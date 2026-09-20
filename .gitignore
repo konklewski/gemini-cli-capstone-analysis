@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local/editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Raw GitHub exports are preserved locally but can be large or contain emails.
+data/raw/*
+
+# Reproducible generated artifacts
+data/processed/*
+!data/processed/.gitkeep
+output/*
+!output/.gitkeep
+figures/*
+!figures/.gitkeep
