@@ -11,6 +11,7 @@ venv/
 
 # Raw GitHub exports are preserved locally but can be large or contain emails.
 data/raw/*
+Contributor_Collaboration/data/raw/*
 
 # Reproducible generated artifacts
 data/processed/*
@@ -19,3 +20,9 @@ output/*
 !output/.gitkeep
 figures/*
 !figures/.gitkeep
+Contributor_Collaboration/data/processed/*
+!Contributor_Collaboration/data/processed/.gitkeep
+Contributor_Collaboration/output/*
+!Contributor_Collaboration/output/.gitkeep
+Contributor_Collaboration/figures/*
+!Contributor_Collaboration/figures/.gitkeep
