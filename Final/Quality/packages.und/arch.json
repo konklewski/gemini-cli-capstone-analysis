@@ -1,0 +1,23 @@
+{
+    "auto": {
+        "Git Author": {
+            "name": "Git Author",
+            "options": {
+            }
+        },
+        "Git Date": {
+            "name": "Git Date",
+            "options": {
+            }
+        },
+        "Git Stability": {
+            "name": "Git Stability",
+            "options": {
+            }
+        }
+    },
+    "ents": {
+    },
+    "tags": [
+    ]
+}
