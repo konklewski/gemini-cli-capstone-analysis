@@ -161,6 +161,112 @@ function extractRange(
   return parts.join('\n');
 }
 
+/** Apply the change operator's h/j/k/l movement to a text-buffer state. */
+function handleVimChangeMovement(
+  state: TextBufferState,
+  action: Extract<VimAction, { type: 'vim_change_movement' }>,
+): TextBufferState {
+  const { lines, cursorRow, cursorCol } = state;
+  const { movement, count } = action.payload;
+  const totalLines = lines.length;
+
+  switch (movement) {
+    case 'h': {
+      // Left
+      // Change N characters to the left
+      const startCol = Math.max(0, cursorCol - count);
+      return replaceRangeInternal(
+        detachExpandedPaste(pushUndo(state)),
+        cursorRow,
+        startCol,
+        cursorRow,
+        cursorCol,
+        '',
+      );
+    }
+
+    case 'j': {
+      // Down - delete/change current line + count lines below
+      const linesToChange = Math.min(count + 1, totalLines - cursorRow);
+      if (linesToChange > 0) {
+        if (linesToChange >= totalLines) {
+          // Deleting all lines - keep one empty line
+          const nextState = detachExpandedPaste(pushUndo(state));
+          return {
+            ...nextState,
+            lines: [''],
+            cursorRow: 0,
+            cursorCol: 0,
+            preferredCol: null,
+          };
+        }
+
+        const nextState = detachExpandedPaste(pushUndo(state));
+        const newLines = [...nextState.lines];
+        newLines.splice(cursorRow, linesToChange);
+
+        return {
+          ...nextState,
+          lines: newLines,
+          cursorRow: Math.min(cursorRow, newLines.length - 1),
+          cursorCol: 0,
+          preferredCol: null,
+        };
+      }
+      return state;
+    }
+
+    case 'k': {
+      // Up - delete/change current line + count lines above
+      const startRow = Math.max(0, cursorRow - count);
+      const linesToChange = cursorRow - startRow + 1;
+
+      if (linesToChange > 0) {
+        if (linesToChange >= totalLines) {
+          // Deleting all lines - keep one empty line
+          const nextState = detachExpandedPaste(pushUndo(state));
+          return {
+            ...nextState,
+            lines: [''],
+            cursorRow: 0,
+            cursorCol: 0,
+            preferredCol: null,
+          };
+        }
+
+        const nextState = detachExpandedPaste(pushUndo(state));
+        const newLines = [...nextState.lines];
+        newLines.splice(startRow, linesToChange);
+
+        return {
+          ...nextState,
+          lines: newLines,
+          cursorRow: Math.min(startRow, newLines.length - 1),
+          cursorCol: 0,
+          preferredCol: null,
+        };
+      }
+      return state;
+    }
+
+    case 'l': {
+      // Right
+      // Change N characters to the right
+      return replaceRangeInternal(
+        detachExpandedPaste(pushUndo(state)),
+        cursorRow,
+        cursorCol,
+        cursorRow,
+        Math.min(cpLen(lines[cursorRow] || ''), cursorCol + count),
+        '',
+      );
+    }
+
+    default:
+      return state;
+  }
+}
+
 export function handleVimAction(
   state: TextBufferState,
   action: VimAction,
@@ -832,106 +938,8 @@ export function handleVimAction(
       };
     }
 
-    case 'vim_change_movement': {
-      const { movement, count } = action.payload;
-      const totalLines = lines.length;
-
-      switch (movement) {
-        case 'h': {
-          // Left
-          // Change N characters to the left
-          const startCol = Math.max(0, cursorCol - count);
-          return replaceRangeInternal(
-            detachExpandedPaste(pushUndo(state)),
-            cursorRow,
-            startCol,
-            cursorRow,
-            cursorCol,
-            '',
-          );
-        }
-
-        case 'j': {
-          // Down - delete/change current line + count lines below
-          const linesToChange = Math.min(count + 1, totalLines - cursorRow);
-          if (linesToChange > 0) {
-            if (linesToChange >= totalLines) {
-              // Deleting all lines - keep one empty line
-              const nextState = detachExpandedPaste(pushUndo(state));
-              return {
-                ...nextState,
-                lines: [''],
-                cursorRow: 0,
-                cursorCol: 0,
-                preferredCol: null,
-              };
-            }
-
-            const nextState = detachExpandedPaste(pushUndo(state));
-            const newLines = [...nextState.lines];
-            newLines.splice(cursorRow, linesToChange);
-
-            return {
-              ...nextState,
-              lines: newLines,
-              cursorRow: Math.min(cursorRow, newLines.length - 1),
-              cursorCol: 0,
-              preferredCol: null,
-            };
-          }
-          return state;
-        }
-
-        case 'k': {
-          // Up - delete/change current line + count lines above
-          const startRow = Math.max(0, cursorRow - count);
-          const linesToChange = cursorRow - startRow + 1;
-
-          if (linesToChange > 0) {
-            if (linesToChange >= totalLines) {
-              // Deleting all lines - keep one empty line
-              const nextState = detachExpandedPaste(pushUndo(state));
-              return {
-                ...nextState,
-                lines: [''],
-                cursorRow: 0,
-                cursorCol: 0,
-                preferredCol: null,
-              };
-            }
-
-            const nextState = detachExpandedPaste(pushUndo(state));
-            const newLines = [...nextState.lines];
-            newLines.splice(startRow, linesToChange);
-
-            return {
-              ...nextState,
-              lines: newLines,
-              cursorRow: Math.min(startRow, newLines.length - 1),
-              cursorCol: 0,
-              preferredCol: null,
-            };
-          }
-          return state;
-        }
-
-        case 'l': {
-          // Right
-          // Change N characters to the right
-          return replaceRangeInternal(
-            detachExpandedPaste(pushUndo(state)),
-            cursorRow,
-            cursorCol,
-            cursorRow,
-            Math.min(cpLen(lines[cursorRow] || ''), cursorCol + count),
-            '',
-          );
-        }
-
-        default:
-          return state;
-      }
-    }
+    case 'vim_change_movement':
+      return handleVimChangeMovement(state, action);
 
     case 'vim_move_left': {
       const { count } = action.payload;
