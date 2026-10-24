@@ -1,5 +1,5 @@
 {
-  "captured_utc": "2026-10-24T19:22:21.809445+00:00",
+  "captured_utc": "2026-10-24T19:34:54.349548+00:00",
   "implemented_change": "Limited Vim change-movement extraction only",
   "unimplemented_proposals": [
     "Config built-in tool assembly",
@@ -89,8 +89,8 @@
       "sha256": "dff3653d312abcf2d6d7c01a0f4626a0076363f16690df678d33413188ef262f"
     },
     "README.md": {
-      "bytes": 1826,
-      "sha256": "a8f82ee4dbbbbd44c79b78f8b1a74596d7485a6416897962556d2602be853cb6"
+      "bytes": 1146,
+      "sha256": "3a440e5b7812aff01f58d98155b8d98c91aacbf0fdc336e3ce35ead2c1231392"
     },
     "config-factory/analyse-config-imports.mjs": {
       "bytes": 3980,
@@ -113,8 +113,8 @@
       "sha256": "1b449cd3fff9bdee88a335c77788512d448d90449c2875d3a5ac99df3002b6f1"
     },
     "config-factory/design-evidence.txt": {
-      "bytes": 4709,
-      "sha256": "b0e80019f9071b2480ced6b06b406d7af6f3c4395fc236462ca800c6aed0381e"
+      "bytes": 2174,
+      "sha256": "f23deef13ff61404a5f521c6aefadf345a3ba3aff5cc7967fb20b030213123c2"
     },
     "create_delivery_manifest.py": {
       "bytes": 2058,
@@ -161,12 +161,12 @@
       "sha256": "f8e8d30490ec585a1c989264b8a4d8ba9e248f3124852e8012b96892f462879f"
     },
     "security/security-evidence.txt": {
-      "bytes": 3475,
-      "sha256": "da526103ddc4ed546a8508ae0f800b6a604d5f4559830e5fc471ad107440ec8f"
+      "bytes": 2048,
+      "sha256": "d88428cb778aaf1ad4d82a99b544e5db08d3f71a244eabf2cb995ff143ef0cef"
     },
     "vim-extraction/REPRODUCING.txt": {
-      "bytes": 9024,
-      "sha256": "f03d2b42d56ce14ec1c67e189aadb6159881253cb68c3c43f9dc435e57d6d271"
+      "bytes": 5601,
+      "sha256": "ea27cb966a975e46b3084b0bb535286fcbbb05e8bb70b98814aeab6801bc3413"
     },
     "vim-extraction/analyse-metrics.py": {
       "bytes": 2744,

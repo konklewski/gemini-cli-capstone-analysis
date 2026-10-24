@@ -1,144 +1,96 @@
-REPRODUCING THE PUBLISHED VIM EXTRACTION EXPERIMENT
+Vim change-movement extraction
 
 Repository: https://github.com/konklewski/gemini-cli-capstone-analysis
-Source branch: experiment/vim-extraction
-This branch preserves Gemini CLI source and ancestry. It is separate from the
-analysis files on main and must not be merged into main.
+Source branch: experiment/vim-extraction. Evidence is on main; do not merge
+the source branch into main. Permanent source URLs: published-revisions.json.
 
-Exact revisions (unchanged Git object IDs)
-Original baseline, Gemini CLI v0.64.0:
-  4a0749aceac5643e6f85a36d7420314d85e13b52
-Controlled before, adding four characterization tests without production edits:
-  8f0a0f2d7d827d7ccd11c3df89631c39af67296f
-After, same tests plus a private Vim movement helper extraction:
-  1820eca22b026d6f16c05cc62e845c849aa2f49c
+Revisions
+  Baseline v0.64.0: 4a0749aceac5643e6f85a36d7420314d85e13b52
+  Before: 8f0a0f2d7d827d7ccd11c3df89631c39af67296f
+  After: 1820eca22b026d6f16c05cc62e845c849aa2f49c
+Before adds four characterization tests without changing production code.
+After extracts handleVimChangeMovement in the same file, with identical tests.
 
-Permanent source links
-https://github.com/konklewski/gemini-cli-capstone-analysis/commit/8f0a0f2d7d827d7ccd11c3df89631c39af67296f
-https://github.com/konklewski/gemini-cli-capstone-analysis/commit/1820eca22b026d6f16c05cc62e845c849aa2f49c
-https://github.com/konklewski/gemini-cli-capstone-analysis/compare/8f0a0f2d7d827d7ccd11c3df89631c39af67296f...1820eca22b026d6f16c05cc62e845c849aa2f49c
-
-A. Obtain both published versions from the capstone repository
-Run in a NEW parent directory, not an existing Gemini CLI clone:
-
+1. Get both versions
+Run in a new directory, not your existing Gemini CLI clone:
   git clone --depth 3 --single-branch --branch experiment/vim-extraction https://github.com/konklewski/gemini-cli-capstone-analysis.git gemini-vim-after
   git -C gemini-vim-after worktree add --detach ../gemini-vim-before 8f0a0f2d7d827d7ccd11c3df89631c39af67296f
   git -C gemini-vim-before rev-parse HEAD
   git -C gemini-vim-after rev-parse HEAD
 
-The commands must print the full before and after IDs above. Depth 3 contains
-the after commit, controlled before commit and original baseline. No upstream
-write access, pull request or changes to an existing clone are needed.
+The last commands should print the before and after IDs above. Source/test
+SHA-256 values are in experiment.json; check them with shasum -a 256.
 
-B. Independent fallback from the preserved Git bundle
-Download the vim-extraction folder from main, preserving the bundle and patches.
-Set VIM_EVIDENCE to its absolute path. Run in a NEW directory:
-
+Bundle fallback, also in a new directory:
   VIM_EVIDENCE="/absolute/path/to/vim-extraction"
   git clone --depth 1 --single-branch --branch v0.64.0 https://github.com/google-gemini/gemini-cli.git bundle-before
   git -C bundle-before bundle verify "$VIM_EVIDENCE/vim-extraction.bundle"
   git -C bundle-before fetch "$VIM_EVIDENCE/vim-extraction.bundle" 1820eca22b026d6f16c05cc62e845c849aa2f49c:refs/heads/experiment/vim-extraction
   git -C bundle-before switch --detach 8f0a0f2d7d827d7ccd11c3df89631c39af67296f
   git -C bundle-before worktree add --detach ../bundle-after 1820eca22b026d6f16c05cc62e845c849aa2f49c
-  git -C bundle-before rev-parse HEAD
-  git -C bundle-after rev-parse HEAD
 
-The bundle is incremental and requires baseline commit 4a0749a. The initial
-read-only clone supplies that prerequisite. Fetching the bundle preserves the
-exact hashes. The two format-patch files are retained for review/reapplication,
-but git am may create different commit IDs; it is not the hash-preserving route.
+The bundle requires the baseline commit and preserves both exact revisions.
+Patches are provided for review; git am may produce different commit IDs.
 
-C. Verify the source files
-File: packages/cli/src/ui/components/shared/vim-buffer-actions.ts
-Before SHA-256:
-  b9027a5f772cacaac81d1acc6589eb314027edf5823542eec3ca580bceacc9f8
-After SHA-256:
-  8a2d9567cda15a73f77c0504b13c1e5afd22be8302eefa8f5d9d7f79ba7c1d16
-Test file: packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts
-SHA-256 in both controlled versions:
-  17e3c3410fc49d40d299339137b80f6784b29f789aa7b007696a2ff41499addd
-On macOS, run shasum -a 256 PATH_TO_FILE for each of the files above.
+2. Understand measurements
+Analyse each checkout's packages/ before installing dependencies. Use separate
+projects, Web language and Build 1265 for both. Match the saved gui-settings-*.xml
+and gui-exported-settings-*.xml in results/understand-build-1265-completed/,
+changing machine paths only. Count each multi-way decision separately; do not
+count logical AND/OR. Disable Node.js/jQuery analysis; add found imported files.
 
-D. Reproduce Understand measurements
-Do this BEFORE dependency installation, using source-only checkouts.
-Use SciTools Understand Build 1265 for both versions, separate .und projects,
-and each version's packages/ folder as source. Use Web language analysis.
-Match the settings preserved in results/understand-build-1265-completed/,
-updating only checkout/output paths for your machine. gui-settings-*.xml are
-the original shared settings; gui-exported-settings-*.xml are supported exports.
-Count each multi-way decision separately; do not count logical AND/OR.
-Keep Node.js and jQuery analysis disabled and add found imported files enabled.
-Export Cyclomatic, CountLineCode, AvgCyclomatic, AvgCountLine,
-AvgCountLineCode and MaxCyclomatic, with headers, file paths and unique names.
-Do not install dependencies before these source-only analyses.
+Export AvgCountLine, AvgCountLineCode, AvgCyclomatic, CountLineCode, Cyclomatic
+and MaxCyclomatic, with headers, file paths and unique names.
 
-Recorded results:
-  handleVimAction: CountLineCode 1461 -> 1381; Cyclomatic 196 -> 188.
-  handleVimChangeMovement: absent before; CountLineCode 86, Cyclomatic 9 after.
-  Both projects: 117 errors, 172 warnings; no added/removed diagnostics after
-  source-path normalisation, and none in the selected source/test files.
-The original group measurement used Build 1264. Both controlled versions used
-Build 1265 and reproduced its baseline function values, not all parse results.
+Results (CountLineCode; Cyclomatic):
+  handleVimAction: 1461; 196 before, 1381; 188 after.
+  handleVimChangeMovement: absent before, 86; 9 after.
+The combined decision count, sum(Cyclomatic - 1), stays 195.
+Both runs have 117 errors and 172 warnings. After path normalisation there
+are no added/removed diagnostics and none in the selected source/test files.
+The original Build 1264 measurement has matching baseline function values;
+this does not mean all parse results match across builds.
 
-Regenerate the derived maxima and affected-function decision totals:
+From this folder, regenerate the filtered summary:
   python analyse-metrics.py --output /absolute/path/to/re-evaluation-metrics.json
-This uses the original report filters: exclude Ambient Module/Class/Enum/File
-entities, describe-callback/mock-callback names, and zero-code-line entries.
-The retained results/re-evaluation-metrics.json records 196 -> 188 for the
-maximum under those filters, not a reduction in the combined decision count.
+Filters exclude Ambient Module/Class/Enum/File entities, describe-callback/
+mock-callback names and zero-code-line entries.
 
-Stored gui-issues-*.cbor files are original version-1 diagnostic containers.
-preserve_understand_evidence.py reads them with cbor2 6.1.5, normalises source
-roots, and compares diagnostic multisets without changing the GUI databases.
-The readable diagnostics-*.txt and diagnostic-comparison.json are derived
-from those containers. The supplied before GUI log is retained for cross-checking;
-its displayed warning columns are one below stored CBOR columns. Error columns
-already match. All 289 records matched after that display conversion.
-To repeat the capture after making fresh GUI projects and CSV exports:
-  python -m pip install cbor2==6.1.5
-  python preserve_understand_evidence.py --und /Applications/Understand.app/Contents/MacOS/und --before-root BEFORE_CHECKOUT --after-root AFTER_CHECKOUT --before-db BEFORE_DATABASE.und --after-db AFTER_DATABASE.und --exports DIRECTORY_CONTAINING_GUI_CSVS --before-gui-log BEFORE_GUI_LOG.txt --output NEW_EVIDENCE_DIRECTORY
-Use a new output directory. Full binary Understand databases are not committed.
+Raw CSVs, settings, CBOR diagnostics and readable logs are retained.
+python preserve_understand_evidence.py --help lists capture arguments; it requires
+cbor2==6.1.5 and a new output directory. The version-1 CBOR records were checked
+against all 289 entries in the supplied before log. GUI warning columns need
++1 to match stored columns; error columns already match. Full .und databases
+are not included.
 
-E. Reproduce selected tests
-Recorded environment: Node 25.9.0, npm 11.12.1, TypeScript 5.8.3, Vitest 3.2.4.
-In EACH fresh checkout root, install/build prerequisites:
-
+3. Tests
+Recorded versions: Node 25.9.0, npm 11.12.1, TypeScript 5.8.3, Vitest 3.2.4.
+In each checkout root:
   npm ci --ignore-scripts --no-audit --no-fund
   npm run generate
   npm run build --workspace @google/gemini-cli-core
   npm run build --workspace @google/gemini-cli-devtools
 
-Then change to its packages/cli directory and run:
-
+From packages/cli:
   GEMINI_CLI_TRUST_WORKSPACE=true ../../node_modules/.bin/vitest run src/ui/components/shared/vim-buffer-actions.test.ts src/ui/components/shared/text-buffer.test.ts --coverage.enabled=false --maxWorkers=2 --minWorkers=1
 
-The original baseline passed 423 tests; adding four undo/immutability cases
-gave 200 Vim tests on unchanged production code. After extraction, both selected
-suites passed 427 tests. The two controlled versions have identical test sources.
-For JSON output add --reporter=json --outputFile.json=/absolute/path/result.json.
-The extraction changes only the private function boundary: imports, other action
-branches and text-buffer.ts remain unchanged. Recheck with installed TypeScript:
-  node /absolute/path/to/verify-extraction.mjs AFTER_CHECKOUT /absolute/path/to/structural-verification.json
-From each checkout root, additional checks used were:
+Original baseline: 423 tests passed. Test-only before: 200 Vim tests passed.
+After: 427 tests passed across both selected suites. JSON reports are in results/.
+Add --reporter=json --outputFile.json=/absolute/path/result.json to save a rerun.
+
+From each checkout root, run typecheck and checks on the changed files:
   npm run typecheck --workspace @google/gemini-cli
   node_modules/.bin/eslint packages/cli/src/ui/components/shared/vim-buffer-actions.ts packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts --max-warnings 0
   node_modules/.bin/prettier --check packages/cli/src/ui/components/shared/vim-buffer-actions.ts packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts
   git diff --check
+Check the extracted statements, unchanged imports and other branches:
+  node /absolute/path/to/verify-extraction.mjs AFTER_CHECKOUT /absolute/path/to/structural-verification.json
 
-For the separate focused coverage procedure, use the exact recorded commands
-in results/focused-coverage-before/run.command.json and the after counterpart,
-adjusting only working and output paths. Those runs include only the Vim suite
-and measure only vim-buffer-actions.ts. Both passed 200 tests. They are not
-CLI-package coverage. The whole-CLI attempt timed out at 480 seconds; the full
-repository test suite was not run. Prior selected test reports are retained.
+Focused coverage commands and reports are in results/focused-coverage-before/
+and results/focused-coverage-after/. Each run passed 200 Vim tests and measured
+only vim-buffer-actions.ts, not CLI-wide coverage. The CLI-wide attempt timed
+out after 480 seconds; the full repository suite was not run.
 
-Evidence on main
-experiment.json: revisions, source hashes, measurements and limitations.
-patches/: test-only patch and production extraction patch.
-vim-extraction.bundle: exact commits, with the stated baseline prerequisite.
-results/understand-build-1265-completed/: untouched CSVs, settings, diagnostics.
-results/*vitest.json and focused-coverage-*/: selected tests and focused coverage.
-published-revisions.json: permanent source URLs and published branch.
-../delivery-manifest.json: retained evidence file hashes.
-Use commit-pinned /blob/<analysis-commit>/ links
-for these evidence files in the report, not mutable main-branch links.
+The helper adds a function boundary but leaves the import cycle and algorithmic
+decisions unchanged. No performance improvement is claimed. File hashes are in
+../delivery-manifest.json. Use commit-pinned evidence links in the report.

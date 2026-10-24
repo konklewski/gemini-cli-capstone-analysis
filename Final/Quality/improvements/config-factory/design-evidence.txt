@@ -1,78 +1,41 @@
-CONFIG TOOL-ASSEMBLY PROPOSAL: SOURCE EVIDENCE
+Config tool-assembly proposal
 
-Status: proposal only. No Config production code was changed.
-Baseline: v0.64.0, 4a0749aceac5643e6f85a36d7420314d85e13b52.
+Baseline: Gemini CLI v0.64.0, 4a0749aceac5643e6f85a36d7420314d85e13b52.
+Status: proposed, not implemented.
 
-Motivation: metric (1), Config's 109 direct dependencies in the saved
-dependency-cruiser 18.6.0 report, and the report's Config SRP finding.
-The source inventory identifies 27 concrete tools in 21 modules. Twenty module
-edges can move out of Config; ripGrep.ts must remain because getRipgrepPath()
-uses resolveRipgrepPath() at lines 2203-2215.
+Config has 109 direct dependencies in the saved dependency-cruiser 18.6.0
+report. The inventory finds 27 concrete tools across 21 modules. Twenty
+imports could move out; ripGrep.ts stays because getRipgrepPath() still
+calls resolveRipgrepPath() (config.ts:2203-2215).
 
-Move to proposed tools/builtin-tool-assembly.ts:
-- Construction of ToolRegistry and concrete built-in tools.
-- Core-tool allow-list matching, including minified-name and signature matching.
-- Feature-gated registration for todos, plans and trackers, and registration order.
-- Selection of GrepTool/RipGrepTool with existing fallback logging/telemetry.
-- Calls to registry.discoverAllTools() and registry.sortTools().
-- Concrete ActivateSkillTool construction and its named replacement/removal.
-  These also occur outside createToolRegistry(), at initial discovery lines
-  1547-1553 and skill reload lines 3733-3744. Omitting those sites would leave
-  Config coupled to the concrete skill-tool class.
+Move to tools/builtin-tool-assembly.ts:
+- ToolRegistry and concrete-tool construction.
+- Allow-list matching, feature gates and registration order.
+- Grep/RipGrep selection, including fallback logging and telemetry.
+- Tool discovery and sorting.
+- ActivateSkillTool replacement/removal, including initial discovery
+  (config.ts:1547-1553) and skill reload (3733-3744).
 
-Keep in Config:
-- Settings, authentication, workspace and session lifecycle responsibilities.
-- Initialisation and skill-discovery/reload sequencing and admin/feature state.
-- Registry storage/access and calls to its existing API.
-- Ripgrep path promise caching, memory filename configuration, other services.
+Config keeps settings, authentication, workspace/session lifecycle, discovery
+sequencing, registry access and ripgrep-path caching. The assembly receives
+Config and MessageBus. A type-only Config import avoids an emitted import,
+but does not remove the runtime dependency on Config methods.
 
-The new assembly receives Config and MessageBus; it imports Config as a type.
-Config delegates to it. This is a bounded SRP/separation-of-concerns proposal,
-not a claim of complete dependency inversion. Tools still consume Config and
-Config still coordinates many services. The new module adds one dependency
-and a navigation step. Whole-system coupling and all import cycles do not vanish.
+If exactly 20 imports move and one assembly import is added, Config's count
+would be 109 - 20 + 1 = 90. This is an estimate, not a measured result or a
+reduction in whole-system coupling.
 
-Preserve existing tests in config.test.ts, particularly createToolRegistry
-(from line 1515), ripgrep fallback (around lines 2374-2452), and reloadSkills
-(from line 4056). Move assembly-focused tests or add focused tests covering
-equivalent registered names/order, feature gates, unavailable/throwing ripgrep,
-and replacement/removal of the skill tool after discovery. Do not simply add
-new tests for behaviour already covered without identifying a gap.
+Validation: preserve config.test.ts coverage for createToolRegistry (1515),
+ripgrep fallback (2374-2452) and reloadSkills (4056). Check tool names/order,
+feature gates, fallback behaviour and skill-tool replacement. Then rerun
+dependency-cruiser and compare with the saved report.
 
-The mechanical 109 - 20 + 1 = 90 Config-edge estimate assumes precisely these
-twenty module imports move and only one assembly-module import is added. It
-is not a measured after-result, an arbitrary quality threshold, or proof of
-reduced whole-system coupling. Rerun dependency-cruiser after implementation.
+Recreate the inventory from the analysis repository root:
+  node Final/Quality/improvements/config-factory/analyse-config-imports.mjs CHECKOUT Final/Quality/coupling-report.json OUTPUT.json
+Requires TypeScript installed in CHECKOUT. The script verifies Config against
+the baseline commit and checks imports against the saved dependency graph.
 
-Reproduce the inventory (requires the checkout's installed TypeScript):
-  node analyse-config-imports.mjs CHECKOUT Final/Quality/coupling-report.json OUTPUT.json
-The script verifies Config's bytes against the baseline Git commit and checks
-each inventoried module against the saved dependency graph.
-
-Diagram: config-tool-assembly-proposal.puml is a proposed component diagram
-based on these source locations. The import inventory lists
-all concrete classes and actual file paths. Render with pinned PlantUML; see
-the commands and renderer hash in ../README.md.
-
-Notation and caption
-The revised diagram consistently represents responsibility-based module
-components, each annotated with its associated source file. The package groups
-20 other concrete tool modules, with two actual module examples shown and the
-other 18 omitted for readability. Ripgrep is shown separately, so the complete
-inventory remains 21 concrete-tool modules and 27 classes.
-All visible arrows are dashed UML dependencies directed from dependent to
-supplier. Labels distinguish TypeScript imports, type-only imports and runtime
-function/object use. A type-only import removes an emitted JavaScript import,
-not the behavioural dependency of an object whose methods are called. Config's
-registry interaction and the assembly's Config-object interaction remain shown.
-The type-only Config imports in the shown ls.ts and activate-skill.ts modules
-do not imply absence of runtime configuration-object usage.
-
-Suggested caption:
-"Proposed module-level separation of built-in tool assembly from configuration,
-based on config.ts, tool-registry.ts, ls.ts and activate-skill.ts
-at Gemini CLI v0.64.0 (commit 4a0749aceac5643e6f85a36d7420314d85e13b52), and
-rendered with PlantUML 1.2026.9. Blue denotes the unimplemented assembly module.
-Only two of the 20 grouped tool modules are expanded; the full import inventory
-is retained in the appendix evidence. Import and object-use dependencies remain;
-no complete decoupling or removal of all cycles is claimed."
+Diagram: config-tool-assembly-proposal.svg. Dashed arrows run from dependent
+to supplier; labels distinguish imports from runtime use. Two of the 20
+grouped tool modules are expanded, with ripgrep shown separately. Blue marks
+the proposed assembly. Rendering commands are in ../README.md.

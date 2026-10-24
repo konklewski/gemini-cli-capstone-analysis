@@ -1,56 +1,40 @@
-PROJECT-SPECIFIC DEPENDENCY SECURITY PROPOSAL
+Dependency security proposal
 
-The original npm audit JSON behind the report's 100 findings is not present in
-the accessible files. It cannot be reconstructed as a historical snapshot.
-On 24 October 2026 we captured new npm 11.12.1 audits of the unchanged baseline
-lockfile (SHA-256 verified by analyse-audit.py). Commands:
+No dependency updates were applied.
+
+The original audit behind the report's 100 findings is unavailable. These
+results are a new snapshot from 24 October 2026, using npm 11.12.1 and the
+unchanged v0.64.0 baseline lockfile:
   npm audit --json --package-lock-only
   npm audit --json --package-lock-only --omit=dev
-Exact arguments, timestamps, source revision, exit codes and raw output hashes
-are recorded in audit-*.command.json. Exit 1 indicates reported vulnerabilities,
-not failure to receive audit data. JSON stdout files are preserved unchanged.
 
 Full audit: 82 findings (3 low, 41 moderate, 31 high, 7 critical).
-Root workspace audit omitting dev dependencies: 73 findings (1 low, 38 moderate,
-28 high, 6 critical). This is not a measured improvement over the earlier 100:
-there was no dependency change, and the original snapshot is unavailable.
-Counts concern npm package-level findings, not unique CVEs or verified exploits.
+Root workspace audit without dev dependencies: 73 findings (1 low,
+38 moderate, 28 high, 6 critical). These are package-level findings, not
+unique CVEs. The difference from 100 is not evidence of an improvement.
+Raw JSON and command records are in audit-*.stdout.txt and audit-*.command.json.
+Exit code 1 means vulnerabilities were reported.
 
-Production example
-packages/core/package.json line 32 pins @grpc/grpc-js 1.14.3 in dependencies.
-The lockfile records that version without the dev flag. Both audits report it.
-GHSA-5375-pq7m-f5r2 / CVE-2026-48068 is high severity: malformed incoming HTTP/2
-stream initiation can crash a grpc-js server. In the 1.14 release line, 1.14.4
-fixes this specific advisory. The captured audit recommends 1.14.6 for the
-package's current set of findings. Propose a reviewed update of the pinned
-version and lockfile, followed by affected gRPC/A2A and telemetry tests and a
-new audit. This targets an availability risk at a concrete dependency. If the
-report previously selected only security integrity, add availability with a
-project-specific justification rather than describe a crash as an integrity fix.
-No exploit path through Gemini CLI was demonstrated; package applicability
-must not be presented as proof that its server vulnerability is reachable.
+Production example: @grpc/grpc-js 1.14.3
+Pinned in packages/core/package.json:32 and present in both audits.
+GHSA-5375-pq7m-f5r2 (high, CVE-2026-48068) concerns malformed HTTP/2 streams
+crashing a grpc-js server. Version 1.14.4 fixes this advisory; the captured
+audit recommends 1.14.6 for the package's findings. Update the pin and lockfile,
+then run affected gRPC/A2A and telemetry tests. This concerns availability.
+No reachable exploit through Gemini CLI was demonstrated.
 https://github.com/advisories/GHSA-5375-pq7m-f5r2
 
-Development-only example
-ESLint 9.24.0 brings @eslint/plugin-kit 0.2.8, marked dev in the lockfile.
-GHSA-xffm-g5w8-qvg7 is a low-severity ReDoS in ConfigCommentParser; 0.3.4 fixes
-the specific advisory. npm recommends updating the root ESLint devDependency
-to 9.39.5. The plugin-kit finding is absent from the --omit=dev audit. Validate
-lint/preflight after a proposed upgrade. This affects tooling availability,
-not a demonstrated production CLI exploit.
+Development example: @eslint/plugin-kit 0.2.8
+Brought in by ESLint 9.24.0 and marked dev in the lockfile.
+GHSA-xffm-g5w8-qvg7 is a low-severity ReDoS fixed in 0.3.4. The audit recommends
+ESLint 9.39.5. This finding disappears with --omit=dev. Rerun lint/preflight
+after an update.
 https://github.com/advisories/GHSA-xffm-g5w8-qvg7
 
-Classification warning
-Do not simply call every Vitest finding development-only. Although Vitest is
-a devDependency in the root/core/cli manifests, packages/test-utils declares
-Vitest in dependencies, and it remains in this root production-graph audit.
-The package manifest and unchanged baseline lockfile establish that declaration;
-the full and omit-dev audit JSON preserve the affected dependency nodes.
+Vitest is not development-only in this graph: packages/test-utils declares
+it in dependencies, so it remains in the omit-dev audit. Neither audit proves
+exactly what ships in the published CLI package.
 
-Proposal and re-evaluation boundary
-No npm audit fix, forced upgrade, dependency edit, or after-fix audit was run.
-Use separate reviewed updates, preserve the lockfile, assess reachability and
-compatibility, rerun the affected tests, then capture full and omit-dev audits
-again. Record justified exceptions with an owner and review date. Rejecting new
-high/critical findings in CI is a proposed policy, not an existing measured fix.
-The advisories were captured from GitHub's public advisory API as raw JSON.
+Recheck compatibility and reachability, rerun affected tests, then capture
+both audits after any update. analyse-audit.py verifies the baseline lockfile
+and derives audit-summary.json. Original advisory responses are also retained.
