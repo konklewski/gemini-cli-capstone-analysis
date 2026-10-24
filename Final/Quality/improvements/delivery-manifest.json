@@ -1,5 +1,5 @@
 {
-  "captured_utc": "2026-10-24T18:23:32.979844+00:00",
+  "captured_utc": "2026-10-24T19:09:05.735455+00:00",
   "implemented_change": "Limited Vim change-movement extraction only",
   "unimplemented_proposals": [
     "Config built-in tool assembly",
@@ -325,8 +325,8 @@
       "sha256": "40b7219262ef4db7d113e41ce260b3432a7ed692793560127d827a9397b6f8b8"
     },
     "submission-evidence-notes.txt": {
-      "bytes": 4721,
-      "sha256": "53db042bb2dfc393736c4a718f9e27015470a0ea70206c148e52bb3614cce989"
+      "bytes": 4718,
+      "sha256": "697cf583ff204f8e27f273a571a6dd0389041a0620965cf96805e0a1251b8ad9"
     },
     "tool-registration-proposal.png": {
       "bytes": 111902,
@@ -341,8 +341,12 @@
       "sha256": "78a5947ce134dd8f2014bc4e5b79898f6c1ae02c21b43294ada67caeb429fc1e"
     },
     "vim-extraction/REPRODUCING.txt": {
-      "bytes": 6378,
-      "sha256": "e13feaafb058eaf0280764d56056ae5cb6c80316fc13d422feebfff66b17555f"
+      "bytes": 6493,
+      "sha256": "a644158831f81ca0ce3ad26f2b17b83950bcf207fc1ecf2a408f91cc296308bd"
+    },
+    "vim-extraction/branch-verification.json": {
+      "bytes": 864,
+      "sha256": "ff871ec09bf723ba2bf8cb47b10bbd8e22e5f5ec2c4bbe6520540f6bf213aa22"
     },
     "vim-extraction/experiment.json": {
       "bytes": 6434,
@@ -373,8 +377,8 @@
       "sha256": "6a5d45358373e5cfcc1c4597c8a17406ffad7f72e51513cef4c4e286a6c81bb1"
     },
     "vim-extraction/published-revisions.json": {
-      "bytes": 1171,
-      "sha256": "32fbcfe470d67acae5cba54a3889d757e5e023cc1cb5dca9a3632e4c206e6286"
+      "bytes": 1168,
+      "sha256": "9b0fd849193d7fa7a192c66161283cbce981a0f58ec83e9015cc81631d5216ce"
     },
     "vim-extraction/results/baseline-vitest.json": {
       "bytes": 137081,
@@ -709,8 +713,8 @@
       "sha256": "300c3d9d0226f5ee7938401fdc6fefc7ec94556f157ff75efd9bf234d8b623c6"
     },
     "vim-extraction/understand-handoff.txt": {
-      "bytes": 6080,
-      "sha256": "ce593ce149e093cb701d506271535b07eb7a2734ec1b123f4444302464ad3a7a"
+      "bytes": 6075,
+      "sha256": "81687bbb35a0ba1ef656750810d7792391944c2f69fc0c388dfbfa1e72ae5332"
     },
     "vim-extraction/verify-extraction.mjs": {
       "bytes": 4635,

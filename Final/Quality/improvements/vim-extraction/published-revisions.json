@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/konklewski/gemini-cli-capstone-analysis",
-  "source_branch": "codex/vim-handler-extraction",
+  "source_branch": "experiment/vim-extraction",
   "evidence_branch": "main",
   "published_source_branch_verified": true,
   "baseline_commit": "4a0749aceac5643e6f85a36d7420314d85e13b52",

@@ -69,7 +69,7 @@ editable report, export a new PDF, then verify the exported document itself.
 
 Publication
 The exact source revisions are published on the capstone repository's separate
-codex/vim-handler-extraction branch. No source commit was rewritten, no push
+experiment/vim-extraction branch. No source commit was rewritten, no push
 was made to upstream Gemini CLI, and the original baseline was not modified.
 REPRODUCING.txt includes clone, bundle fallback, test and Understand procedures.
 The evidence folder is published separately on analysis main. Use full commit

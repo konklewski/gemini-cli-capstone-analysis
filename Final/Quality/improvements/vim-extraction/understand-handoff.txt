@@ -1,7 +1,7 @@
 UNDERSTAND REPRODUCTION INSTRUCTIONS AND COMPLETED MEASUREMENT STATUS
 
 Publication update: both exact revisions are available on the capstone
-repository's separate codex/vim-handler-extraction branch. See REPRODUCING.txt
+repository's separate experiment/vim-extraction branch. See REPRODUCING.txt
 for direct clone commands and permanent commit URLs. The original incremental
 bundle procedure below remains available as an independent fallback.
 
@@ -39,7 +39,7 @@ Get the exact versions without changing an existing Gemini CLI checkout
 4. Verify and fetch the incremental bundle. The original baseline is its
    prerequisite, so complete the clone first:
      git -C gemini-vim-before bundle verify "$VIM_EVIDENCE/vim-extraction.bundle"
-     git -C gemini-vim-before fetch "$VIM_EVIDENCE/vim-extraction.bundle" refs/heads/codex/vim-handler-extraction:refs/heads/codex/vim-handler-extraction
+     git -C gemini-vim-before fetch "$VIM_EVIDENCE/vim-extraction.bundle" 1820eca22b026d6f16c05cc62e845c849aa2f49c:refs/heads/experiment/vim-extraction
 5. Select the controlled before version and create a separate after worktree:
      git -C gemini-vim-before switch --detach 8f0a0f2d7d827d7ccd11c3df89631c39af67296f
      git -C gemini-vim-before worktree add --detach ../gemini-vim-after 1820eca22b026d6f16c05cc62e845c849aa2f49c

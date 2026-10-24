@@ -1,7 +1,7 @@
 REPRODUCING THE PUBLISHED VIM EXTRACTION EXPERIMENT
 
 Repository: https://github.com/konklewski/gemini-cli-capstone-analysis
-Source branch: codex/vim-handler-extraction
+Source branch: experiment/vim-extraction
 This branch preserves Gemini CLI source and ancestry. It is separate from the
 analysis files on main and must not be merged into main.
 
@@ -21,7 +21,7 @@ https://github.com/konklewski/gemini-cli-capstone-analysis/compare/8f0a0f2d7d827
 A. Obtain both published versions from the capstone repository
 Run in a NEW parent directory, not an existing Gemini CLI clone:
 
-  git clone --depth 3 --single-branch --branch codex/vim-handler-extraction https://github.com/konklewski/gemini-cli-capstone-analysis.git gemini-vim-after
+  git clone --depth 3 --single-branch --branch experiment/vim-extraction https://github.com/konklewski/gemini-cli-capstone-analysis.git gemini-vim-after
   git -C gemini-vim-after worktree add --detach ../gemini-vim-before 8f0a0f2d7d827d7ccd11c3df89631c39af67296f
   git -C gemini-vim-before rev-parse HEAD
   git -C gemini-vim-after rev-parse HEAD
@@ -37,7 +37,7 @@ Set VIM_EVIDENCE to its absolute path. Run in a NEW directory:
   VIM_EVIDENCE="/absolute/path/to/vim-extraction"
   git clone --depth 1 --single-branch --branch v0.64.0 https://github.com/google-gemini/gemini-cli.git bundle-before
   git -C bundle-before bundle verify "$VIM_EVIDENCE/vim-extraction.bundle"
-  git -C bundle-before fetch "$VIM_EVIDENCE/vim-extraction.bundle" refs/heads/codex/vim-handler-extraction:refs/heads/codex/vim-handler-extraction
+  git -C bundle-before fetch "$VIM_EVIDENCE/vim-extraction.bundle" 1820eca22b026d6f16c05cc62e845c849aa2f49c:refs/heads/experiment/vim-extraction
   git -C bundle-before switch --detach 8f0a0f2d7d827d7ccd11c3df89631c39af67296f
   git -C bundle-before worktree add --detach ../bundle-after 1820eca22b026d6f16c05cc62e845c849aa2f49c
   git -C bundle-before rev-parse HEAD
@@ -106,5 +106,7 @@ vim-extraction.bundle: exact commits, with the stated baseline prerequisite.
 results/understand-build-1265-completed/: untouched CSVs, settings, diagnostics.
 results/*vitest.json and focused-coverage-*/: selected tests and focused coverage.
 published-revisions.json and published-reconstruction-check.json: publication
-and fresh-clone verification. Use commit-pinned /blob/<analysis-commit>/ links
+and the original fresh-clone verification. The current branch is checked in
+branch-verification.json. Historical capture records are retained unchanged.
+Use commit-pinned /blob/<analysis-commit>/ links
 for these evidence files in the report, not mutable main-branch links.
