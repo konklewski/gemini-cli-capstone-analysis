@@ -1,7 +1,0 @@
-This CLI-wide coverage attempt timed out after 480 seconds. Its command record
-and raw stdout/stderr are preserved. There is no completed test-results JSON
-or coverage summary, so no CLI-wide success or coverage percentage is claimed.
-Incomplete V8 intermediates were moved, not deleted, to:
-/tmp/gemini-final-report-review.j5FSiS/incomplete-cli-coverage
-The separate focused-coverage-before/after directories contain completed
-measurements for only vim-buffer-actions.ts using its 200-test Vim suite.

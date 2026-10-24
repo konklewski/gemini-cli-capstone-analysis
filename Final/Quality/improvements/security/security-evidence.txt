@@ -44,7 +44,8 @@ Classification warning
 Do not simply call every Vitest finding development-only. Although Vitest is
 a devDependency in the root/core/cli manifests, packages/test-utils declares
 Vitest in dependencies, and it remains in this root production-graph audit.
-The separate npm explain JSON captures preserve the actual dependency paths.
+The package manifest and unchanged baseline lockfile establish that declaration;
+the full and omit-dev audit JSON preserve the affected dependency nodes.
 
 Proposal and re-evaluation boundary
 No npm audit fix, forced upgrade, dependency edit, or after-fix audit was run.

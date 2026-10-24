@@ -49,10 +49,10 @@ Reproduce the inventory (requires the checkout's installed TypeScript):
 The script verifies Config's bytes against the baseline Git commit and checks
 each inventoried module against the saved dependency graph.
 
-Diagram: config-tool-assembly-proposal.puml is a proposed component diagram,
-manually constructed from these source locations. The import inventory lists
+Diagram: config-tool-assembly-proposal.puml is a proposed component diagram
+based on these source locations. The import inventory lists
 all concrete classes and actual file paths. Render with pinned PlantUML; see
-the rendering manifest retained with the analysis files.
+the commands and renderer hash in ../README.md.
 
 Notation and caption
 The revised diagram consistently represents responsibility-based module
@@ -70,7 +70,7 @@ do not imply absence of runtime configuration-object usage.
 
 Suggested caption:
 "Proposed module-level separation of built-in tool assembly from configuration,
-manually constructed from config.ts, tool-registry.ts, ls.ts and activate-skill.ts
+based on config.ts, tool-registry.ts, ls.ts and activate-skill.ts
 at Gemini CLI v0.64.0 (commit 4a0749aceac5643e6f85a36d7420314d85e13b52), and
 rendered with PlantUML 1.2026.9. Blue denotes the unimplemented assembly module.
 Only two of the 20 grouped tool modules are expanded; the full import inventory

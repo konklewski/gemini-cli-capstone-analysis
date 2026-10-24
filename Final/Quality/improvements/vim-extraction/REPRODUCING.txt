@@ -64,11 +64,13 @@ Do this BEFORE dependency installation, using source-only checkouts.
 Use SciTools Understand Build 1265 for both versions, separate .und projects,
 and each version's packages/ folder as source. Use Web language analysis.
 Match the settings preserved in results/understand-build-1265-completed/,
-updating only checkout/output paths for your machine. Original machine-local
-settings and supported CLI exports are retained alongside the shared settings.
+updating only checkout/output paths for your machine. gui-settings-*.xml are
+the original shared settings; gui-exported-settings-*.xml are supported exports.
+Count each multi-way decision separately; do not count logical AND/OR.
+Keep Node.js and jQuery analysis disabled and add found imported files enabled.
 Export Cyclomatic, CountLineCode, AvgCyclomatic, AvgCountLine,
 AvgCountLineCode and MaxCyclomatic, with headers, file paths and unique names.
-For details and parser diagnostics, see procedure.txt and understand-handoff.txt.
+Do not install dependencies before these source-only analyses.
 
 Recorded results:
   handleVimAction: CountLineCode 1461 -> 1381; Cyclomatic 196 -> 188.
@@ -77,6 +79,25 @@ Recorded results:
   source-path normalisation, and none in the selected source/test files.
 The original group measurement used Build 1264. Both controlled versions used
 Build 1265 and reproduced its baseline function values, not all parse results.
+
+Regenerate the derived maxima and affected-function decision totals:
+  python analyse-metrics.py --output /absolute/path/to/re-evaluation-metrics.json
+This uses the original report filters: exclude Ambient Module/Class/Enum/File
+entities, describe-callback/mock-callback names, and zero-code-line entries.
+The retained results/re-evaluation-metrics.json records 196 -> 188 for the
+maximum under those filters, not a reduction in the combined decision count.
+
+Stored gui-issues-*.cbor files are original version-1 diagnostic containers.
+preserve_understand_evidence.py reads them with cbor2 6.1.5, normalises source
+roots, and compares diagnostic multisets without changing the GUI databases.
+The readable diagnostics-*.txt and diagnostic-comparison.json are derived
+from those containers. The supplied before GUI log is retained for cross-checking;
+its displayed warning columns are one below stored CBOR columns. Error columns
+already match. All 289 records matched after that display conversion.
+To repeat the capture after making fresh GUI projects and CSV exports:
+  python -m pip install cbor2==6.1.5
+  python preserve_understand_evidence.py --und /Applications/Understand.app/Contents/MacOS/und --before-root BEFORE_CHECKOUT --after-root AFTER_CHECKOUT --before-db BEFORE_DATABASE.und --after-db AFTER_DATABASE.und --exports DIRECTORY_CONTAINING_GUI_CSVS --before-gui-log BEFORE_GUI_LOG.txt --output NEW_EVIDENCE_DIRECTORY
+Use a new output directory. Full binary Understand databases are not committed.
 
 E. Reproduce selected tests
 Recorded environment: Node 25.9.0, npm 11.12.1, TypeScript 5.8.3, Vitest 3.2.4.
@@ -91,6 +112,19 @@ Then change to its packages/cli directory and run:
 
   GEMINI_CLI_TRUST_WORKSPACE=true ../../node_modules/.bin/vitest run src/ui/components/shared/vim-buffer-actions.test.ts src/ui/components/shared/text-buffer.test.ts --coverage.enabled=false --maxWorkers=2 --minWorkers=1
 
+The original baseline passed 423 tests; adding four undo/immutability cases
+gave 200 Vim tests on unchanged production code. After extraction, both selected
+suites passed 427 tests. The two controlled versions have identical test sources.
+For JSON output add --reporter=json --outputFile.json=/absolute/path/result.json.
+The extraction changes only the private function boundary: imports, other action
+branches and text-buffer.ts remain unchanged. Recheck with installed TypeScript:
+  node /absolute/path/to/verify-extraction.mjs AFTER_CHECKOUT /absolute/path/to/structural-verification.json
+From each checkout root, additional checks used were:
+  npm run typecheck --workspace @google/gemini-cli
+  node_modules/.bin/eslint packages/cli/src/ui/components/shared/vim-buffer-actions.ts packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts --max-warnings 0
+  node_modules/.bin/prettier --check packages/cli/src/ui/components/shared/vim-buffer-actions.ts packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts
+  git diff --check
+
 For the separate focused coverage procedure, use the exact recorded commands
 in results/focused-coverage-before/run.command.json and the after counterpart,
 adjusting only working and output paths. Those runs include only the Vim suite
@@ -100,13 +134,11 @@ repository test suite was not run. Prior selected test reports are retained.
 
 Evidence on main
 experiment.json: revisions, source hashes, measurements and limitations.
-procedure.txt: decisions, setup, commands and validation.
 patches/: test-only patch and production extraction patch.
 vim-extraction.bundle: exact commits, with the stated baseline prerequisite.
 results/understand-build-1265-completed/: untouched CSVs, settings, diagnostics.
 results/*vitest.json and focused-coverage-*/: selected tests and focused coverage.
-published-revisions.json and published-reconstruction-check.json: publication
-and the original fresh-clone verification. The current branch is checked in
-branch-verification.json. Historical capture records are retained unchanged.
+published-revisions.json: permanent source URLs and published branch.
+../delivery-manifest.json: retained evidence file hashes.
 Use commit-pinned /blob/<analysis-commit>/ links
 for these evidence files in the report, not mutable main-branch links.

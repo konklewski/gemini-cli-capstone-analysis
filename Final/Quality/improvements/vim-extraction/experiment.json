@@ -3,7 +3,7 @@
   "report_baseline_commit": "4a0749aceac5643e6f85a36d7420314d85e13b52",
   "controlled_before_commit": "8f0a0f2d7d827d7ccd11c3df89631c39af67296f",
   "refactored_commit": "1820eca22b026d6f16c05cc62e845c849aa2f49c",
-  "branch": "codex/vim-handler-extraction",
+  "published_branch": "experiment/vim-extraction",
   "controlled_before_definition": "Report baseline plus four characterization test cases; production source is byte-identical to the report baseline.",
   "change": "Extract the existing vim_change_movement branch into a private handleVimChangeMovement function in the same module.",
   "changed_files": [
@@ -38,15 +38,6 @@
     "bundle_replay_in_fresh_baseline_clone": "passed; controlled before and after source hashes matched; test files were identical",
     "plantuml_syntax_check": "passed; PlantUML server returned HTTP 200 and SVG without a syntax error"
   },
-  "physical_source_span_measurements": {
-    "definition": "Inclusive physical function span including internal comments and blank lines, measured with the TypeScript parser. Not Understand CountLineCode.",
-    "handleVimAction_before": 1686,
-    "handleVimAction_after": 1588,
-    "handleVimChangeMovement_after": 104,
-    "sum_of_these_function_spans_before": 1686,
-    "sum_of_these_function_spans_after": 1692,
-    "interpretation": "The outer handler is 98 physical lines shorter. Extracting the helper adds structure and increases the summed spans by six lines; the underlying movement logic is unchanged."
-  },
   "understand": {
     "status": "Completed: both GUI projects measured with Understand Build 1265; stored before/after diagnostics compared with no additions or removals.",
     "tool_build_for_both_versions": 1265,
@@ -66,7 +57,7 @@
     "diagnostics_in_vim_and_text_buffer_sources_and_tests": 0,
     "metric_comparison": "results/understand-build-1265-completed/metric-comparison.json",
     "diagnostic_comparison": "results/understand-build-1265-completed/diagnostic-comparison.json",
-    "manifest": "results/understand-build-1265-completed/evidence-manifest.json"
+    "manifest": "../delivery-manifest.json"
   },
   "additional_focused_coverage": {
     "date": "2026-10-24",

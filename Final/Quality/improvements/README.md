@@ -1,10 +1,20 @@
-# Proposed quality improvements: supporting diagrams
+# Quality improvements
 
-These diagrams support the *Project quality* improvement section of the final report. They show proposed designs, **not changes implemented in Gemini CLI**. Each is available as an editable SVG and a PNG for easy insertion into the report.
+Supporting files for the final report, based on Gemini CLI `v0.64.0` (`4a0749a`).
 
-- `tool-registration-proposal.svg` shows how built-in tool registration could move out of `Config`. The baseline is [`config.ts`, lines 3974-4129](https://github.com/google-gemini/gemini-cli/blob/4a0749aceac5643e6f85a36d7420314d85e13b52/packages/core/src/config/config.ts#L3974-L4129). The saved [dependency report](../coupling-report.json) records 109 direct dependencies for this file.
-- `vim-handler-proposal.svg` shows how Vim actions could be split by action family, with shared buffer operations extracted to remove the existing import cycle. The baseline is [`vim-buffer-actions.ts`, from line 164](https://github.com/google-gemini/gemini-cli/blob/4a0749aceac5643e6f85a36d7420314d85e13b52/packages/cli/src/ui/components/shared/vim-buffer-actions.ts#L164), [`text-buffer.ts`, lines 30-31](https://github.com/google-gemini/gemini-cli/blob/4a0749aceac5643e6f85a36d7420314d85e13b52/packages/cli/src/ui/components/shared/text-buffer.ts#L30-L31), and the saved [complexity CSV](../packages.csv), where `handleVimAction` has 1,461 code lines and cyclomatic complexity 196. The saved dependency report marks imports between the two modules as circular.
+- [vim-extraction](vim-extraction/REPRODUCING.txt): the implemented change, exact before/after revisions, patches, tests and Understand exports. `vim-change-movement.svg` is the diagram for the report.
+- [config-factory](config-factory/design-evidence.txt): the proposed tool-assembly split, source inventory and component diagram. This proposal was not implemented.
+- [security](security/security-evidence.txt): the dated npm audit exports, two dependency examples and proposed fixes. No dependency update was applied.
 
-Both conceptual UML component diagrams were drawn manually from these files at tag `v0.64.0`, commit `4a0749aceac5643e6f85a36d7420314d85e13b52`, and from the metrics already collected by the group. No before/after metric has been measured because the changes were not implemented. Re-measure with the same Dependency Cruiser, SciTools Understand, and Vitest commands documented in the report if the changes are implemented.
+The Vim handler's cyclomatic complexity changed from 196 to 188. The extracted helper measures 9, so the combined decision count, `sum(Cyclomatic - 1)`, remains 195. Both controlled versions were measured with Understand Build 1265. The original group measurement used Build 1264 and gave the same baseline function values.
 
-The draft report also cites an `npm audit` result, but no machine-readable audit output is currently stored under `Final/Quality/`. Preserve that output, the lockfile revision, and the audit date before claiming that a dependency update reduced the number of findings.
+Raw CSVs, diagnostics, audit outputs and test reports are kept alongside derived summaries. See the Vim reproduction instructions for commands and limitations. `delivery-manifest.json` records the retained files and their SHA-256 hashes; regenerate it with `python create_delivery_manifest.py .` from this folder.
+
+Both diagrams include PlantUML source, SVG and PNG. Render with PlantUML 1.2026.9 (Java required):
+
+```sh
+java -jar /path/to/plantuml-1.2026.9.jar -tsvg vim-extraction/vim-change-movement.puml config-factory/config-tool-assembly-proposal.puml
+java -jar /path/to/plantuml-1.2026.9.jar -tpng vim-extraction/vim-change-movement.puml config-factory/config-tool-assembly-proposal.puml
+```
+
+Renderer: [PlantUML 1.2026.9](https://github.com/plantuml/plantuml/releases/tag/v1.2026.9). JAR SHA-256: `aa4a1d06f8911c4b842beff4828dd955be431692b631a312d04c0e9fab9581de`.

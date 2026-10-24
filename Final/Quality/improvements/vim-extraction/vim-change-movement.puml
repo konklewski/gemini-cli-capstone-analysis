@@ -36,7 +36,6 @@ partition "Existing module: vim-buffer-actions.ts" {
 }
 
 legend bottom
-  Diagram source created with Codex assistance from the implemented extraction.
   Both functions remain in the same file. No new runtime imports are added.
   The pre-existing text-buffer / Vim-handler import cycle remains.
   Both versions measured with Understand Build 1265; raw evidence is retained separately.
