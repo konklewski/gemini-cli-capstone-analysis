@@ -1,0 +1,1210 @@
+{
+  "status": "pass",
+  "report": {
+    "filename": "Final_Group27-4.pdf",
+    "sha256": "0a29de5ff6624b2e0feee5506af369f0af3353957bb52c9f909805f324ef5fb5"
+  },
+  "window": [
+    "2025-09-17T00:00:00Z",
+    "2026-09-17T23:59:59Z"
+  ],
+  "wording_note": "V4 calls the three retained self-declaration account flags three messages. The raw search matches 12 comments, deduplicated by account; 29 flags and 28 cases remain correct.",
+  "checks": [
+    {
+      "claim": "source report checksum",
+      "actual": "0a29de5ff6624b2e0feee5506af369f0af3353957bb52c9f909805f324ef5fb5",
+      "expected": "0a29de5ff6624b2e0feee5506af369f0af3353957bb52c9f909805f324ef5fb5",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: config.py",
+      "actual": "bd38ad79139b05a96ce452159eaef04bc075d24244da4e3ad3f5ecf8936d206c",
+      "expected": "bd38ad79139b05a96ce452159eaef04bc075d24244da4e3ad3f5ecf8936d206c",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: data/raw/commits.json",
+      "actual": "b811bcaa4b6bcd8f9eaebae00eb04f67180a5bf929ad35a782884f66749b0116",
+      "expected": "b811bcaa4b6bcd8f9eaebae00eb04f67180a5bf929ad35a782884f66749b0116",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: data/raw/issue_comments.json",
+      "actual": "8f6489c0f831a56f3040e92e234b9018c75f55b77d6389f290035cabc3239c76",
+      "expected": "8f6489c0f831a56f3040e92e234b9018c75f55b77d6389f290035cabc3239c76",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: data/raw/issue_details.json",
+      "actual": "c4c9a95191801b843721978429901a6562813737ff9b8add095c412aaf2c1b1a",
+      "expected": "c4c9a95191801b843721978429901a6562813737ff9b8add095c412aaf2c1b1a",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: data/raw/issues.json",
+      "actual": "32d46337d8d59f26e1157d0f7e3c73227b4b1fe84047c1b10b08aff028c26ec2",
+      "expected": "32d46337d8d59f26e1157d0f7e3c73227b4b1fe84047c1b10b08aff028c26ec2",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: data/raw/labels.json",
+      "actual": "eb54b49127df842e54a672b4589742a50be6f45b0f1ef638b25fa630c2475ef9",
+      "expected": "eb54b49127df842e54a672b4589742a50be6f45b0f1ef638b25fa630c2475ef9",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: data/raw/pr_details.json",
+      "actual": "979e341cf6ffa212eca21d84b798e72c40b922bba075cad04abf542eddedacda",
+      "expected": "979e341cf6ffa212eca21d84b798e72c40b922bba075cad04abf542eddedacda",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: data/raw/pull_requests.json",
+      "actual": "526680d8152c0879953d588cb5f0632d6c8965c043e1352e938eb276a582d01b",
+      "expected": "526680d8152c0879953d588cb5f0632d6c8965c043e1352e938eb276a582d01b",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: data/raw/review_comments.json",
+      "actual": "b7968de7fbe1c6381d424f6330c594b83150d6e3e68701d497910e51265ab8d6",
+      "expected": "b7968de7fbe1c6381d424f6330c594b83150d6e3e68701d497910e51265ab8d6",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: data/snapshot/manifest.json",
+      "actual": "55ef235a6317c5b3864251776af051f795dc283a4bcdd36e89771f285f12b402",
+      "expected": "55ef235a6317c5b3864251776af051f795dc283a4bcdd36e89771f285f12b402",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: evidence/bot_manual_decisions.csv",
+      "actual": "36074e747a7fa44cd30a8fe330fe977d6af0aa144fa4a56edec42d4875bcba4e",
+      "expected": "36074e747a7fa44cd30a8fe330fe977d6af0aa144fa4a56edec42d4875bcba4e",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: evidence/identity_decisions.csv",
+      "actual": "dc791c618432d350105cec6c3e7a6ad597016c3e5b8d13144ecc2b5be0a1ada4",
+      "expected": "dc791c618432d350105cec6c3e7a6ad597016c3e5b8d13144ecc2b5be0a1ada4",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: evidence/report_expectations.json",
+      "actual": "c097acd790f8685cfec8c1a7987bdc204a3980cd3468241e11b8ae4cc6b7c6af",
+      "expected": "c097acd790f8685cfec8c1a7987bdc204a3980cd3468241e11b8ae4cc6b7c6af",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: output/bot_classification.csv",
+      "actual": "4fa5c2654070bcd6e595f52cae181f3867ab51fd888e56b6dfe60a8e84693bae",
+      "expected": "4fa5c2654070bcd6e595f52cae181f3867ab51fd888e56b6dfe60a8e84693bae",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: output/identity_map.csv",
+      "actual": "07b79d0eda53e8e1ca5b0329e105b731fe61f2512ebd5eb28a5f0a638c1c9764",
+      "expected": "07b79d0eda53e8e1ca5b0329e105b731fe61f2512ebd5eb28a5f0a638c1c9764",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: output/scripted_activity.csv",
+      "actual": "f51f4c66c85710754145dee8dbee9c681c49f6fc95eda1aeda0da90505c41d7d",
+      "expected": "f51f4c66c85710754145dee8dbee9c681c49f6fc95eda1aeda0da90505c41d7d",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: requirements.txt",
+      "actual": "dae3f991ce38c5a86d21cf9e497e00e013b5286df8b99cfb46dc8f0e7291c4f4",
+      "expected": "dae3f991ce38c5a86d21cf9e497e00e013b5286df8b99cfb46dc8f0e7291c4f4",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/activity.py",
+      "actual": "bb0902969ba6e4deefeb0b60d178b1e1f3e57661e35b445ca698ed686dc3b2f3",
+      "expected": "bb0902969ba6e4deefeb0b60d178b1e1f3e57661e35b445ca698ed686dc3b2f3",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/classify_bots.py",
+      "actual": "175f8bf59c2f2212756468e6d0de9ad1f311898d3d51ed299b3c8f6214e2c565",
+      "expected": "175f8bf59c2f2212756468e6d0de9ad1f311898d3d51ed299b3c8f6214e2c565",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/events.py",
+      "actual": "1692fc7b836d7068d6741a3becfa2cf8df2851c309629989f959650ca8703372",
+      "expected": "1692fc7b836d7068d6741a3becfa2cf8df2851c309629989f959650ca8703372",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/fetch_graphql.py",
+      "actual": "0dc9c0f5ad76520af1ca5bd28ec9b1bee090e89fad9c04148d86fb9b401ce74e",
+      "expected": "0dc9c0f5ad76520af1ca5bd28ec9b1bee090e89fad9c04148d86fb9b401ce74e",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/fetch_raw.sh",
+      "actual": "857d55533c3f913250952453200f3f64a9c5bd92649ba29c4f0e84d80af1ba9f",
+      "expected": "857d55533c3f913250952453200f3f64a9c5bd92649ba29c4f0e84d80af1ba9f",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/identify_accounts.py",
+      "actual": "422df243d44c80d6175e84df603d94d1f929c4386f7ac4491abce6f4661b92fa",
+      "expected": "422df243d44c80d6175e84df603d94d1f929c4386f7ac4491abce6f4661b92fa",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/inspect_account.py",
+      "actual": "e1fc36eb12456cf7fc36c60b4581785c505f56595cf2faf1b7520bf4de49520e",
+      "expected": "e1fc36eb12456cf7fc36c60b4581785c505f56595cf2faf1b7520bf4de49520e",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/involvement.py",
+      "actual": "0b14dc3866661b947453bce90e8e9a506bef293af99ab556009468f33c4442a8",
+      "expected": "0b14dc3866661b947453bce90e8e9a506bef293af99ab556009468f33c4442a8",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/match_closures.py",
+      "actual": "4e29050fb99185aeb268ab67b3900c8bcbff7c1309890d3e42be93159ddd48cd",
+      "expected": "4e29050fb99185aeb268ab67b3900c8bcbff7c1309890d3e42be93159ddd48cd",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/plot_commit_concentration.py",
+      "actual": "13d4300fd1c3e187b82663e60172fbfee33200d5b858d0339864f27c8fc787e7",
+      "expected": "13d4300fd1c3e187b82663e60172fbfee33200d5b858d0339864f27c8fc787e7",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/plot_frequency.py",
+      "actual": "6361bedb813f7fbf92a416e60015f7bb4049e56d4fd14e62dc14d75da16f406e",
+      "expected": "6361bedb813f7fbf92a416e60015f7bb4049e56d4fd14e62dc14d75da16f406e",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/plot_newcomers.py",
+      "actual": "aa33477b9360b26965fbc05e29e75aacd6e9c8759b164733c2b548b337fa94ee",
+      "expected": "aa33477b9360b26965fbc05e29e75aacd6e9c8759b164733c2b548b337fa94ee",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/process_metrics.py",
+      "actual": "17cd32cdaaf386eb2c7b9751472a1286b0b1cd50f578a7e4710237797e5187f1",
+      "expected": "17cd32cdaaf386eb2c7b9751472a1286b0b1cd50f578a7e4710237797e5187f1",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/reproduce.py",
+      "actual": "298fa3aa4a77859f473fb30ec8125292eb9cf02efaacb082ee21969415699f1a",
+      "expected": "298fa3aa4a77859f473fb30ec8125292eb9cf02efaacb082ee21969415699f1a",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/sample_conversations.py",
+      "actual": "48a06b96c01319556448d76edec47ad398332f59210b0b271540eba959811a70",
+      "expected": "48a06b96c01319556448d76edec47ad398332f59210b0b271540eba959811a70",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/snapshot.py",
+      "actual": "3266c220a13696cfbd3a8a36820325a7a1e77f2f973287a7badc902de912f9c0",
+      "expected": "3266c220a13696cfbd3a8a36820325a7a1e77f2f973287a7badc902de912f9c0",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/test_metrics.py",
+      "actual": "f8a3ca4a20898ed2498fe12288ca6f37fe22b73863ccb434ac8ee8619a000cef",
+      "expected": "f8a3ca4a20898ed2498fe12288ca6f37fe22b73863ccb434ac8ee8619a000cef",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/test_process_metrics.py",
+      "actual": "c2083765760955e412e52af4d181e3216809b8299c41be45b4d71d2b7071aa54",
+      "expected": "c2083765760955e412e52af4d181e3216809b8299c41be45b4d71d2b7071aa54",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/test_snapshot.py",
+      "actual": "2a20bbab3150c55f7a5d9f2a21e72967f0286266a355c58018b394df4e2c02d3",
+      "expected": "2a20bbab3150c55f7a5d9f2a21e72967f0286266a355c58018b394df4e2c02d3",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/validate.py",
+      "actual": "f3a9d3adfb639a2912e0c1be78cd9b6cd4da16dd8667e54121a0faf1a89e3a2c",
+      "expected": "f3a9d3adfb639a2912e0c1be78cd9b6cd4da16dd8667e54121a0faf1a89e3a2c",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: scripts/verify_report.py",
+      "actual": "02856ab3678f28aaf7bbe6cc7ba6935c680e4de2813c65e5ec68a1c6b8e267af",
+      "expected": "02856ab3678f28aaf7bbe6cc7ba6935c680e4de2813c65e5ec68a1c6b8e267af",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: ../../Interim/Contributor_Collaboration/scripts/common.py",
+      "actual": "07f50c50fdb7902cd188315beabbb6c0aec4d8bfab7c9e7558314c91edc44f89",
+      "expected": "07f50c50fdb7902cd188315beabbb6c0aec4d8bfab7c9e7558314c91edc44f89",
+      "pass": true
+    },
+    {
+      "claim": "input checksum: ../../Interim/Contributor_Collaboration/scripts/detect_bots.py",
+      "actual": "ed6af13bc62eb661ccf659596bc603d3e7817624b32eaf72e2c7001eff6af2bb",
+      "expected": "ed6af13bc62eb661ccf659596bc603d3e7817624b32eaf72e2c7001eff6af2bb",
+      "pass": true
+    },
+    {
+      "claim": "analysis window",
+      "actual": [
+        "2025-09-17T00:00:00Z",
+        "2026-09-17T23:59:59Z"
+      ],
+      "expected": [
+        "2025-09-17T00:00:00Z",
+        "2026-09-17T23:59:59Z"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "participants",
+      "actual": 10610,
+      "expected": 10610,
+      "pass": true
+    },
+    {
+      "claim": "authored_contributors",
+      "actual": 5922,
+      "expected": 5922,
+      "pass": true
+    },
+    {
+      "claim": "frequent",
+      "actual": 77,
+      "expected": 77,
+      "pass": true
+    },
+    {
+      "claim": "newcomer",
+      "actual": 5558,
+      "expected": 5558,
+      "pass": true
+    },
+    {
+      "claim": "dormant",
+      "actual": 1756,
+      "expected": 1756,
+      "pass": true
+    },
+    {
+      "claim": "observed_integrator",
+      "actual": 81,
+      "expected": 81,
+      "pass": true
+    },
+    {
+      "claim": "frequent_and_dormant",
+      "actual": 61,
+      "expected": 61,
+      "pass": true
+    },
+    {
+      "claim": "newcomers_with_prior_observed_participation",
+      "actual": 665,
+      "expected": 665,
+      "pass": true
+    },
+    {
+      "claim": "frequency bands",
+      "actual": {
+        "single_month": 8704,
+        "occasional": 1829,
+        "frequent": 77
+      },
+      "expected": {
+        "single_month": 8704,
+        "occasional": 1829,
+        "frequent": 77
+      },
+      "pass": true
+    },
+    {
+      "claim": "human commit",
+      "actual": 3935,
+      "expected": 3935,
+      "pass": true
+    },
+    {
+      "claim": "human pull_request",
+      "actual": 7951,
+      "expected": 7951,
+      "pass": true
+    },
+    {
+      "claim": "human issue",
+      "actual": 9623,
+      "expected": 9623,
+      "pass": true
+    },
+    {
+      "claim": "human comment",
+      "actual": 31296,
+      "expected": 31296,
+      "pass": true
+    },
+    {
+      "claim": "human review_comment",
+      "actual": 11299,
+      "expected": 11299,
+      "pass": true
+    },
+    {
+      "claim": "human review",
+      "actual": 15588,
+      "expected": 15588,
+      "pass": true
+    },
+    {
+      "claim": "human pull_request_merged",
+      "actual": 4248,
+      "expected": 4248,
+      "pass": true
+    },
+    {
+      "claim": "human pull_request_closed_unmerged",
+      "actual": 2800,
+      "expected": 2800,
+      "pass": true
+    },
+    {
+      "claim": "human issue_closed",
+      "actual": 7400,
+      "expected": 7400,
+      "pass": true
+    },
+    {
+      "claim": "human pull_request_reopened",
+      "actual": 614,
+      "expected": 614,
+      "pass": true
+    },
+    {
+      "claim": "human issue_reopened",
+      "actual": 491,
+      "expected": 491,
+      "pass": true
+    },
+    {
+      "claim": "bot share commit",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "claim": "bot share pull_request",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "claim": "bot share comment",
+      "actual": 58,
+      "expected": 58,
+      "pass": true
+    },
+    {
+      "claim": "bot share review_comment",
+      "actual": 54,
+      "expected": 54,
+      "pass": true
+    },
+    {
+      "claim": "raw accounts",
+      "actual": 10634,
+      "expected": 10634,
+      "pass": true
+    },
+    {
+      "claim": "human accounts",
+      "actual": 10612,
+      "expected": 10612,
+      "pass": true
+    },
+    {
+      "claim": "bot accounts",
+      "actual": 14,
+      "expected": 14,
+      "pass": true
+    },
+    {
+      "claim": "uncertain accounts",
+      "actual": 5,
+      "expected": 5,
+      "pass": true
+    },
+    {
+      "claim": "organization accounts",
+      "actual": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "claim": "probable bots",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "claim": "spam accounts",
+      "actual": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "claim": "manual bot checks",
+      "actual": 22,
+      "expected": 22,
+      "pass": true
+    },
+    {
+      "claim": "eligible_user_accounts",
+      "actual": 570,
+      "expected": 570,
+      "pass": true
+    },
+    {
+      "claim": "templated_median",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "claim": "templated_p95",
+      "actual": 0.36,
+      "expected": 0.36,
+      "pass": true
+    },
+    {
+      "claim": "templated_flags_at_0_6",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "claim": "scripted messages",
+      "actual": 1446,
+      "expected": 1446,
+      "pass": true
+    },
+    {
+      "claim": "scripted accounts",
+      "actual": 18,
+      "expected": 18,
+      "pass": true
+    },
+    {
+      "claim": "robot PRs",
+      "actual": 652,
+      "expected": 652,
+      "pass": true
+    },
+    {
+      "claim": "robot template percent",
+      "actual": 93,
+      "expected": 93,
+      "pass": true
+    },
+    {
+      "claim": "google-admin PRs",
+      "actual": 100,
+      "expected": 100,
+      "pass": true
+    },
+    {
+      "claim": "classification changes at threshold 0.7",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "claim": "classification changes at threshold 0.8",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "claim": "identity decisions",
+      "actual": {
+        "candidates": 29,
+        "cases": 28,
+        "alias_pairs": 4,
+        "unlinked_commits": 2,
+        "different_people": 14,
+        "uncertain": 5,
+        "git_name_variants": 2,
+        "placeholder": 1,
+        "git_name_groups": 2,
+        "shared_email_groups": 0,
+        "login_similarity_groups": 19,
+        "self_declaration_account_flags": 3
+      },
+      "expected": {
+        "candidates": 29,
+        "cases": 28,
+        "alias_pairs": 4,
+        "unlinked_commits": 2,
+        "different_people": 14,
+        "uncertain": 5,
+        "git_name_variants": 2,
+        "placeholder": 1,
+        "git_name_groups": 2,
+        "login_similarity_groups": 19,
+        "self_declaration_account_flags": 3,
+        "shared_email_groups": 0
+      },
+      "pass": true
+    },
+    {
+      "claim": "main-branch commits examined",
+      "actual": 6491,
+      "expected": 6491,
+      "pass": true
+    },
+    {
+      "claim": "frequency threshold 5",
+      "actual": {
+        "exact": 81,
+        "at_least": 158,
+        "commit_percent": 75.22,
+        "pr_percent": 50.06,
+        "review_percent": 79.29
+      },
+      "expected": {
+        "exact": 81,
+        "at_least": 158,
+        "commit_percent": 75.22,
+        "pr_percent": 50.06,
+        "review_percent": 79.29
+      },
+      "pass": true
+    },
+    {
+      "claim": "frequency threshold 6",
+      "actual": {
+        "exact": 27,
+        "at_least": 77,
+        "commit_percent": 68.74,
+        "pr_percent": 44.32,
+        "review_percent": 71.42
+      },
+      "expected": {
+        "exact": 27,
+        "at_least": 77,
+        "commit_percent": 68.74,
+        "pr_percent": 44.32,
+        "review_percent": 71.42
+      },
+      "pass": true
+    },
+    {
+      "claim": "frequency threshold 7",
+      "actual": {
+        "exact": 16,
+        "at_least": 50,
+        "commit_percent": 65.59
+      },
+      "expected": {
+        "exact": 16,
+        "at_least": 50,
+        "commit_percent": 65.59
+      },
+      "pass": true
+    },
+    {
+      "claim": "frequency threshold 8",
+      "actual": {
+        "exact": 13,
+        "at_least": 34,
+        "commit_percent": 58.98
+      },
+      "expected": {
+        "exact": 13,
+        "at_least": 34,
+        "commit_percent": 58.98
+      },
+      "pass": true
+    },
+    {
+      "claim": "dormancy threshold 30",
+      "actual": 1817,
+      "expected": 1817,
+      "pass": true
+    },
+    {
+      "claim": "dormancy threshold 60",
+      "actual": 1756,
+      "expected": 1756,
+      "pass": true
+    },
+    {
+      "claim": "dormancy threshold 90",
+      "actual": 1684,
+      "expected": 1684,
+      "pass": true
+    },
+    {
+      "claim": "frequent gap percentile 0.95",
+      "actual": 14.0,
+      "expected": 14,
+      "pass": true
+    },
+    {
+      "claim": "frequent gap percentile 0.99",
+      "actual": 42.0,
+      "expected": 42,
+      "pass": true
+    },
+    {
+      "claim": "newcomer entry types",
+      "actual": {
+        "issue": 4313,
+        "pull_request": 1240,
+        "commit": 5
+      },
+      "expected": {
+        "issue": 4313,
+        "pull_request": 1240,
+        "commit": 5
+      },
+      "pass": true
+    },
+    {
+      "claim": "monthly newcomers",
+      "actual": {
+        "2025-09": 250,
+        "2025-10": 505,
+        "2025-11": 615,
+        "2025-12": 471,
+        "2026-01": 568,
+        "2026-02": 611,
+        "2026-03": 938,
+        "2026-04": 625,
+        "2026-05": 483,
+        "2026-06": 169,
+        "2026-07": 111,
+        "2026-08": 136,
+        "2026-09": 76
+      },
+      "expected": {
+        "2025-09": 250,
+        "2025-10": 505,
+        "2025-11": 615,
+        "2025-12": 471,
+        "2026-01": 568,
+        "2026-02": 611,
+        "2026-03": 938,
+        "2026-04": 625,
+        "2026-05": 483,
+        "2026-06": 169,
+        "2026-07": 111,
+        "2026-08": 136,
+        "2026-09": 76
+      },
+      "pass": true
+    },
+    {
+      "claim": "commit concentration figure",
+      "actual": {
+        "authors": 453,
+        "top15_commits": 1976,
+        "top15_percent": 50.22
+      },
+      "expected": {
+        "authors": 453,
+        "top15_commits": 1976,
+        "top15_percent": 50.22
+      },
+      "pass": true
+    },
+    {
+      "claim": "absence factor commit",
+      "actual": 15,
+      "expected": 15,
+      "pass": true
+    },
+    {
+      "claim": "absence factor pull_request",
+      "actual": 51,
+      "expected": 51,
+      "pass": true
+    },
+    {
+      "claim": "absence factor review",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "claim": "absence factor pull_request_merged",
+      "actual": 9,
+      "expected": 9,
+      "pass": true
+    },
+    {
+      "claim": "February/March daily growth pull_request",
+      "actual": 31,
+      "expected": 31,
+      "pass": true
+    },
+    {
+      "claim": "February/March daily growth review",
+      "actual": 13,
+      "expected": 13,
+      "pass": true
+    },
+    {
+      "claim": "February/March daily growth pull_request_merged",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "claim": "pr_closure_peak",
+      "actual": [
+        "2026-01",
+        621
+      ],
+      "expected": [
+        "2026-01",
+        621
+      ],
+      "pass": true
+    },
+    {
+      "claim": "issue_closure_peak",
+      "actual": [
+        "2026-05",
+        1503
+      ],
+      "expected": [
+        "2026-05",
+        1503
+      ],
+      "pass": true
+    },
+    {
+      "claim": "issue opening peak",
+      "actual": "2026-03",
+      "expected": "2026-03",
+      "pass": true
+    },
+    {
+      "claim": "partial September days",
+      "actual": [
+        14,
+        17
+      ],
+      "expected": [
+        14,
+        17
+      ],
+      "pass": true
+    },
+    {
+      "claim": "observed dates",
+      "actual": 366,
+      "expected": 366,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: n",
+      "actual": 1525,
+      "expected": 1525,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: response_7d",
+      "actual": 422,
+      "expected": 422,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: response_7d_percent",
+      "actual": 27.7,
+      "expected": 27.7,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: human_review_30d",
+      "actual": 350,
+      "expected": 350,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: human_review_30d_percent",
+      "actual": 23.0,
+      "expected": 23.0,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: merged_30d",
+      "actual": 198,
+      "expected": 198,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: merged_30d_percent",
+      "actual": 13.0,
+      "expected": 13.0,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: closed_unmerged_30d",
+      "actual": 1031,
+      "expected": 1031,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: closed_unmerged_30d_percent",
+      "actual": 67.6,
+      "expected": 67.6,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: open_30d",
+      "actual": 295,
+      "expected": 295,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: open_30d_percent",
+      "actual": 19.3,
+      "expected": 19.3,
+      "pass": true
+    },
+    {
+      "claim": "first_pr: unknown_30d",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: n",
+      "actual": 6205,
+      "expected": 6205,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: response_7d",
+      "actual": 3890,
+      "expected": 3890,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: response_7d_percent",
+      "actual": 62.7,
+      "expected": 62.7,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: human_review_30d",
+      "actual": 3851,
+      "expected": 3851,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: human_review_30d_percent",
+      "actual": 62.1,
+      "expected": 62.1,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: merged_30d",
+      "actual": 3519,
+      "expected": 3519,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: merged_30d_percent",
+      "actual": 56.7,
+      "expected": 56.7,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: closed_unmerged_30d",
+      "actual": 2029,
+      "expected": 2029,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: closed_unmerged_30d_percent",
+      "actual": 32.7,
+      "expected": 32.7,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: open_30d",
+      "actual": 657,
+      "expected": 657,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: open_30d_percent",
+      "actual": 10.6,
+      "expected": 10.6,
+      "pass": true
+    },
+    {
+      "claim": "repeat_pr: unknown_30d",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "claim": "issue: n",
+      "actual": 9446,
+      "expected": 9446,
+      "pass": true
+    },
+    {
+      "claim": "issue: response_7d",
+      "actual": 3526,
+      "expected": 3526,
+      "pass": true
+    },
+    {
+      "claim": "issue: response_7d_percent",
+      "actual": 37.3,
+      "expected": 37.3,
+      "pass": true
+    },
+    {
+      "claim": "pre-merge review",
+      "actual": {
+        "merged_prs": 3856,
+        "with_prior_human_review": 3749,
+        "reviewed_percent": 97.2
+      },
+      "expected": {
+        "merged_prs": 3856,
+        "with_prior_human_review": 3749,
+        "reviewed_percent": 97.2
+      },
+      "pass": true
+    },
+    {
+      "claim": "help_wanted_policy: events",
+      "actual": 1382,
+      "expected": 1382,
+      "pass": true
+    },
+    {
+      "claim": "help_wanted_policy: objects",
+      "actual": 1344,
+      "expected": 1344,
+      "pass": true
+    },
+    {
+      "claim": "help_wanted_policy: without_prior_human_response",
+      "actual": 1167,
+      "expected": 1167,
+      "pass": true
+    },
+    {
+      "claim": "stale_issue: events",
+      "actual": 944,
+      "expected": 944,
+      "pass": true
+    },
+    {
+      "claim": "stale_issue: objects",
+      "actual": 944,
+      "expected": 944,
+      "pass": true
+    },
+    {
+      "claim": "stale_issue: without_prior_human_response",
+      "actual": 516,
+      "expected": 516,
+      "pass": true
+    },
+    {
+      "claim": "stale_issue: without_prior_human_response_percent",
+      "actual": 54.7,
+      "expected": 54.7,
+      "pass": true
+    },
+    {
+      "claim": "eight stratified conversations",
+      "actual": [
+        "https://github.com/google-gemini/gemini-cli/issues/18826",
+        "https://github.com/google-gemini/gemini-cli/issues/26557",
+        "https://github.com/google-gemini/gemini-cli/pull/13717",
+        "https://github.com/google-gemini/gemini-cli/pull/21515",
+        "https://github.com/google-gemini/gemini-cli/pull/23443",
+        "https://github.com/google-gemini/gemini-cli/pull/26079",
+        "https://github.com/google-gemini/gemini-cli/pull/9036",
+        "https://github.com/google-gemini/gemini-cli/pull/9391"
+      ],
+      "expected": [
+        "https://github.com/google-gemini/gemini-cli/issues/18826",
+        "https://github.com/google-gemini/gemini-cli/issues/26557",
+        "https://github.com/google-gemini/gemini-cli/pull/13717",
+        "https://github.com/google-gemini/gemini-cli/pull/21515",
+        "https://github.com/google-gemini/gemini-cli/pull/23443",
+        "https://github.com/google-gemini/gemini-cli/pull/26079",
+        "https://github.com/google-gemini/gemini-cli/pull/9036",
+        "https://github.com/google-gemini/gemini-cli/pull/9391"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "targeted conversation",
+      "actual": [
+        "https://github.com/google-gemini/gemini-cli/pull/16881"
+      ],
+      "expected": [
+        "https://github.com/google-gemini/gemini-cli/pull/16881"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "targeted_random conversation",
+      "actual": [
+        "https://github.com/google-gemini/gemini-cli/pull/16381"
+      ],
+      "expected": [
+        "https://github.com/google-gemini/gemini-cli/pull/16381"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "random sampling seed",
+      "actual": [
+        20261016.0
+      ],
+      "expected": [
+        20261016
+      ],
+      "pass": true
+    },
+    {
+      "claim": "ten frozen conversations",
+      "actual": 10,
+      "expected": 10,
+      "pass": true
+    },
+    {
+      "claim": "raw self-declaration comments before account deduplication",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "claim": "quoted comment 3792342438",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "claim": "quoted comment 4105195325",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "claim": "quoted comment 3340119252",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "claim": "quoted comment 3583157930",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "claim": "quoted comment 3717093737",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "claim": "quoted comment 5053599038",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "claim": "quoted comment 3893359474",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "claim": "quoted comment 4003831080",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "claim": "quoted comment 4003809782",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "claim": "account switch date 4003831080",
+      "actual": "2026-03-05",
+      "expected": "2026-03-05",
+      "pass": true
+    },
+    {
+      "claim": "account switch date 4003809782",
+      "actual": "2026-03-05",
+      "expected": "2026-03-05",
+      "pass": true
+    },
+    {
+      "claim": "bdmorgan burst comments",
+      "actual": 283,
+      "expected": 283,
+      "pass": true
+    },
+    {
+      "claim": "bdmorgan burst minute-label span",
+      "actual": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "claim": "ghost attribution",
+      "actual": {
+        "comment": 96,
+        "pull_request": 78,
+        "issue": 34
+      },
+      "expected": {
+        "pull_request": 78,
+        "issue": 34,
+        "comment": 96
+      },
+      "pass": true
+    },
+    {
+      "claim": "independent mature outcome comparisons",
+      "actual": 17173,
+      "expected": 17173,
+      "pass": true
+    },
+    {
+      "claim": "independent outcome mismatches",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    }
+  ]
+}

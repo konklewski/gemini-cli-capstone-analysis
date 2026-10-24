@@ -1,0 +1,4 @@
+group,n,response_7d,response_7d_percent,human_review_30d,human_review_30d_percent,merged_30d,merged_30d_percent,closed_unmerged_30d,closed_unmerged_30d_percent,closed_30d,closed_30d_percent,open_30d,open_30d_percent,unknown_30d,unknown_30d_percent
+first_pr,1525,422,27.7,350,23.0,198,13.0,1031,67.6,0,0.0,295,19.3,1,0.1
+repeat_pr,6205,3890,62.7,3851,62.1,3519,56.7,2029,32.7,0,0.0,657,10.6,0,0.0
+issue,9446,3526,37.3,0,0.0,0,0.0,0,0.0,4437,47.0,5007,53.0,2,0.0

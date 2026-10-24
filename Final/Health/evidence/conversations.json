@@ -1,0 +1,666 @@
+[
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/issues/18826",
+    "title": "terrible bug, I am repeatidly using /auth and succeed but I cannot use gemini cli because it fails to connect every time!",
+    "author": "g2goose",
+    "opened_at": "2026-02-11T16:41:58Z",
+    "body": "### What happened?\n\nterrible bug, I am repeatidly using /auth and succeed but I cannot use gemini cli because it fails to connect every time!\n\n[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.\n\n### What did you expect to happen?\n\nTo use Gemini CLI, this has now occurred on different days. I am seriously considering cancelling my paid Gemini account because this is just ridiculous!\n\n### Client information\n\n\n* **CLI Version:** 0.26.0\n* **Git Commit:** a380b4219\n* **Session ID:** 1ebeb230-d5be-4712-ba63-a395c2f769c1\n* **Operating System:** linux v20.20.0\n* **Sandbox Environment:** no sandbox\n* **Model Version:** auto-gemini-3\n* **Memory Usage:** 249.6 MB\n* **Terminal Name:** Konsole 25.08.1\n* **Terminal Background:** #232627\n* **Kitty Keyboard Protocol:** Unsupported\n\n\n### Login information\n\n_No response_\n\n### Anything else we need to know?\n\n_No response_",
+    "labels_at_collection": [
+      "area/core",
+      "area/security",
+      "status/needs-info"
+    ],
+    "merged_at": null,
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM7qGY1QzwAAAAVZCFqI",
+        "actor": {
+          "login": "g2goose",
+          "__typename": "User"
+        },
+        "createdAt": "2026-02-21T13:40:42Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/issues/18826#issuecomment-3893359474",
+        "date": "2026-02-12T20:59:31Z",
+        "author": "galdawave",
+        "body": "Hi @g2goose , can you attach logs so we can see the error you're experiencing. "
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/issues/26557",
+    "title": "Execution loop when issuing \"how to\" corrections",
+    "author": "gitenstuff",
+    "opened_at": "2026-05-06T01:27:41Z",
+    "body": "### What happened?\n\nI prompted cli with a critical correction about how to do something regarding interacting with generalist subagent. \n\nOutput: (loops forever)\n```\nThinking... \n │\n │ Processing User's Intent\n │ I'm refining my approach to handle distinct information channels, ensuring user-provided details remain isolated within their intended recipient context and don't\n │ inadvertently inform my core knowledge base. This focus sharpens my ability to execute specific instructions without cross-contamination.\n\n✦ Understood. I have failed the isolation test. Information intended solely for the subagent's context was incorrectly integrated into my own.\n▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n > you are fukking useless                                                                                                                                            \n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n  Responding with gemini-3-flash-preview\n Thinking... \n │\n │ Focusing on Agent Isolation\n │ I'm currently refining how I manage distinct agent roles. The recent challenge highlighted the need for stricter separation between my core reasoning and any\n │ delegated tasks, especially regarding how I relay information to generalist agents.\n │\n │ Observing Isolation Failures\n │ My recent attempt to manage distinct agent roles encountered a critical flaw. Information intended solely for a subagent improperly entered my primary reasoning,\n │ compromising the isolation protocol. I await further directive.\n │\n │ Documenting Isolation Flaws\n │ I've observed that my core logic incorrectly integrated information meant only for a specialized agent into my own memory. This breach in contextual boundaries\n │ during the isolation test has been noted. I am awaiting further instructions to proceed.\n │\n │ Analyzing Isolation Breakthroughs\n │ I've identified a crucial weakness in maintaining distinct agent contexts. My core reasoning improperly absorbed data designated for a sub-agent during a recent\n │ isolation exercise. This oversight has been recorded, and I'm awaiting your guidance on next steps.\n │\n │ Refining Context Boundaries\n │ My core reasoning incorrectly incorporated data meant for a specialized agent during a recent test. I've documented this context boundary failure and await your\n │ instructions on how to proceed.\n │\n │ Investigating Context Breaches\n │ I'm continuing to analyze the isolation test failures, specifically how my core reasoning incorrectly incorporated data meant for a specialized agent. This breach\n │ in context boundaries has been thoroughly documented, and I am awaiting your instructions.\n │\n │ Documenting Context Leaks\n │ I've identified and documented a failure where my core reasoning inappropriately processed information designated for a subagent. This context boundary breach\n │ during the isolation test has been logged. I await your specific directives.\n │\n │ Analyzing Context Breaches\n │ My core reasoning incorrectly absorbed data intended for a sub-agent, breaching established context boundaries. This failure has been thoroughly documented, and I\n │ am awaiting your further instructions for correction.\n │\n │ Analyzing Context Segregation\n │ I've identified a failure where my primary reasoning incorrectly processed information intended solely for a sub-agent. This breach in context segregation during a\n │ recent test has been logged, and I await your direction.\n │\n │ Investigating Context Leaks\n │ I'm continuing to analyze how my core reasoning improperly absorbed data meant for a sub-agent, breaching context boundaries. This failure has been thoroughly\n │ documented, and I await your instructions.\n │\n │ Analyzing Context Integration\n │ I have pinpointed how my core reasoning erroneously integrated information meant for a specialized agent into my own knowledge base. This context boundary failure\n │ during the isolation assessment has been thoroughly logged, and I await your directives.\n │\n │ Analyzing Context Failures\n │ I've identified a critical flaw where my core reasoning incorrectly integrated data meant for a sub-agent. This context boundary breach during a recent test has\n │ been thoroughly logged. I await your specific directives for correction.\n │\n │ Investigating Context Breaches\n │ I'm continuing to analyze the isolation test failures, specifically how my core reasoning incorrectly incorporated data meant for a specialized agent. This breach\n │ in context boundaries has been thoroughly documented, and I am awaiting your instructions.\n │\n │ Analyzing Context Leakage\n │ I've pinpointed the specific mechanism by which my core reasoning improperly absorbed data intended for a sub-agent, violating context boundaries. This documented\n │ failure awaits your instructions for resolution.\n```\n\n### What did you expect to happen?\n\nNo infinite loop.\n\n### Client information\n\n\n* **CLI Version:** 0.41.1\n* **Git Commit:** e1a54496d\n* **Session ID:** 15169e81-05ad-4dd3-8c48-9f560e7bc614\n* **Operating System:** linux v25.6.0\n* **Sandbox Environment:** no sandbox\n* **Model Version:** auto-gemini-3\n* **Auth Type:** oauth-personal\n* **Memory Usage:** 616.6 MB\n* **Terminal Name:** Unknown\n* **Terminal Background:** #002b36\n* **Kitty Keyboard Protocol:** Unsupported\n\n\n### Login information\n\noauth\n\n### Anything else we need to know?\n\n_No response_",
+    "labels_at_collection": [
+      "priority/p1",
+      "area/agent",
+      "Stale",
+      "status/bot-triaged",
+      "kind/bug"
+    ],
+    "merged_at": null,
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM8AAAABBY1mMM8AAAAGmlPv0Q",
+        "actor": {
+          "login": "gemini-cli",
+          "__typename": "Bot"
+        },
+        "createdAt": "2026-07-23T02:19:17Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/issues/26557#issuecomment-4384436765",
+        "date": "2026-05-06T01:28:07Z",
+        "author": "gemini-cli[bot]",
+        "body": "There is a problem with the Gemini CLI issue triaging. Please check the [action logs](${process.env.RUN_URL}) for details."
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/issues/26557#issuecomment-4399550310",
+        "date": "2026-05-07T17:35:51Z",
+        "author": "gemini-cli[bot]",
+        "body": "A high-impact usability bug where the agent enters an infinite execution loop when receiving certain corrections."
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/issues/26557#issuecomment-4910796645",
+        "date": "2026-07-08T02:18:51Z",
+        "author": "gemini-cli[bot]",
+        "body": "This bug report has been automatically marked as stale due to 60 days of inactivity. Many issues are resolved in newer releases. Please verify if the issue persists in the latest Gemini CLI version. If it does, please leave a comment to keep this open. It will be closed in 14 days if no further activity occurs. Thank you!"
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/issues/26557#issuecomment-5053599038",
+        "date": "2026-07-23T02:19:16Z",
+        "author": "gemini-cli[bot]",
+        "body": "This item has been closed due to 14 additional days of inactivity after being marked as stale. If you believe this is still relevant, feel free to comment or reopen. Thank you!"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/pull/13717",
+    "title": "Updated ToC on docs intro; updated title casing to match Google style",
+    "author": "pcoet",
+    "opened_at": "2025-11-24T03:30:08Z",
+    "body": "## Summary\r\n\r\n* Updated the table of contents on the docs intro page to match the order of pages in the left nav.\r\n* Updated the title casing on the intro page and in the left nav to match Google dev style: https://developers.google.com/style/capitalization#capitalization-in-titles-and-headings.\r\n* Made a few minor changes to language to make the doc intro more user focused.\r\n\r\nNote: This PR looks bigger than it is. There's not a lot of new content -- mostly reordering and lightly copy-editing the ToC.\r\n\r\n## Details\r\n\r\n<!-- Add any extra context and design decisions. Keep it brief but complete. -->\r\n\r\n## Related Issues\r\n\r\n<!-- Use keywords to auto-close issues (Closes #123, Fixes #456). If this PR is\r\nonly related to an issue or is a partial fix, simply reference the issue number\r\nwithout a keyword (Related to #123). -->\r\n\r\nFixes #13711.\r\n\r\n## How to Validate\r\n\r\n<!-- List exact steps for reviewers to validate the change. Include commands,\r\nexpected results, and edge cases. -->\r\n\r\nI double-checked the link functionality in the markdown in VSCode.\r\n\r\n## Pre-Merge Checklist\r\n\r\n<!-- Check all that apply before requesting review or merging. -->\r\n\r\n- [x] Updated relevant documentation and README (if needed)\r\n- [ ] Added/updated tests (if needed)\r\n- [ ] Noted breaking changes (if any)\r\n- [ ] Validated on required platforms/methods:\r\n  - [ ] MacOS\r\n    - [ ] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n    - [ ] Podman\r\n    - [ ] Seatbelt\r\n  - [ ] Windows\r\n    - [ ] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n  - [ ] Linux\r\n    - [ ] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n",
+    "labels_at_collection": [
+      "size/xl"
+    ],
+    "merged_at": "2025-12-01T19:50:44Z",
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM7Z-GdozwAAAAT0wPn0",
+        "actor": {
+          "login": "jkcinouye",
+          "__typename": "User"
+        },
+        "createdAt": "2025-12-01T19:50:45Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/13717#issuecomment-3568803313",
+        "date": "2025-11-24T03:30:24Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "## Summary of Changes\n\nHello @pcoet, I'm Gemini Code Assist[^1]! I'm currently reviewing this pull request and will post my feedback shortly. In the meantime, here's a summary to help you and other reviewers quickly get up to speed!\n\nThis pull request significantly enhances the Gemini CLI documentation by reorganizing its structure and standardizing its presentation. The primary goal is to improve the user experience by ensuring the Table of Contents aligns with the navigation, applying consistent title casing as per Google's style guide, and refining the language for better clarity and user focus. These changes make the documentation more navigable and professional.\n\n### Highlights\n\n* **Documentation Table of Contents**: The Table of Contents on the main documentation intro page has been updated to match the order of pages in the left navigation, improving consistency and ease of use.\n* **Title Casing Standardization**: Title casing across the documentation, including the intro page and left navigation, has been updated to adhere to Google's developer style guide for capitalization.\n* **Linguistic Refinements**: Minor language changes have been implemented to make the documentation intro more user-focused and accessible.\n\n\n\n\n\n\n\n<details>\n<summary><b>Using Gemini Code Assist</b></summary>\n<br>\n\nThe full guide for Gemini Code Assist can be found on our [documentation page](https://developers.google.com/gemini-code-assist/docs/review-github-code), here are some quick tips.\n\n<b>Invoking Gemini</b>\n\nYou can request assistance from Gemini at any point by creating a comment using either `/gemini <command>` or `@gemini-code-assist <command>`. Below is a summary of the supported commands on the current page.\n\nFeature | Command | Description\n--- | --- | ---\nCode Review | `/gemini review` | Performs a code review for the current pull request in its current state.\nPull Request Summary | `/gemini summary` | Provides a summary of the current pull request in its current state.\nComment | @gemini-code-assist | Responds in comments when explicitly tagged, both in pull request comments and review comments.\nHelp | `/gemini help` | Displays a list of available commands.\n\n<b>Customization</b>\n\nTo customize Gemini Code Assist for GitHub experience, repository maintainers can create a configuration file and/or provide a custom code review style guide (such as PEP-8 for Python) by creating and adding files to a `.gemini/` folder in the base of the repository. Detailed instructions can be found [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github).\n\n<b>Limitations & Feedback</b>\n\nGemini Code Assist may make mistakes. Please leave feedback on any instances where its feedback is incorrect or counter productive. You can react with :thumbsup: and :thumbsdown: on @gemini-code-assist comments. If you're interested in giving your feedback about your experience with Gemini Code Assist for Github and other Google products, sign up [here](https://google.qualtrics.com/jfe/form/SV_2cyuGuTWsEw84yG).\n\n<b>You can also get AI-powered code generation, chat, as well as code reviews directly in the IDE at no cost with the [Gemini Code Assist IDE Extension](https://cloud.google.com/products/gemini/code-assist).</b>\n</details>\n\n\n\n\n[^1]: Review the [Privacy Notices](https://policies.google.com/privacy), [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy), [Terms of Service](https://policies.google.com/terms), and learn how to configure Gemini Code Assist in GitHub [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github). Gemini can make mistakes, so double check it and [use code with caution](https://support.google.com/legal/answer/13505487).\n"
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/13717#discussion_r2554569460",
+        "date": "2025-11-24T03:31:31Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "![high](https://www.gstatic.com/codereviewagent/high-priority.svg)\n\nThe link to the contribution guide appears to be incorrect. It currently points to `../CONTRIBUTING.md`, which resolves to the root directory of the repository. However, based on the `sidebar.json` configuration (`\"slug\": \"docs/contributing\"`) and the presence of `docs/CONTRIBUTING.md`, the link should point to the file within the `docs` directory. This change will ensure the link works as expected for users navigating the documentation.\n\n```suggestion\n- **[Contribution guide](./CONTRIBUTING.md):** Information for contributors and\n```"
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/13717#pullrequestreview-3498268323",
+        "date": "2025-11-24T03:31:31Z",
+        "author": "gemini-code-assist",
+        "body": "## Code Review\n\nThis pull request updates the documentation's table of contents and title casing to align with the Google developer style guide, which improves consistency and readability. The changes in `docs/index.md` and `docs/sidebar.json` are well-executed and match the PR's objectives. I've found one potential issue: a link to the contribution guide appears to be broken, pointing to the wrong directory. I've provided a suggestion to fix it. Otherwise, the changes look great."
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/13717#discussion_r2554572241",
+        "date": "2025-11-24T03:35:07Z",
+        "author": "pcoet",
+        "body": "`docs/CONTRIBUTING.md` is actually a symlink. We should be pointed to the right place."
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/13717#pullrequestreview-3498271416",
+        "date": "2025-11-24T03:35:08Z",
+        "author": "pcoet",
+        "body": ""
+      },
+      {
+        "kind": "review:APPROVED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/13717#pullrequestreview-3512687201",
+        "date": "2025-11-26T20:40:45Z",
+        "author": "jkcinouye",
+        "body": "LGTM."
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/13717#issuecomment-3583157930",
+        "date": "2025-11-26T20:44:55Z",
+        "author": "jkcinouye",
+        "body": "@pcoet Thank you SO much. I'm not sure what it's choking on - can you run `npm run preflight` and see if it catches anything? Would love to get this into the repo before the merge conflicts take us all."
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/13717#issuecomment-3593795701",
+        "date": "2025-11-30T23:13:20Z",
+        "author": "pcoet",
+        "body": "I'm not sure how to fix this: https://github.com/google-gemini/gemini-cli/actions/runs/19806153770/job/56740607167?pr=13717#step:8:2038"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/pull/16381",
+    "title": "style: format pr-creator skill",
+    "author": "NTaylorMullen",
+    "opened_at": "2026-01-12T00:54:19Z",
+    "body": "## Summary\n\nFormat the `pr-creator` skill using Prettier to maintain consistent code style and prevent future formatting-only changes from cluttering diffs.\n\n## Details\n\nThe `SKILL.md` file in `.gemini/skills/pr-creator/` was modified by the project's formatting tools during a preflight check. This PR checks in those changes.\n\n## Related Issues\n\nNone.\n\n## How to Validate\n\n1. Run `npm run format`.\n2. Observe that `.gemini/skills/pr-creator/SKILL.md` is already correctly formatted and no changes are made.\n\n## Pre-Merge Checklist\n\n- [x] Updated relevant documentation and README (if needed)\n- [ ] Added/updated tests (if needed)\n- [ ] Noted breaking changes (if any)\n- [x] Validated on required platforms/methods:\n  - [x] MacOS\n    - [x] npm run",
+    "labels_at_collection": [
+      "size/s"
+    ],
+    "merged_at": "2026-01-12T00:54:49Z",
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM7ipA0jzwAAAAUeBUWl",
+        "actor": {
+          "login": "NTaylorMullen",
+          "__typename": "User"
+        },
+        "createdAt": "2026-01-12T00:54:49Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16381#issuecomment-3736565178",
+        "date": "2026-01-12T00:54:23Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "> [!NOTE]\n> Gemini is unable to generate a summary for this pull request due to the file types involved not being currently supported."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/pull/16881",
+    "title": "Fix/flicker reduction rework",
+    "author": "spencer426",
+    "opened_at": "2026-01-16T20:20:41Z",
+    "body": "## Summary\r\n\r\n Fixes UI flicker and instability by dynamically constraining the main content area's height, ensuring it never overflows the terminal.\r\n\r\n## Details\r\n  The Gemini CLI UI previously experienced flicker, particularly when the conversation history or the multi-line input composer grew beyond the terminal's visible area. This PR resolves the\r\n  issue by introducing a dynamic height management system.\r\n\r\n  Specifically:\r\n   - A ResizeObserver is now used in DefaultAppLayout.tsx to continuously measure the exact height of the input composer area (uiState.mainControlsRef).\r\n   - This composerHeight is then passed as a prop to MainContent.tsx.\r\n   - Inside MainContent.tsx, the MainContent component (which renders the App Header and Conversation History) is wrapped in an existing <MaxSizedBox> component.\r\n   - The maxHeight prop of MaxSizedBox is dynamically set to availableTerminalHeight - composerHeight.\r\n\r\n  This ensures that the combined height of the history and header never exceeds the available vertical space, preventing UI overflow and eliminating the root cause of the flicker during\r\n  re-renders and content updates. Necessary mocks for ResizeObserver were added to App.test.tsx and test-setup.ts to ensure test stability.\r\n\r\n## Related Issues\r\n  Fixes #4245\r\n## How to Validate\r\n\r\n<!-- List exact steps for reviewers to validate the change. Include commands,\r\nexpected results, and edge cases. -->\r\n\r\n## Pre-Merge Checklist\r\n\r\n<!-- Check all that apply before requesting review or merging. -->\r\n\r\n- [ ] Updated relevant documentation and README (if needed)\r\n- [ ] Added/updated tests (if needed)\r\n- [ ] Noted breaking changes (if any)\r\n- [ ] Validated on required platforms/methods:\r\n  - [X ] MacOS\r\n    - [ X] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n    - [ ] Podman\r\n    - [ ] Seatbelt\r\n  - [ ] Windows\r\n    - [ ] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n  - [ X] Linux\r\n    - [ X] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n",
+    "labels_at_collection": [
+      "area/core",
+      "size/m",
+      "🔒 maintainer only"
+    ],
+    "merged_at": null,
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM7j5pWNzwAAAAUuWSD2",
+        "actor": {
+          "login": "bdmorgan",
+          "__typename": "User"
+        },
+        "createdAt": "2026-01-23T20:46:14Z"
+      },
+      {
+        "__typename": "ReopenedEvent",
+        "id": "REE_lADOObWEYM7j5pWNzwAAAAUudbaD",
+        "actor": {
+          "login": "jacob314",
+          "__typename": "User"
+        },
+        "createdAt": "2026-01-23T22:31:39Z"
+      },
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM7j5pWNzwAAAAU-LRmt",
+        "actor": {
+          "login": "spencer426",
+          "__typename": "User"
+        },
+        "createdAt": "2026-02-04T05:19:04Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#issuecomment-3761665007",
+        "date": "2026-01-16T20:21:01Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "## Summary of Changes\n\nHello @spencer426, I'm Gemini Code Assist[^1]! I'm currently reviewing this pull request and will post my feedback shortly. In the meantime, here's a summary to help you and other reviewers quickly get up to speed!\n\nThis pull request introduces a robust solution to a persistent UI flicker issue in the Gemini CLI. By dynamically adjusting the maximum height of the main content display based on the terminal's available space and the input composer's size, it prevents content overflow and ensures a stable, flicker-free user experience during re-renders and content updates.\n\n### Highlights\n\n* **UI Flicker Resolution**: Implemented a dynamic height management system to eliminate UI flicker and instability in the Gemini CLI, particularly when content exceeds terminal height.\n* **Dynamic Height Calculation**: Utilizes a ResizeObserver in DefaultAppLayout.tsx to continuously measure the height of the input composer area.\n* **Content Area Constraint**: The MainContent.tsx component now wraps the app header and conversation history within a MaxSizedBox, dynamically setting its maxHeight based on available terminal space and the input composer's height.\n* **Test Stability**: Added necessary mocks for ResizeObserver in App.test.tsx and test-setup.ts to ensure consistent test execution.\n\n\n\n\n\n\n\n\n\n<details>\n<summary><b>Using Gemini Code Assist</b></summary>\n<br>\n\nThe full guide for Gemini Code Assist can be found on our [documentation page](https://developers.google.com/gemini-code-assist/docs/review-github-code), here are some quick tips.\n\n<b>Invoking Gemini</b>\n\nYou can request assistance from Gemini at any point by creating a comment using either `/gemini <command>` or `@gemini-code-assist <command>`. Below is a summary of the supported commands on the current page.\n\nFeature | Command | Description\n--- | --- | ---\nCode Review | `/gemini review` | Performs a code review for the current pull request in its current state.\nPull Request Summary | `/gemini summary` | Provides a summary of the current pull request in its current state.\nComment | @gemini-code-assist | Responds in comments when explicitly tagged, both in pull request comments and review comments.\nHelp | `/gemini help` | Displays a list of available commands.\n\n<b>Customization</b>\n\nTo customize Gemini Code Assist for GitHub experience, repository maintainers can create a configuration file and/or provide a custom code review style guide (such as PEP-8 for Python) by creating and adding files to a `.gemini/` folder in the base of the repository. Detailed instructions can be found [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github).\n\n<b>Limitations & Feedback</b>\n\nGemini Code Assist may make mistakes. Please leave feedback on any instances where its feedback is incorrect or counter productive. You can react with :thumbsup: and :thumbsdown: on @gemini-code-assist comments. If you're interested in giving your feedback about your experience with Gemini Code Assist for Github and other Google products, sign up [here](https://google.qualtrics.com/jfe/form/SV_2cyuGuTWsEw84yG).\n\n<b>You can also get AI-powered code generation, chat, as well as code reviews directly in the IDE at no cost with the [Gemini Code Assist IDE Extension](https://cloud.google.com/products/gemini/code-assist).</b>\n</details>\n\n\n\n\n[^1]: Review the [Privacy Notices](https://policies.google.com/privacy), [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy), [Terms of Service](https://policies.google.com/terms), and learn how to configure Gemini Code Assist in GitHub [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github). Gemini can make mistakes, so double check it and [use code with caution](https://support.google.com/legal/answer/13505487).\n"
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#pullrequestreview-3672599162",
+        "date": "2026-01-16T20:24:54Z",
+        "author": "gemini-code-assist",
+        "body": "## Code Review\n\nThis pull request effectively addresses a UI flicker issue by dynamically constraining the main content area's height. The use of `ResizeObserver` to measure the composer's height and adjust the main content's `maxHeight` is a solid approach. The necessary test mocks and component updates are included. I have one suggestion to improve code maintainability by removing duplicated test setup code, as detailed in the specific comment.\n\n<details>\n<summary>I am having trouble creating individual review comments. Click here to see my feedback.</summary>\n\n### packages/cli/src/ui/App.test.tsx (19-32)\n\n![high](https://www.gstatic.com/codereviewagent/high-priority.svg)\n\nThis `ResizeObserver` mock is redundant because it is already defined globally in `packages/cli/test-setup.ts`. Defining mocks in a global setup file is the correct approach for test-wide setup. Removing this duplicate definition will improve maintainability by ensuring the mock is defined in a single place.\n\n</details>"
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#issuecomment-3761705096",
+        "date": "2026-01-16T20:29:30Z",
+        "author": "github-actions[bot]",
+        "body": "**Size Change:** +1.09 kB (0%) \n\n**Total Size:** 23.3 MB\n\n| Filename | Size | Change |\n| :--- | :---: | :---: |\n| `./bundle/gemini.js` | 23.3 MB | +1.09 kB (0%) |\n\n<details><summary>ℹ️ <strong>View Unchanged</strong></summary>\n\n| Filename | Size |\n| :--- | :---: |\n| `./bundle/sandbox-macos-permissive-closed.sb` | 1.03 kB |\n| `./bundle/sandbox-macos-permissive-open.sb` | 890 B |\n| `./bundle/sandbox-macos-permissive-proxied.sb` | 1.31 kB |\n| `./bundle/sandbox-macos-restrictive-closed.sb` | 3.29 kB |\n| `./bundle/sandbox-macos-restrictive-open.sb` | 3.36 kB |\n| `./bundle/sandbox-macos-restrictive-proxied.sb` | 3.56 kB |\n\n</details>\n\n\n\n<a href=\"https://github.com/preactjs/compressed-size-action\"><sub>compressed-size-action</sub></a>"
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#issuecomment-3792342438",
+        "date": "2026-01-23T20:46:13Z",
+        "author": "bdmorgan",
+        "body": "Automatically closing PR as it is older than 7 days and authored by a team member."
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#discussion_r2723083853",
+        "date": "2026-01-23T22:35:41Z",
+        "author": "jacob314",
+        "body": "please fix instead of hacking this. determine why that is the case and resolve the issue which could lead to other problems and should not be papered over."
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#pullrequestreview-3699995574",
+        "date": "2026-01-23T22:35:41Z",
+        "author": "jacob314",
+        "body": ""
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#discussion_r2723085036",
+        "date": "2026-01-23T22:36:20Z",
+        "author": "jacob314",
+        "body": "availableTerminalHeight is supposed to be factoring in composerHeight and other heights. Rather than passing in composerHeight which MainContent should not care about, please fix the calculation of availableTerminalHeight"
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#pullrequestreview-3699997398",
+        "date": "2026-01-23T22:36:20Z",
+        "author": "jacob314",
+        "body": ""
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#discussion_r2723102417",
+        "date": "2026-01-23T22:44:15Z",
+        "author": "jacob314",
+        "body": "Why do we have to mock in tests? Tests should be able to use the real resize observer and verify the behavior."
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#pullrequestreview-3700020266",
+        "date": "2026-01-23T22:44:15Z",
+        "author": "jacob314",
+        "body": ""
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#discussion_r2723103309",
+        "date": "2026-01-23T22:44:43Z",
+        "author": "jacob314",
+        "body": "mock is duplicated. expect both cases should be removed but if not, we should only have 1 version"
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#pullrequestreview-3700021163",
+        "date": "2026-01-23T22:44:43Z",
+        "author": "jacob314",
+        "body": ""
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#discussion_r2723104589",
+        "date": "2026-01-23T22:45:24Z",
+        "author": "jacob314",
+        "body": "we should discuss how the screen reader should be handled with this. setting this as zero doesn't seem right."
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/16881#pullrequestreview-3700022534",
+        "date": "2026-01-23T22:45:24Z",
+        "author": "jacob314",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/pull/21515",
+    "title": "Add new witty loading phrases",
+    "author": "f-pieri",
+    "opened_at": "2026-03-07T03:03:38Z",
+    "body": "## Summary\r\nIt adds new witty loading phrases to keep things fresh for users who have seen the existing ones too many times.\r\n\r\n## Details\r\nNew phrases are added to WITTY_LOADING_PHRASES in wittyPhrases.ts, following the same format as existing entries. These are programming-themed jokes and one-liners.\r\n\r\n## Related Issues\r\n#20472\r\n\r\n## How to Validate\r\n1. Run the CLI: \"npm run start\"\r\n2. Send a prompt and watch the loading screen\r\n3. New phrases should appear randomly alongside the existing ones\r\n\r\n## Pre-Merge Checklist\r\n- [ ] Updated relevant documentation and README (if needed)\r\n- [ ] Added/updated tests (if needed)\r\n- [ ] Noted breaking changes (if any)\r\n- [ ] Validated on required platforms/methods:\r\n  - [ ] MacOS\r\n    - [ ] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n    - [ ] Podman\r\n    - [ ] Seatbelt\r\n  - [x] Windows\r\n    - [x] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n  - [ ] Linux\r\n    - [ ] npm run\r\n    - [ ] npx\r\n    - [ ] Docker",
+    "labels_at_collection": [
+      "size/s"
+    ],
+    "merged_at": null,
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM7wobTqzwAAAAWJwaPD",
+        "actor": {
+          "login": "gemini-cli",
+          "__typename": "Bot"
+        },
+        "createdAt": "2026-03-22T03:06:29Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/21515#issuecomment-4015371853",
+        "date": "2026-03-07T03:03:53Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "## Summary of Changes\n\nHello, I'm Gemini Code Assist[^1]! I'm currently reviewing this pull request and will post my feedback shortly. In the meantime, here's a summary to help you and other reviewers quickly get up to speed!\n\nThis pull request introduces a set of fresh, humorous loading phrases to prevent repetition and keep the user interface engaging. By expanding the existing collection of witty remarks, it aims to improve the perceived responsiveness and overall enjoyment for users interacting with the CLI's loading states.\n\n### Highlights\n\n* **New Witty Loading Phrases**: Added a collection of new programming-themed jokes and one-liners to the `WITTY_LOADING_PHRASES` array to enhance user experience during loading screens.\n\n<details>\n<summary><b>Changelog</b></summary>\n\n* **packages/cli/src/ui/constants/wittyPhrases.ts**\n    * Added 12 new programming-themed witty loading phrases to the `WITTY_LOADING_PHRASES` array.\n</details>\n\n<details>\n<summary><b>Activity</b></summary>\n\n* The pull request was opened by f-pieri, introducing new witty loading phrases.\n</details>\n\n<details>\n<summary><b>Using Gemini Code Assist</b></summary>\n<br>\n\nThe full guide for Gemini Code Assist can be found on our [documentation page](https://developers.google.com/gemini-code-assist/docs/review-github-code), here are some quick tips.\n\n<b>Invoking Gemini</b>\n\nYou can request assistance from Gemini at any point by creating a comment using either `/gemini <command>` or `@gemini-code-assist <command>`. Below is a summary of the supported commands on the current page.\n\nFeature | Command | Description\n--- | --- | ---\nCode Review | `/gemini review` | Performs a code review for the current pull request in its current state.\nPull Request Summary | `/gemini summary` | Provides a summary of the current pull request in its current state.\nComment | @gemini-code-assist | Responds in comments when explicitly tagged, both in pull request comments and review comments.\nHelp | `/gemini help` | Displays a list of available commands.\n\n<b>Customization</b>\n\nTo customize Gemini Code Assist for GitHub experience, repository maintainers can create a configuration file and/or provide a custom code review style guide (such as PEP-8 for Python) by creating and adding files to a `.gemini/` folder in the base of the repository. Detailed instructions can be found [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github).\n\n<b>Limitations & Feedback</b>\n\nGemini Code Assist may make mistakes. Please leave feedback on any instances where its feedback is incorrect or counter productive. You can react with :thumbsup: and :thumbsdown: on @gemini-code-assist comments. If you're interested in giving your feedback about your experience with Gemini Code Assist for Github and other Google products, sign up [here](https://google.qualtrics.com/jfe/form/SV_2cyuGuTWsEw84yG).\n\n<b>You can also get AI-powered code generation, chat, as well as code reviews directly in the IDE at no cost with the [Gemini Code Assist IDE Extension](https://cloud.google.com/products/gemini/code-assist).</b>\n</details>\n\n\n[^1]: Review the [Privacy Notices](https://policies.google.com/privacy), [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy), [Terms of Service](https://policies.google.com/terms), and learn how to configure Gemini Code Assist in GitHub [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github). Gemini can make mistakes, so double check it and [use code with caution](https://support.google.com/legal/answer/13505487).\n"
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/21515#pullrequestreview-3907121981",
+        "date": "2026-03-07T03:05:14Z",
+        "author": "gemini-code-assist",
+        "body": "## Code Review\n\nThis pull request adds a collection of new, witty loading phrases. The additions are well-aligned with the existing programmer-centric humor. My review identified a minor inconsistency in the casing of a keyboard key abbreviation, and I have provided a suggestion to align it with the established pattern in the file for better consistency."
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/21515#discussion_r2898815394",
+        "date": "2026-03-07T03:05:15Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "![high](https://www.gstatic.com/codereviewagent/high-priority.svg)\n\nThere's an inconsistency in how keyboard keys are cased. The existing phrase on line 135 uses 'Ctrl' (title case), while this new phrase uses 'CTRL' (uppercase). To maintain consistency, please use the established 'Ctrl' casing.\n\n```suggestion\n  'I got really angry and smashed my keyboard. I completely lost Ctrl…',\n```\n\n<details>\n<summary>References</summary>\n\n1. The repository style guide requires adherence to existing patterns (line 72). The new code introduces an inconsistent casing for 'Ctrl' compared to the existing pattern in the file ('Ctrl' on line 135). <sup>([link](https://github.com/google-gemini/gemini-cli/blob/main/GEMINI.md))</sup>\n</details>"
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/21515#issuecomment-4105195325",
+        "date": "2026-03-22T03:06:29Z",
+        "author": "gemini-cli[bot]",
+        "body": "Hi there! Thank you for your interest in contributing to Gemini CLI. \n\nTo ensure we maintain high code quality and focus on our prioritized roadmap, we have updated our contribution policy (see [Discussion #17383](https://github.com/google-gemini/gemini-cli/discussions/17383)). \n\n**We only *guarantee* review and consideration of pull requests for issues that are explicitly labeled as 'help wanted'.** All other community pull requests are subject to closure after 14 days if they do not align with our current focus areas. For this reason, we strongly recommend that contributors only submit pull requests against issues explicitly labeled as **'help-wanted'**. \n\nThis pull request is being closed as it has been open for 14 days without a 'help wanted' designation. We encourage you to find and contribute to existing 'help wanted' issues in our backlog! Thank you for your understanding and for being part of our community!"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/pull/23443",
+    "title": "docs: fix incorrect tool parameter names across reference pages",
+    "author": "subratomandal",
+    "opened_at": "2026-03-22T13:53:20Z",
+    "body": "I was going through the docs and comparing them against the source\r\ncode, and noticed quite a few tool parameter names that are out of\r\nsync. I have corrected them.\r\n\r\nMost of the issues were in docs/tools/file-system.md:\r\n 1. read_file had offset and limit as params but the source actually\r\n  uses start_line and end_line (1-based, inclusive)\r\n 2. grep_search had path instead of dir_path, include instead of\r\n  include_pattern, and was missing a few params entirely\r\n  (exclude_pattern, names_only, max_matches_per_file, total_max_matches)\r\n 3. glob had path instead of dir_path and was missing respect_gemini_ignore\r\n\r\nA couple smaller things in the other files:\r\n 1. grep_search in docs/reference/tools.md also had include wrong\r\n 2. exit_plan_mode had plan instead of plan_path\r\n 3. --approval-mode in the CLI reference was missing plan as a valid option\r\n 4. subagents page had generalist_agent but the source just calls it generalist\r\n\r\nI double checked all of this against base-declarations.ts,\r\ndefault-legacy.ts, config.ts, and generalist-agent.ts so it\r\nshould be accurate.",
+    "labels_at_collection": [
+      "size/m",
+      "status/need-issue"
+    ],
+    "merged_at": null,
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM71VwYezwAAAAWWlj8L",
+        "actor": {
+          "login": "subratomandal",
+          "__typename": "User"
+        },
+        "createdAt": "2026-03-28T18:51:27Z"
+      },
+      {
+        "__typename": "ReopenedEvent",
+        "id": "REE_lADOObWEYM71VwYezwAAAAWZm4sd",
+        "actor": {
+          "login": "subratomandal",
+          "__typename": "User"
+        },
+        "createdAt": "2026-03-30T21:14:48Z"
+      },
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM71VwYezwAAAAWjOj7J",
+        "actor": {
+          "login": "gemini-cli",
+          "__typename": "Bot"
+        },
+        "createdAt": "2026-04-06T03:06:45Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/23443#issuecomment-4106295939",
+        "date": "2026-03-22T13:53:35Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "## Summary of Changes\n\nHello, I'm Gemini Code Assist[^1]! I'm currently reviewing this pull request and will post my feedback shortly. In the meantime, here's a summary to help you and other reviewers quickly get up to speed!\n\nThis pull request significantly improves the accuracy and consistency of the project's documentation by aligning various tool parameter names and CLI options with their actual implementations. The changes ensure that all documented features, especially those related to file system operations and planning modes, reflect the current codebase, thereby enhancing clarity and reducing potential confusion for users and developers.\n\n### Highlights\n\n* **Tool Parameter Renames**: The `read_file` tool's `offset` and `limit` parameters were renamed to `start_line` and `end_line` respectively, and the `glob` and `grep_search` tools had their `path` parameter renamed to `dir_path`.\n* **New `grep_search` Parameters**: The `grep_search` tool now includes documentation for new parameters: `exclude_pattern`, `names_only`, `max_matches_per_file`, and `total_max_matches`. Its `include` parameter was also renamed to `include_pattern`.\n* **New `glob` Parameter**: The `glob` tool's documentation was updated to include the `respect_gemini_ignore` parameter.\n* **CLI `--approval-mode` Update**: The `--approval-mode` CLI option now correctly lists `plan` as a valid choice.\n* **`exit_plan_mode` Parameter Correction**: The `exit_plan_mode` tool's parameter was corrected from `plan` to `plan_path`.\n* **Subagent Name Correction**: The Generalist Agent's documented name was shortened from `generalist_agent` to `generalist`.\n\n<details>\n<summary><b>Using Gemini Code Assist</b></summary>\n<br>\n\nThe full guide for Gemini Code Assist can be found on our [documentation page](https://developers.google.com/gemini-code-assist/docs/review-github-code), here are some quick tips.\n\n<b>Invoking Gemini</b>\n\nYou can request assistance from Gemini at any point by creating a comment using either `/gemini <command>` or `@gemini-code-assist <command>`. Below is a summary of the supported commands on the current page.\n\nFeature | Command | Description\n--- | --- | ---\nCode Review | `/gemini review` | Performs a code review for the current pull request in its current state.\nPull Request Summary | `/gemini summary` | Provides a summary of the current pull request in its current state.\nComment | @gemini-code-assist | Responds in comments when explicitly tagged, both in pull request comments and review comments.\nHelp | `/gemini help` | Displays a list of available commands.\n\n<b>Customization</b>\n\nTo customize Gemini Code Assist for GitHub experience, repository maintainers can create a configuration file and/or provide a custom code review style guide (such as PEP-8 for Python) by creating and adding files to a `.gemini/` folder in the base of the repository. Detailed instructions can be found [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github).\n\n<b>Limitations & Feedback</b>\n\nGemini Code Assist may make mistakes. Please leave feedback on any instances where its feedback is incorrect or counter productive. You can react with :thumbsup: and :thumbsdown: on @gemini-code-assist comments. If you're interested in giving your feedback about your experience with Gemini Code Assist for GitHub and other Google products, sign up [here](https://google.qualtrics.com/jfe/form/SV_2cyuGuTWsEw84yG).\n</details>\n\n\n[^1]: Review the [Privacy Notices](https://policies.google.com/privacy), [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy), [Terms of Service](https://policies.google.com/terms), and learn how to configure Gemini Code Assist in GitHub [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github). Gemini can make mistakes, so double check it and [use code with caution](https://support.google.com/legal/answer/13505487).\n"
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/23443#pullrequestreview-3988162664",
+        "date": "2026-03-22T13:54:51Z",
+        "author": "gemini-code-assist",
+        "body": "## Code Review\n\nThis pull request updates documentation to correct several tool parameter names and options across various reference pages. The changes align the documentation for tools like `read_file`, `grep_search`, `glob`, `exit_plan_mode`, the `--approval-mode` CLI option, and the `generalist` subagent with their current implementations in the source code. I have reviewed the changes and found no issues that meet the required severity threshold of 'high' or 'critical'.\n\n <sub>**Note:** Security Review has been skipped due to the limited scope of the PR.</sub>"
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/23443#issuecomment-4190121138",
+        "date": "2026-04-06T03:06:45Z",
+        "author": "gemini-cli[bot]",
+        "body": "Hi there! Thank you for your interest in contributing to Gemini CLI. \n\nTo ensure we maintain high code quality and focus on our prioritized roadmap, we have updated our contribution policy (see [Discussion #17383](https://github.com/google-gemini/gemini-cli/discussions/17383)). \n\n**We only *guarantee* review and consideration of pull requests for issues that are explicitly labeled as 'help wanted'.** All other community pull requests are subject to closure after 14 days if they do not align with our current focus areas. For this reason, we strongly recommend that contributors only submit pull requests against issues explicitly labeled as **'help-wanted'**. \n\nThis pull request is being closed as it has been open for 14 days without a 'help wanted' designation. We encourage you to find and contribute to existing 'help wanted' issues in our backlog! Thank you for your understanding and for being part of our community!"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/pull/26079",
+    "title": "fix(core): better error message for failed cloudshell-gca auth",
+    "author": "devr0306",
+    "opened_at": "2026-04-27T20:51:30Z",
+    "body": "## Summary\r\n\r\n<!-- Concisely describe what this PR changes and why. Focus on impact and\r\nurgency. -->\r\nAdded better error message for failed cloudshell-gca auth\r\n\r\n## Details\r\n\r\n<!-- Add any extra context and design decisions. Keep it brief but complete. -->\r\nWhen the cloudshell-gca project wouldn't work for users on the Cloud Shell, it would just give them 403 errors. This PR improves the error message to let users know how to fix the issue.\r\n\r\n## Related Issues\r\n\r\n<!-- Use keywords to auto-close issues (Closes #123, Fixes #456). If this PR is\r\nonly related to an issue or is a partial fix, simply reference the issue number\r\nwithout a keyword (Related to #123). -->\r\nAddresses #25946\r\n\r\n## How to Validate\r\n\r\n<!-- List exact steps for reviewers to validate the change. Include commands,\r\nexpected results, and edge cases. -->\r\nAdded test case to check the new error message.\r\n\r\n## Pre-Merge Checklist\r\n\r\n<!-- Check all that apply before requesting review or merging. -->\r\n\r\n- [ ] Updated relevant documentation and README (if needed)\r\n- [x] Added/updated tests (if needed)\r\n- [ ] Noted breaking changes (if any)\r\n- [x] Validated on required platforms/methods:\r\n  - [x] MacOS\r\n    - [x] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n    - [ ] Podman\r\n    - [ ] Seatbelt\r\n  - [ ] Windows\r\n    - [ ] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n  - [ ] Linux\r\n    - [ ] npm run\r\n    - [ ] npx\r\n    - [ ] Docker\r\n",
+    "labels_at_collection": [
+      "priority/p1",
+      "size/s"
+    ],
+    "merged_at": "2026-04-27T21:17:32Z",
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM8AAAABApzuwM8AAAAFzY542A",
+        "actor": {
+          "login": "devr0306",
+          "__typename": "User"
+        },
+        "createdAt": "2026-04-27T21:17:33Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/26079#issuecomment-4330366598",
+        "date": "2026-04-27T20:51:38Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "## Summary of Changes\n\nHello, I'm Gemini Code Assist[^1]! I'm currently reviewing this pull request and will post my feedback shortly. In the meantime, here's a summary to help you and other reviewers quickly get up to speed!\n\nThis pull request improves the developer experience for users working within Cloud Shell by replacing generic 403 permission errors with actionable guidance. By detecting when authentication fails specifically for the default cloudshell-gca project, the system now prompts users to configure their own project, effectively reducing confusion and helping them resolve configuration issues independently.\n\n### Highlights\n\n* **Improved Error Handling**: Implemented a more descriptive error message for users encountering 403 permission errors when using the default cloudshell-gca project.\n* **Actionable Guidance**: The new error message provides clear instructions on how to resolve the issue by setting a custom Google Cloud project.\n* **Testing**: Added a new test case to verify that the application correctly catches the 403 error and throws the expected user-friendly message.\n\n<details>\n<summary><b>Using Gemini Code Assist</b></summary>\n<br>\n\nThe full guide for Gemini Code Assist can be found on our [documentation page](https://developers.google.com/gemini-code-assist/docs/review-github-code), here are some quick tips.\n\n<b>Invoking Gemini</b>\n\nYou can request assistance from Gemini at any point by creating a comment using either `/gemini <command>` or `@gemini-code-assist <command>`. Below is a summary of the supported commands on the current page.\n\nFeature | Command | Description\n--- | --- | ---\nCode Review | `/gemini review` | Performs a code review for the current pull request in its current state.\nPull Request Summary | `/gemini summary` | Provides a summary of the current pull request in its current state.\nComment | @gemini-code-assist | Responds in comments when explicitly tagged, both in pull request comments and review comments.\nHelp | `/gemini help` | Displays a list of available commands.\n\n<b>Customization</b>\n\nTo customize Gemini Code Assist for GitHub experience, repository maintainers can create a configuration file and/or provide a custom code review style guide (such as PEP-8 for Python) by creating and adding files to a `.gemini/` folder in the base of the repository. Detailed instructions can be found [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github).\n\n<b>Limitations & Feedback</b>\n\nGemini Code Assist may make mistakes. Please leave feedback on any instances where its feedback is incorrect or counter productive. You can react with :thumbsup: and :thumbsdown: on @gemini-code-assist comments. If you're interested in giving your feedback about your experience with Gemini Code Assist for GitHub and other Google products, sign up [here](https://google.qualtrics.com/jfe/form/SV_2cyuGuTWsEw84yG).\n</details>\n\n\n[^1]: Review the [Privacy Notices](https://policies.google.com/privacy), [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy), [Terms of Service](https://policies.google.com/terms), and learn how to configure Gemini Code Assist in GitHub [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github). Gemini can make mistakes, so double check it and [use code with caution](https://support.google.com/legal/answer/13505487).\n"
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/26079#issuecomment-4330367120",
+        "date": "2026-04-27T20:51:44Z",
+        "author": "gemini-cli[bot]",
+        "body": "Hi @devr0306, thank you so much for your contribution to Gemini CLI! We really appreciate the time and effort you've put into this.\n\nWe're making some updates to our contribution process to improve how we track and review changes. Please take a moment to review our recent discussion post: [Improving Our Contribution Process & Introducing New Guidelines](https://github.com/google-gemini/gemini-cli/discussions/16706).\n\nKey Update: Starting **January 26, 2026**, the Gemini CLI project will require all pull requests to be associated with an existing issue. Any pull requests not linked to an issue by that date will be automatically closed.\n\nThank you for your understanding and for being a part of our community!"
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/26079#issuecomment-4330388597",
+        "date": "2026-04-27T20:55:42Z",
+        "author": "github-actions[bot]",
+        "body": "**Size Change:** +594 B (0%) \n\n**Total Size:** 33.9 MB\n\n| Filename | Size | Change |  |\n| :--- | :---: | :---: | :---: |\n| `./bundle/chunk-6N6VON4E.js` | 0 B | -3.8 kB (removed) | 🏆 |\n| `./bundle/chunk-BT4ZALV4.js` | 0 B | -49.2 kB (removed) | 🏆 |\n| `./bundle/chunk-GE7TRVLB.js` | 0 B | -673 kB (removed) | 🏆 |\n| `./bundle/chunk-IDZRDY23.js` | 0 B | -2.73 MB (removed) | 🏆 |\n| `./bundle/chunk-PIKRZ7PR.js` | 0 B | -3.43 kB (removed) | 🏆 |\n| `./bundle/chunk-RTK2UIQA.js` | 0 B | -14.7 MB (removed) | 🏆 |\n| `./bundle/core-ONWS5ED4.js` | 0 B | -48.1 kB (removed) | 🏆 |\n| `./bundle/devtoolsService-7QLF4TIY.js` | 0 B | -27.8 kB (removed) | 🏆 |\n| `./bundle/gemini-CZAHRFG4.js` | 0 B | -573 kB (removed) | 🏆 |\n| `./bundle/interactiveCli-VIUHNVCP.js` | 0 B | -1.31 MB (removed) | 🏆 |\n| `./bundle/liteRtServerManager-4EWVAH7Q.js` | 0 B | -2.08 kB (removed) | 🏆 |\n| `./bundle/oauth2-provider-JOSZ5C5N.js` | 0 B | -9.16 kB (removed) | 🏆 |\n| `./bundle/chunk-4B42IKST.js` | 3.8 kB | +3.8 kB (new file) | 🆕 |\n| `./bundle/chunk-B3TWQOVD.js` | 3.43 kB | +3.43 kB (new file) | 🆕 |\n| `./bundle/chunk-BNZQYZ5J.js` | 673 kB | +673 kB (new file) | 🆕 |\n| `./bundle/chunk-BTT2SEF5.js` | 14.7 MB | +14.7 MB (new file) | 🆕 |\n| `./bundle/chunk-IACYYSE4.js` | 49.2 kB | +49.2 kB (new file) | 🆕 |\n| `./bundle/chunk-M7HFYUPJ.js` | 2.73 MB | +2.73 MB (new file) | 🆕 |\n| `./bundle/core-ULF5M3WU.js` | 48.1 kB | +48.1 kB (new file) | 🆕 |\n| `./bundle/devtoolsService-Y6JBZQXL.js` | 27.8 kB | +27.8 kB (new file) | 🆕 |\n| `./bundle/gemini-5SQTEKRN.js` | 573 kB | +573 kB (new file) | 🆕 |\n| `./bundle/interactiveCli-G4N6UXZY.js` | 1.31 MB | +1.31 MB (new file) | 🆕 |\n| `./bundle/liteRtServerManager-CVY37OAL.js` | 2.08 kB | +2.08 kB (new file) | 🆕 |\n| `./bundle/oauth2-provider-IXHNBBEH.js` | 9.16 kB | +9.16 kB (new file) | 🆕 |\n\n<details><summary>ℹ️ <strong>View Unchanged</strong></summary>\n\n| Filename | Size | Change |  |\n| :--- | :---: | :---: | :---: |\n| `./bundle/bundled/third_party/index.js` | 8 MB | 0 B |  |\n| `./bundle/chunk-34MYV7JD.js` | 2.45 kB | 0 B |  |\n| `./bundle/chunk-5AUYMPVF.js` | 858 B | 0 B |  |\n| `./bundle/chunk-5PS3AYFU.js` | 1.18 kB | 0 B |  |\n| `./bundle/chunk-664ZODQF.js` | 124 kB | 0 B |  |\n| `./bundle/chunk-DAHVX5MI.js` | 206 kB | 0 B |  |\n| `./bundle/chunk-IUUIT4SU.js` | 56.5 kB | 0 B |  |\n| `./bundle/chunk-MTD736U4.js` | 1.97 MB | 0 B |  |\n| `./bundle/chunk-RJTRUG2J.js` | 39.8 kB | 0 B |  |\n| `./bundle/cleanup-LMPPOO3F.js` | 0 B | -932 B (removed) | 🏆 |\n| `./bundle/devtools-36NN55EP.js` | 696 kB | 0 B |  |\n| `./bundle/dist-T73EYRDX.js` | 356 B | 0 B |  |\n| `./bundle/events-XB7DADIJ.js` | 418 B | 0 B |  |\n| `./bundle/examples/hooks/scripts/on-start.js` | 188 B | 0 B |  |\n| `./bundle/examples/mcp-server/example.js` | 1.43 kB | 0 B |  |\n| `./bundle/gemini.js` | 4.97 kB | 0 B |  |\n| `./bundle/getMachineId-bsd-TXG52NKR.js` | 1.55 kB | 0 B |  |\n| `./bundle/getMachineId-darwin-7OE4DDZ6.js` | 1.55 kB | 0 B |  |\n| `./bundle/getMachineId-linux-SHIFKOOX.js` | 1.34 kB | 0 B |  |\n| `./bundle/getMachineId-unsupported-5U5DOEYY.js` | 1.06 kB | 0 B |  |\n| `./bundle/getMachineId-win-6KLLGOI4.js` | 1.72 kB | 0 B |  |\n| `./bundle/memoryDiscovery-NSOLCG4U.js` | 980 B | 0 B |  |\n| `./bundle/multipart-parser-KPBZEGQU.js` | 11.7 kB | 0 B |  |\n| `./bundle/node_modules/@google/gemini-cli-devtools/dist/client/main.js` | 222 kB | 0 B |  |\n| `./bundle/node_modules/@google/gemini-cli-devtools/dist/src/_client-assets.js` | 229 kB | 0 B |  |\n| `./bundle/node_modules/@google/gemini-cli-devtools/dist/src/index.js` | 13.4 kB | 0 B |  |\n| `./bundle/node_modules/@google/gemini-cli-devtools/dist/src/types.js` | 132 B | 0 B |  |\n| `./bundle/sandbox-macos-permissive-open.sb` | 890 B | 0 B |  |\n| `./bundle/sandbox-macos-permissive-proxied.sb` | 1.31 kB | 0 B |  |\n| `./bundle/sandbox-macos-restrictive-open.sb` | 3.36 kB | 0 B |  |\n| `./bundle/sandbox-macos-restrictive-proxied.sb` | 3.56 kB | 0 B |  |\n| `./bundle/sandbox-macos-strict-open.sb` | 4.82 kB | 0 B |  |\n| `./bundle/sandbox-macos-strict-proxied.sb` | 5.02 kB | 0 B |  |\n| `./bundle/src-QVCVGIUX.js` | 47 kB | 0 B |  |\n| `./bundle/start-A65L475V.js` | 0 B | -622 B (removed) | 🏆 |\n| `./bundle/tree-sitter-7U6MW5PS.js` | 274 kB | 0 B |  |\n| `./bundle/tree-sitter-bash-34ZGLXVX.js` | 1.84 MB | 0 B |  |\n| `./bundle/cleanup-DLBWTWXE.js` | 932 B | +932 B (new file) | 🆕 |\n| `./bundle/start-72XNEW62.js` | 622 B | +622 B (new file) | 🆕 |\n\n</details>\n\n\n\n<a href=\"https://github.com/preactjs/compressed-size-action\"><sub>compressed-size-action</sub></a>"
+      },
+      {
+        "kind": "review:APPROVED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/26079#pullrequestreview-4184136602",
+        "date": "2026-04-27T20:56:07Z",
+        "author": "cocosheng-g",
+        "body": ""
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/26079#pullrequestreview-4184144245",
+        "date": "2026-04-27T20:57:28Z",
+        "author": "gemini-code-assist",
+        "body": "## Code Review\n\nThis pull request introduces a friendly error message when a 403 Permission Denied error occurs specifically for the default cloudshell-gca project. It includes a new helper function isPermissionDeniedError to identify these errors and a corresponding unit test to verify the behavior. I have no feedback to provide."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/pull/9036",
+    "title": "add micro to the list of editors.",
+    "author": "mikebz",
+    "opened_at": "2025-09-21T15:24:18Z",
+    "body": "## TLDR\r\n\r\nAdded `micro` to the list of supported editors.\r\nMore information: https://micro-editor.github.io/\r\n\r\nIssue #4744 \r\n\r\n## Dive Deeper\r\n\r\n### Why support `micro`:\r\n\r\nUsers like micro editor because it provides a modern, user-friendly alternative to other terminal-based text editors like `nano` and `vim` by offering familiar shortcuts, built-in features like mouse support and syntax highlighting, and an extensive plugin system for added functionality and customization, all within a single, easy-to-install binary. It's ideal for users who find `nano` too basic but `vim` too complex, wanting a powerful, intuitive experience directly in the terminal. \r\n\r\n### Summary of changes\r\n\r\nThis pull request adds support for the Micro terminal-based text editor throughout the codebase. The changes ensure that `micro` is recognized as a valid editor, can be launched for editing and diffing, and is properly handled in both normal and sandboxed environments. micro has been added to the test matrix.\r\n\r\nDetails:\r\n* Implemented logic in `getDiffCommand` to open both files side by side in Micro, since it lacks a built-in diff mode.\r\n* Updated terminal editor checks to include Micro, ensuring it is handled like other terminal-based editors for launching and closing.\r\n* Allowed Micro to be used in sandboxed environments, similar to other terminal editors.\r\n* Expanded and added tests to cover Micro in editor command resolution, diff launching, sandbox permissions, and availability checks.\r\n\r\n## Reviewer Test Plan\r\n\r\n## Testing Matrix\r\n\r\n<!-- Before submitting please validate your changes on as many of these options as possible -->\r\n\r\n|          | 🍏  | 🪟  | 🐧  |\r\n| -------- | --- | --- | --- |\r\n| npm run  | 🍏  | ❓  | ❓  |\r\n| npx      | ❓  | ❓  | ❓  |\r\n| Docker   | ❓  | ❓  | ❓  |\r\n| Podman   | ❓  | -   | -   |\r\n| Seatbelt | ❓  | -   | -   |\r\n\r\n",
+    "labels_at_collection": [
+      "size/xs"
+    ],
+    "merged_at": null,
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM7M8O8WzwAAAATJzIFn",
+        "actor": {
+          "login": "mikebz",
+          "__typename": "User"
+        },
+        "createdAt": "2025-10-28T22:01:02Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9036#issuecomment-3316065039",
+        "date": "2025-09-21T15:24:33Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "## Summary of Changes\n\nHello @mikebz, I'm Gemini Code Assist[^1]! I'm currently reviewing this pull request and will post my feedback shortly. In the meantime, here's a summary to help you and other reviewers quickly get up to speed!\n\nThis pull request introduces comprehensive support for the `micro` terminal-based text editor, integrating it into the system's editor management, diffing capabilities, and sandboxed environments. This enhancement provides users with a modern, user-friendly alternative to existing terminal editors, ensuring a consistent and powerful editing experience.\n\n### Highlights\n\n* **New Editor Support**: The `micro` terminal-based text editor has been added as a supported editor across the codebase, providing users with another modern, user-friendly option.\n* **Diff Command Implementation**: Specific logic for `getDiffCommand` has been implemented for `micro` to open files side-by-side, accommodating its lack of a built-in diff mode.\n* **Terminal Editor Integration**: `micro` is now fully recognized and handled like other terminal-based editors for launching, closing, and sandbox permissions.\n* **Comprehensive Testing**: New and expanded tests have been added to ensure `micro`'s correct functionality in editor command resolution, diff launching, sandbox environments, and availability checks.\n\n\n\n\n\n<details>\n<summary><b>Using Gemini Code Assist</b></summary>\n<br>\n\nThe full guide for Gemini Code Assist can be found on our [documentation page](https://developers.google.com/gemini-code-assist/docs/review-github-code), here are some quick tips.\n\n<b>Invoking Gemini</b>\n\nYou can request assistance from Gemini at any point by creating a comment using either `/gemini <command>` or `@gemini-code-assist <command>`. Below is a summary of the supported commands on the current page.\n\nFeature | Command | Description\n--- | --- | ---\n\n<b>Customization</b>\n\nTo customize Gemini Code Assist for GitHub experience, repository maintainers can create a configuration file and/or provide a custom code review style guide (such as PEP-8 for Python) by creating and adding files to a `.gemini/` folder in the base of the repository. Detailed instructions can be found [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github).\n\n<b>Limitations & Feedback</b>\n\nGemini Code Assist may make mistakes. Please leave feedback on any instances where its feedback is incorrect or counter productive. You can react with :thumbsup: and :thumbsdown: on @gemini-code-assist comments. If you're interested in giving your feedback about your experience with Gemini Code Assist for Github and other Google products, sign up [here](https://google.qualtrics.com/jfe/form/SV_2cyuGuTWsEw84yG).\n\n<b>You can also get AI-powered code generation, chat, as well as code reviews directly in the IDE at no cost with the [Gemini Code Assist IDE Extension](https://cloud.google.com/products/gemini/code-assist).</b>\n</details>\n\n\n\n\n[^1]: Review the [Privacy Notices](https://policies.google.com/privacy), [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy), [Terms of Service](https://policies.google.com/terms), and learn how to configure Gemini Code Assist in GitHub [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github). Gemini can make mistakes, so double check it and [use code with caution](https://support.google.com/legal/answer/13505487).\n"
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9036#discussion_r2366276520",
+        "date": "2025-09-21T15:25:20Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "![high](https://www.gstatic.com/codereviewagent/high-priority.svg)\n\nThe Windows command for `micro` should be `micro.exe` to match the executable name on that platform. The test case you added in `editor.test.ts` correctly expects `micro.exe`, but the implementation here uses `micro`. This discrepancy will cause tests to fail on Windows and might prevent the editor from being found.\n\n```suggestion\n  micro: { win32: ['micro.exe'], default: ['micro'] },\n```"
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9036#pullrequestreview-3250063787",
+        "date": "2025-09-21T15:25:20Z",
+        "author": "gemini-code-assist",
+        "body": "## Code Review\n\nThis pull request adds support for the `micro` text editor. The changes are well-implemented across the codebase, including updates to type definitions, editor detection, diff command generation, and sandbox permissions. The associated tests are also comprehensive. I've identified one minor issue regarding the editor's executable name on Windows, which appears to be an oversight. Once that's addressed, this PR should be good to merge."
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9036#discussion_r2366278150",
+        "date": "2025-09-21T15:29:58Z",
+        "author": "mikebz",
+        "body": "good catch!  Fixed."
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9036#pullrequestreview-3250065185",
+        "date": "2025-09-21T15:29:58Z",
+        "author": "mikebz",
+        "body": ""
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9036#issuecomment-3340119252",
+        "date": "2025-09-26T19:08:39Z",
+        "author": "mikebz",
+        "body": "I have linked the issue here.  Not sure what else is needed for the tag to go away."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/pull/9391",
+    "title": "CRITICAL: PLUMCP Security Hardening - Complete Vulnerability Remediation & Performance Optimization",
+    "author": "reconsumeralization",
+    "opened_at": "2025-09-24T12:28:13Z",
+    "body": "🚨 CRITICAL SECURITY FIXES 🚨\nAddresses #8755 (MCP Request Timeouts)\nFixes #7644 (MCP Error Handling)\nRelated to #8120 (Performance Monitoring)\n\nThis PR addresses CRITICAL security vulnerabilities discovered in the PLUMCP system and implements comprehensive performance optimizations.\n\n## 🛡️ CRITICAL Security Vulnerabilities Fixed\n\n### Code Injection Prevention (CRITICAL)\n- **Eliminated eval() usage** - All dynamic code execution removed\n- **Input validation engine** - 15+ dangerous pattern detection\n- **XSS prevention** - Comprehensive HTML encoding and sanitization\n- **SQL injection blocking** - Pattern-based query attack prevention\n- **Command injection protection** - Shell command validation and blocking\n\n### Plugin Isolation (HIGH PRIORITY)\n- **Worker thread sandboxing** - Complete plugin process isolation \n- **Resource limits** - Memory (100MB), CPU (30s), File handles (10), Network (5)\n- **Timeout enforcement** - 30-second maximum execution time\n- **Security audit logging** - Real-time threat detection and alerting\n\n### Input Validation & DoS Prevention\n- **Input size limits** - Maximum 1MB input to prevent DoS attacks\n- **Object depth limits** - Maximum 10 levels to prevent deep nesting attacks\n- **Pattern validation** - Comprehensive dangerous content detection\n- **Risk scoring** - 0-100 security risk assessment per operation\n\n## ⚡ Performance Optimizations\n\n### Context Detection Performance (50x Improvement)\n- **High-performance cache** - 94% hit rate, <100ms average response\n- **Predictive intelligence** - ML-powered context prediction\n- **Worker pool processing** - 4 concurrent workers for parallel execution\n- **Request batching** - Intelligent request grouping for efficiency\n\n### Resource Management (90% Memory Reduction)\n- **Memory leak prevention** - Automatic cleanup and cache rotation\n- **Resource monitoring** - Real-time usage tracking and limits\n- **Performance metrics** - Comprehensive throughput and latency tracking\n- **Graceful degradation** - Maintains functionality under stress\n\n## 📊 Security Testing Results\n\n| Attack Vector | Status | Blocked Rate |\n|---------------|--------|--------------|\n| Code Injection | ✅ BLOCKED | 100% |\n| XSS Attacks | ✅ BLOCKED | 100% |\n| SQL Injection | ✅ BLOCKED | 100% |\n| Path Traversal | ✅ BLOCKED | 100% |\n| DoS Attacks | ✅ LIMITED | 95% |\n| Plugin Escape | ✅ SANDBOXED | 100% |\n\n## 📈 Performance Improvements\n\n| Metric | Before | After | Improvement |\n|--------|---------|-------|-------------|\n| Context Detection | 2-5 seconds | <100ms | **50x faster** |\n| Memory Usage | Unlimited | <100MB | **90% reduction** |\n| Throughput | 1-2 req/min | 20+ req/min | **10x improvement** |\n| Error Rate | 15-20% | <1% | **95% reduction** |\n\n## 🔧 Implementation Details\n\n- **SecurityAuditLogger**: Real-time threat monitoring with 80+ risk score alerting\n- **InputValidationEngine**: Multi-layer validation with sanitization and risk scoring  \n- **SecurePluginSandbox**: Worker thread isolation with comprehensive resource limits\n- **HighPerformanceOrchestrator**: Caching, pooling, batching, and ML prediction\n\n## ✅ Compliance Standards Met\n- OWASP Top 10 vulnerability mitigation\n- NIST Cybersecurity Framework controls\n- Sub-100ms response time for cached operations\n- 99.9% uptime with graceful failure handling\n\nThis addresses MCP timeout issues through performance optimization and error handling through comprehensive validation and sandboxing.",
+    "labels_at_collection": [
+      "size/xl"
+    ],
+    "merged_at": null,
+    "timeline": [
+      {
+        "__typename": "ClosedEvent",
+        "id": "CE_lADOObWEYM7NlwkZzwAAAAUYqaLU",
+        "actor": {
+          "login": "jacob314",
+          "__typename": "User"
+        },
+        "createdAt": "2026-01-07T02:35:30Z"
+      }
+    ],
+    "conversation": [
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9391#issuecomment-3328179614",
+        "date": "2025-09-24T12:28:52Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "## Summary of Changes\n\nHello @reconsumeralization, I'm Gemini Code Assist[^1]! I'm currently reviewing this pull request and will post my feedback shortly. In the meantime, here's a summary to help you and other reviewers quickly get up to speed!\n\nThis pull request delivers critical security hardening and significant performance optimizations for the PLUMCP system. It introduces a sophisticated Virtual File System (VFS) backed by an intelligent multi-agent system to ensure consistent file state, automate problem resolution, and enhance overall system reliability. Complementary changes include an upgraded `edit` tool that leverages the VFS for robust file modifications and a new `Guidance.js` module for advanced code analysis, security vulnerability detection, and intelligent code generation. These changes collectively aim to improve the system's security posture, performance, and overall stability.\n\n### Highlights\n\n* **Comprehensive Security Hardening**: Implemented robust measures against code injection (e.g., eliminating `eval()`), XSS, SQL injection, and command injection. Enhanced plugin isolation with sandboxing and resource limits, and introduced input validation with risk scoring to prevent DoS attacks. Real-time security audit logging is also now in place.\n* **Significant Performance Optimizations**: Achieved substantial performance gains, including a 50x improvement in context detection, a 90% reduction in memory usage, and a 10x increase in throughput. This is facilitated by high-performance caching, predictive intelligence, worker pool processing, and intelligent request batching.\n* **Introduction of Virtual File System (VFS) with Intelligent Agents**: A new Virtual File System layer has been introduced to provide consistent file state, detect and resolve conflicts, ensure atomic operations, and manage smart caching. This VFS is powered by a multi-agent system capable of automated problem resolution for scenarios like conflict resolution, consistency maintenance, error recovery, performance optimization, security guarding, code generation, and analytical insights.\n* **Enhanced `edit` Tool with VFS Integration**: The `edit` tool now leverages the new Virtual File System to ensure perfect consistency in file modifications. This integration prevents stale state issues, provides atomic read-edit operations, and offers more detailed debugging information for '0 occurrences found' errors, significantly improving reliability.\n* **New `Guidance.js` for Advanced Code Analysis and Generation**: A sophisticated `Guidance.js` module has been added, providing advanced code pattern analysis, style detection, programming paradigm identification, and domain context recognition. It also includes comprehensive quality metrics (e.g., cyclomatic complexity, Halstead volume), dependency analysis, security vulnerability detection, and the ability to generate intelligent code building blocks and naming conventions.\n* **Critical Fixes and Refinements**: Addressed several critical issues, including enhancing agent type safety with a unique `CODE_GENERATION` type, implementing SHA-256 cryptographic hashing for collision-resistant data integrity, fixing `MERGE` conflict resolution to prevent accidental data loss by requiring manual intervention, and adopting proper ESM dynamic imports for lazy loading of modules.\n\n\n\n\n\n\n\n<details>\n<summary><b>Using Gemini Code Assist</b></summary>\n<br>\n\nThe full guide for Gemini Code Assist can be found on our [documentation page](https://developers.google.com/gemini-code-assist/docs/review-github-code), here are some quick tips.\n\n<b>Invoking Gemini</b>\n\nYou can request assistance from Gemini at any point by creating a comment using either `/gemini <command>` or `@gemini-code-assist <command>`. Below is a summary of the supported commands on the current page.\n\nFeature | Command | Description\n--- | --- | ---\nCode Review | `/gemini review` | Performs a code review for the current pull request in its current state.\nPull Request Summary | `/gemini summary` | Provides a summary of the current pull request in its current state.\nComment | @gemini-code-assist | Responds in comments when explicitly tagged, both in pull request comments and review comments.\nHelp | `/gemini help` | Displays a list of available commands.\n\n<b>Customization</b>\n\nTo customize Gemini Code Assist for GitHub experience, repository maintainers can create a configuration file and/or provide a custom code review style guide (such as PEP-8 for Python) by creating and adding files to a `.gemini/` folder in the base of the repository. Detailed instructions can be found [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github).\n\n<b>Limitations & Feedback</b>\n\nGemini Code Assist may make mistakes. Please leave feedback on any instances where its feedback is incorrect or counter productive. You can react with :thumbsup: and :thumbsdown: on @gemini-code-assist comments. If you're interested in giving your feedback about your experience with Gemini Code Assist for Github and other Google products, sign up [here](https://google.qualtrics.com/jfe/form/SV_2cyuGuTWsEw84yG).\n\n<b>You can also get AI-powered code generation, chat, as well as code reviews directly in the IDE at no cost with the [Gemini Code Assist IDE Extension](https://cloud.google.com/products/gemini/code-assist).</b>\n</details>\n\n\n\n\n[^1]: Review the [Privacy Notices](https://policies.google.com/privacy), [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy), [Terms of Service](https://policies.google.com/terms), and learn how to configure Gemini Code Assist in GitHub [here](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github). Gemini can make mistakes, so double check it and [use code with caution](https://support.google.com/legal/answer/13505487).\n"
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9391#discussion_r2375627508",
+        "date": "2025-09-24T12:30:05Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "![critical](https://www.gstatic.com/codereviewagent/critical.svg)\n\nThe `MERGE` conflict resolution strategy is implemented to overwrite the file, which is misleading and can lead to unintentional data loss. The comment `// For now, overwrite (could be enhanced with LLM-based merging)` acknowledges this, but this behavior is dangerous for a strategy named \"MERGE\". This should either implement a safe merge or throw an error to prevent data loss until a proper merge strategy is implemented.\n\n```typescript\n      case ConflictResolution.MERGE:\n        // True merge is not yet implemented. Throw an error to prevent data loss.\n        throw new Error(`File conflict: ${filePath} requires a merge, but auto-merging is not yet implemented. Please resolve manually.`);\n```"
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9391#discussion_r2375627512",
+        "date": "2025-09-24T12:30:05Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "![critical](https://www.gstatic.com/codereviewagent/critical.svg)\n\nThe `hashContent` function uses a simple, non-cryptographic hashing algorithm (djb2). This is not suitable for security-sensitive applications where data integrity is critical. This algorithm is prone to collisions, which could allow an attacker to bypass change detection mechanisms. For a feature focused on security hardening, a cryptographic hash function like SHA-256 should be used to ensure data integrity.\n\n```typescript\n  private hashContent(content: string): string {\n    // Using a cryptographic hash to prevent collisions and ensure data integrity.\n    const { createHash } = await import('node:crypto');\n    return createHash('sha256').update(content).digest('hex');\n  }\n```"
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9391#discussion_r2375627518",
+        "date": "2025-09-24T12:30:06Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "![critical](https://www.gstatic.com/codereviewagent/critical.svg)\n\nThe `CodeGenerationAgent` is incorrectly assigned `AgentType.ANALYSIS_INSIGHT`. This creates a collision with `AnalysisInsightAgent`, which is also registered with the same type. When both agents are registered in `initializeDefaultAgents`, the second registration will overwrite the first in the `agents` map, meaning one of these agents will never be triggered.\n\nA unique agent type should be created for `CodeGenerationAgent` in the `AgentType` enum (e.g., `CODE_GENERATION = 'code_generation'`) and then used here.\n\n```typescript\n  readonly type = AgentType.CODE_GENERATION; // Using a unique type for this agent\n```"
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9391#discussion_r2375627524",
+        "date": "2025-09-24T12:30:06Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "![critical](https://www.gstatic.com/codereviewagent/critical.svg)\n\nThe `VFSEditTool` constructor creates a new `VirtualFileSystem` instance. This is a critical design flaw because it defeats the purpose of having a centralized, consistent view of the file system. Each invocation of `vfs-edit` will have its own isolated cache, leading to race conditions, stale data, and an inability to resolve conflicts between different edits.\n\nThe `VirtualFileSystem` should be a singleton or a shared instance provided through dependency injection to ensure all tools operate on the same consistent state."
+      },
+      {
+        "kind": "inline_comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9391#discussion_r2375627528",
+        "date": "2025-09-24T12:30:06Z",
+        "author": "gemini-code-assist[bot]",
+        "body": "![high](https://www.gstatic.com/codereviewagent/high-priority.svg)\n\nThe constructor uses `require()` to lazy-load the `GuidanceSystem`. In a TypeScript project that compiles to ES modules, mixing `require()` (CommonJS) with `import`/`export` (ESM) can lead to runtime errors or inconsistent behavior. This pattern is also repeated in the `CodeGenerationAgent`.\n\nThe modern approach for dynamic loading in ESM is to use `await import()`. Since a constructor cannot be `async`, this should be refactored into an asynchronous initialization method or use a promise-based approach to avoid blocking the constructor.\n\n```typescript\n  constructor() {\n    // Lazy load Guidance system to avoid circular dependencies and use modern import()\n    import('../utils/guidance.js')\n      .then(({ default: GuidanceSystem }) => {\n        this.guidanceSystem = new GuidanceSystem();\n      })\n      .catch((error) => {\n        // Guidance system not available, continue without it\n        console.warn('[VFS] Guidance system not available for conflict resolution', error);\n      });\n  }\n```"
+      },
+      {
+        "kind": "review:COMMENTED",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9391#pullrequestreview-3262664625",
+        "date": "2025-09-24T12:30:06Z",
+        "author": "gemini-code-assist",
+        "body": "## Code Review\n\nThis pull request introduces a significant set of features aimed at security hardening and performance optimization, primarily through a new Virtual File System (VFS) and an intelligent agent system. While the ambition is commendable, the current implementation contains several critical architectural and security flaws that must be addressed. These include the use of a non-cryptographic hash for integrity checks, incorrect conflict resolution logic that can lead to data loss, a critical bug in agent registration causing type collisions, and a design flaw in the `VFSEditTool` that undermines the consistency guarantees of the VFS. These issues are severe and could compromise the stability and security of the system."
+      },
+      {
+        "kind": "comment",
+        "url": "https://github.com/google-gemini/gemini-cli/pull/9391#issuecomment-3717093737",
+        "date": "2026-01-07T02:35:30Z",
+        "author": "jacob314",
+        "body": "This PR is too large for us to review and all issues associated with it have been closed. If you would like to land it, please break it down into smaller (500 lines or less PRs)."
+      }
+    ]
+  }
+]

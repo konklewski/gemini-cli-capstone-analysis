@@ -121,7 +121,8 @@ def main() -> None:
         rows.append({"measure": "S shared: deleted users", "logins": "ghost",
                      "evidence": "GitHub placeholder for deleted accounts"})
 
-    frame = pd.DataFrame(rows).drop_duplicates(["measure", "logins"])
+    frame = pd.DataFrame(rows).drop_duplicates(["measure", "logins"]).sort_values(
+        ["measure", "logins"], kind="stable").reset_index(drop=True)
     frame.to_csv(CANDIDATES, index=False)
     print(f"Wrote {len(frame)} candidates to {CANDIDATES}")
     print(frame["measure"].value_counts().to_string())

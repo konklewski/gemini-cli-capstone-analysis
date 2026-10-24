@@ -259,7 +259,7 @@ def main() -> None:
     import importlib.metadata
     inputs = [p for p in RAW.glob("*.json") if "before_audit" not in p.name]
     inputs += [OUTPUT / n for n in ("bot_classification.csv", "identity_map.csv", "scripted_activity.csv")]
-    inputs += [PROJECT_ROOT / "config.py", PROJECT_ROOT / "requirements.txt", PROJECT_ROOT / "evidence" / "identity_decisions.csv", PROJECT_ROOT / "evidence" / "bot_manual_decisions.csv", *Path(__file__).parent.glob("*.py"), Path(__file__).parent / "fetch_raw.sh"]
+    inputs += [PROJECT_ROOT / "config.py", PROJECT_ROOT / "requirements.txt", PROJECT_ROOT / "evidence" / "identity_decisions.csv", PROJECT_ROOT / "evidence" / "bot_manual_decisions.csv", PROJECT_ROOT / "evidence/report_expectations.json", PROJECT_ROOT / "data/snapshot/manifest.json", *Path(__file__).parent.glob("*.py"), Path(__file__).parent / "fetch_raw.sh"]
     hashes = {}
     for path in sorted(inputs):
         with path.open("rb") as stream:

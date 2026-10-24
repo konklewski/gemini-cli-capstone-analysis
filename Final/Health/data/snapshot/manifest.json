@@ -1,0 +1,45 @@
+{
+  "source": "GitHub exports collected 14\u201316 October 2026",
+  "files": {
+    "commits.json": {
+      "sha256": "b811bcaa4b6bcd8f9eaebae00eb04f67180a5bf929ad35a782884f66749b0116",
+      "gzip_sha256": "f81038313f52ae0414a6842a0809b43646b41102400352c41bb361b474815a16",
+      "bytes": 29109916
+    },
+    "pull_requests.json": {
+      "sha256": "526680d8152c0879953d588cb5f0632d6c8965c043e1352e938eb276a582d01b",
+      "gzip_sha256": "a95e3dc7713bfe979e5243c62d64a7b8dd6078f7033130587589cf606652948c",
+      "bytes": 244197017
+    },
+    "issues.json": {
+      "sha256": "32d46337d8d59f26e1157d0f7e3c73227b4b1fe84047c1b10b08aff028c26ec2",
+      "gzip_sha256": "c998fc10dfd91afd9f25dbbc79bf619dc247282cabccc0b81486bf4c9bb2ee5b",
+      "bytes": 173334814
+    },
+    "issue_comments.json": {
+      "sha256": "8f6489c0f831a56f3040e92e234b9018c75f55b77d6389f290035cabc3239c76",
+      "gzip_sha256": "550184fd94db9828684613a791696cf0a82bb99a49bf7ef23140c7b48ef6cba2",
+      "bytes": 302658542
+    },
+    "review_comments.json": {
+      "sha256": "b7968de7fbe1c6381d424f6330c594b83150d6e3e68701d497910e51265ab8d6",
+      "gzip_sha256": "dcf50bda14f22abb4b9dc5cd5d85371ad99fabb7ecea866bdd4b002fad25972d",
+      "bytes": 121498470
+    },
+    "pr_details.json": {
+      "sha256": "979e341cf6ffa212eca21d84b798e72c40b922bba075cad04abf542eddedacda",
+      "gzip_sha256": "6115f7381977c602bdbd459abac62b5a92c638365406e507d021793a598faefc",
+      "bytes": 37763107
+    },
+    "issue_details.json": {
+      "sha256": "c4c9a95191801b843721978429901a6562813737ff9b8add095c412aaf2c1b1a",
+      "gzip_sha256": "fde3e02bbd3f5a16fb3390b364e8b133d91203d4b49dc2a5c5df2a76b4ddf09a",
+      "bytes": 8284330
+    },
+    "labels.json": {
+      "sha256": "eb54b49127df842e54a672b4589742a50be6f45b0f1ef638b25fa630c2475ef9",
+      "gzip_sha256": "955aa7f72242d8665f29b42eb1a7c23a846bc46e08043104478c290b88e1fd87",
+      "bytes": 24047
+    }
+  }
+}

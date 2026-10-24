@@ -1,0 +1,250 @@
+{
+  "report": {
+    "filename": "Final_Group27-4.pdf",
+    "sha256": "0a29de5ff6624b2e0feee5506af369f0af3353957bb52c9f909805f324ef5fb5"
+  },
+  "population": {
+    "participants": 10610,
+    "authored_contributors": 5922,
+    "frequent": 77,
+    "newcomer": 5558,
+    "dormant": 1756,
+    "observed_integrator": 81,
+    "frequent_and_dormant": 61,
+    "newcomers_with_prior_observed_participation": 665
+  },
+  "frequency_bands": {
+    "single_month": 8704,
+    "occasional": 1829,
+    "frequent": 77
+  },
+  "bots": {
+    "raw_accounts": 10634,
+    "human": 10612,
+    "bot": 14,
+    "uncertain": 5,
+    "organization": 3,
+    "manual_checks": 22,
+    "eligible_user_accounts": 570,
+    "templated_median": 0.0,
+    "templated_p95": 0.36,
+    "templated_flags_at_0_6": 12,
+    "scripted_messages": 1446,
+    "scripted_accounts": 18,
+    "robot_prs": 652,
+    "robot_templated_percent": 93,
+    "admin_prs": 100,
+    "probable_bots": 2,
+    "spam_accounts": 3
+  },
+  "bot_shares_percent": {
+    "commit": 4,
+    "pull_request": 12,
+    "comment": 58,
+    "review_comment": 54
+  },
+  "identities": {
+    "candidates": 29,
+    "cases": 28,
+    "alias_pairs": 4,
+    "unlinked_commits": 2,
+    "different_people": 14,
+    "uncertain": 5,
+    "git_name_variants": 2,
+    "placeholder": 1,
+    "git_name_groups": 2,
+    "login_similarity_groups": 19,
+    "self_declaration_account_flags": 3,
+    "shared_email_groups": 0
+  },
+  "human_activity": {
+    "commit": 3935,
+    "pull_request": 7951,
+    "issue": 9623,
+    "comment": 31296,
+    "review_comment": 11299,
+    "review": 15588,
+    "pull_request_merged": 4248,
+    "pull_request_closed_unmerged": 2800,
+    "issue_closed": 7400,
+    "pull_request_reopened": 614,
+    "issue_reopened": 491
+  },
+  "frequency_thresholds": {
+    "5": {
+      "exact": 81,
+      "at_least": 158,
+      "commit_percent": 75.22,
+      "pr_percent": 50.06,
+      "review_percent": 79.29
+    },
+    "6": {
+      "exact": 27,
+      "at_least": 77,
+      "commit_percent": 68.74,
+      "pr_percent": 44.32,
+      "review_percent": 71.42
+    },
+    "7": {
+      "exact": 16,
+      "at_least": 50,
+      "commit_percent": 65.59
+    },
+    "8": {
+      "exact": 13,
+      "at_least": 34,
+      "commit_percent": 58.98
+    }
+  },
+  "dormancy_thresholds": {
+    "30": 1817,
+    "60": 1756,
+    "90": 1684
+  },
+  "frequent_day_gap_percentiles": {
+    "0.95": 14,
+    "0.99": 42
+  },
+  "newcomer_first_kind": {
+    "issue": 4313,
+    "pull_request": 1240,
+    "commit": 5
+  },
+  "concentration_50pct": {
+    "commit": 15,
+    "pull_request": 51,
+    "review": 12,
+    "pull_request_merged": 9
+  },
+  "monthly": {
+    "feb_march_daily_growth_percent": {
+      "pull_request": 31,
+      "review": 13,
+      "pull_request_merged": 0
+    },
+    "pr_closure_peak": [
+      "2026-01",
+      621
+    ],
+    "issue_closure_peak": [
+      "2026-05",
+      1503
+    ],
+    "issue_opening_peak": "2026-03",
+    "september_observed_days": [
+      14,
+      17
+    ]
+  },
+  "process": {
+    "first_pr": {
+      "n": 1525,
+      "response_7d": 422,
+      "response_7d_percent": 27.7,
+      "human_review_30d": 350,
+      "human_review_30d_percent": 23.0,
+      "merged_30d": 198,
+      "merged_30d_percent": 13.0,
+      "closed_unmerged_30d": 1031,
+      "closed_unmerged_30d_percent": 67.6,
+      "open_30d": 295,
+      "open_30d_percent": 19.3,
+      "unknown_30d": 1
+    },
+    "repeat_pr": {
+      "n": 6205,
+      "response_7d": 3890,
+      "response_7d_percent": 62.7,
+      "human_review_30d": 3851,
+      "human_review_30d_percent": 62.1,
+      "merged_30d": 3519,
+      "merged_30d_percent": 56.7,
+      "closed_unmerged_30d": 2029,
+      "closed_unmerged_30d_percent": 32.7,
+      "open_30d": 657,
+      "open_30d_percent": 10.6,
+      "unknown_30d": 0
+    },
+    "issue": {
+      "n": 9446,
+      "response_7d": 3526,
+      "response_7d_percent": 37.3
+    }
+  },
+  "premerge_review": {
+    "merged_prs": 3856,
+    "with_prior_human_review": 3749,
+    "reviewed_percent": 97.2
+  },
+  "closure_matches": {
+    "help_wanted_policy": {
+      "events": 1382,
+      "objects": 1344,
+      "without_prior_human_response": 1167
+    },
+    "stale_issue": {
+      "events": 944,
+      "objects": 944,
+      "without_prior_human_response": 516,
+      "without_prior_human_response_percent": 54.7
+    }
+  },
+  "sample": {
+    "seed": 20261016,
+    "stratified_urls": [
+      "issues/18826",
+      "issues/26557",
+      "pull/13717",
+      "pull/21515",
+      "pull/23443",
+      "pull/26079",
+      "pull/9036",
+      "pull/9391"
+    ],
+    "targeted_url": "pull/16881",
+    "targeted_random_url": "pull/16381"
+  },
+  "quotes": {
+    "3792342438": "Automatically closing PR as it is older than 7 days and authored by a team member.",
+    "4105195325": "This pull request is being closed as it has been open for 14 days without a 'help wanted' designation.",
+    "3340119252": "Not sure what else is needed for the tag to go away.",
+    "3583157930": "can you run `npm run preflight` and see if it catches anything?",
+    "3717093737": "This PR is too large for us to review",
+    "5053599038": "This item has been closed due to 14 additional days of inactivity after being marked as stale.",
+    "3893359474": "can you attach logs so we can see the error you're experiencing.",
+    "4003831080": "this account is no longer active. I've moved to neeraj-kumarr.",
+    "4003809782": "this is my new GitHub account. **neeraj-par** is my previous account."
+  },
+  "wording_note": "V4 calls the three retained self-declaration account flags three messages. The raw search matches 12 comments, deduplicated by account; 29 flags and 28 cases remain correct.",
+  "window": [
+    "2025-09-17T00:00:00Z",
+    "2026-09-17T23:59:59Z"
+  ],
+  "main_commits_examined": 6491,
+  "ghost_activity": {
+    "pull_request": 78,
+    "issue": 34,
+    "comment": 96
+  },
+  "commit_figure": {
+    "authors": 453,
+    "top15_commits": 1976,
+    "top15_percent": 50.22
+  },
+  "monthly_newcomers": {
+    "2025-09": 250,
+    "2025-10": 505,
+    "2025-11": 615,
+    "2025-12": 471,
+    "2026-01": 568,
+    "2026-02": 611,
+    "2026-03": 938,
+    "2026-04": 625,
+    "2026-05": 483,
+    "2026-06": 169,
+    "2026-07": 111,
+    "2026-08": 136,
+    "2026-09": 76
+  },
+  "raw_self_declaration_comments": 12
+}
