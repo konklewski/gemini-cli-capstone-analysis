@@ -1,0 +1,109 @@
+{
+  "window": {
+    "start": "2025-09-17T00:00:00Z",
+    "end": "2026-09-17T23:59:59Z"
+  },
+  "participants": 10610,
+  "authored_contributors": 5922,
+  "frequent": 77,
+  "newcomer": 5558,
+  "dormant": 1756,
+  "observed_integrator": 81,
+  "no_authored_contribution": 4688,
+  "one_authored_contribution": 4175,
+  "one_action": 5876,
+  "frequent_and_dormant": 61,
+  "integrator_and_dormant": 68,
+  "newcomer_first_kind": {
+    "issue": 4313,
+    "pull_request": 1240,
+    "commit": 5
+  },
+  "newcomers_with_prior_observed_participation": 665,
+  "return_rates": {
+    "authored_later_day": {
+      "returned": 1175,
+      "eligible": 5558,
+      "rate": 0.2114069809283915
+    },
+    "authored_30d": {
+      "returned": 919,
+      "eligible": 5416,
+      "rate": 0.16968242245199408
+    },
+    "any_later_day": {
+      "returned": 2163,
+      "eligible": 5558,
+      "rate": 0.3891687657430731
+    },
+    "any_30d": {
+      "returned": 1809,
+      "eligible": 5416,
+      "rate": 0.33401033973412114
+    }
+  },
+  "months_active_distribution": {
+    "1": 8704,
+    "2": 1267,
+    "3": 339,
+    "4": 142,
+    "5": 81,
+    "6": 27,
+    "7": 16,
+    "8": 13,
+    "9": 7,
+    "10": 10,
+    "11": 1,
+    "12": 2,
+    "13": 1
+  },
+  "inter_active_day_gaps": {
+    "all": {
+      "0.5": 2.0,
+      "0.9": 24.0,
+      "0.95": 47.0,
+      "0.99": 112.0,
+      "max": 292.0
+    },
+    "frequent": {
+      "0.5": 1.0,
+      "0.9": 7.0,
+      "0.95": 14.0,
+      "0.99": 42.0,
+      "max": 106.0
+    }
+  },
+  "coverage": {
+    "events_by_actor_class": {
+      "human": 96691,
+      "bot": 77653,
+      "unattributed": 497,
+      "spam": 43,
+      "organization": 6
+    },
+    "scripted_human_texts": 1446,
+    "window_named_actors_without_classification": 0,
+    "rest_only_openings_in_window": 3,
+    "fallback_closures_in_window": {
+      "graphql_last_closure": 23,
+      "rest_last_closure": 5
+    }
+  },
+  "population_flow": {
+    "raw_named_accounts": 10634,
+    "bot_accounts": 14,
+    "spam_accounts": 3,
+    "organization_accounts": 3,
+    "retained_accounts_before_aliases": 10614,
+    "active_alias_accounts_merged": 3,
+    "placeholder_accounts_excluded": 1,
+    "people_before_scripted_filter": 10610,
+    "scripted_only_people_excluded": 0,
+    "analysis_participants": 10610
+  },
+  "including_flagged_texts": {
+    "participants": 10610,
+    "frequent": 77,
+    "dormant": 1756
+  }
+}

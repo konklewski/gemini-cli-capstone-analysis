@@ -1,0 +1,7 @@
+# Raw GitHub exports are large and commit records contain author emails.
+data/raw/*
+!data/raw/fetch_log.md
+
+# The full activity table is regenerated from the raw exports.
+data/processed/*
+!data/processed/.gitkeep

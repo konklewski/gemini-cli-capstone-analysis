@@ -1,0 +1,12 @@
+kind,human_events,people_for_50pct,people_for_80pct
+commit,3935,15,55
+pull_request,7951,51,425
+issue,9623,505,2940
+comment,31296,198,2068
+review_comment,11299,12,50
+review,15588,12,44
+pull_request_merged,4248,9,22
+pull_request_closed_unmerged,2800,12,117
+issue_closed,7400,8,29
+pull_request_reopened,614,11,31
+issue_reopened,491,4,22

@@ -1,0 +1,11 @@
+stage,count
+raw_named_accounts,10634
+bot_accounts,14
+spam_accounts,3
+organization_accounts,3
+retained_accounts_before_aliases,10614
+active_alias_accounts_merged,3
+placeholder_accounts_excluded,1
+people_before_scripted_filter,10610
+scripted_only_people_excluded,0
+analysis_participants,10610

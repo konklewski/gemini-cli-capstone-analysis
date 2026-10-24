@@ -1,0 +1,40 @@
+{
+  "inputs_sha256": {
+    "config.py": "bd38ad79139b05a96ce452159eaef04bc075d24244da4e3ad3f5ecf8936d206c",
+    "data/raw/commits.json": "b811bcaa4b6bcd8f9eaebae00eb04f67180a5bf929ad35a782884f66749b0116",
+    "data/raw/issue_comments.json": "8f6489c0f831a56f3040e92e234b9018c75f55b77d6389f290035cabc3239c76",
+    "data/raw/issue_details.json": "c4c9a95191801b843721978429901a6562813737ff9b8add095c412aaf2c1b1a",
+    "data/raw/issues.json": "32d46337d8d59f26e1157d0f7e3c73227b4b1fe84047c1b10b08aff028c26ec2",
+    "data/raw/labels.json": "eb54b49127df842e54a672b4589742a50be6f45b0f1ef638b25fa630c2475ef9",
+    "data/raw/pr_details.json": "979e341cf6ffa212eca21d84b798e72c40b922bba075cad04abf542eddedacda",
+    "data/raw/pull_requests.json": "526680d8152c0879953d588cb5f0632d6c8965c043e1352e938eb276a582d01b",
+    "data/raw/review_comments.json": "b7968de7fbe1c6381d424f6330c594b83150d6e3e68701d497910e51265ab8d6",
+    "evidence/bot_manual_decisions.csv": "36074e747a7fa44cd30a8fe330fe977d6af0aa144fa4a56edec42d4875bcba4e",
+    "evidence/identity_decisions.csv": "dc791c618432d350105cec6c3e7a6ad597016c3e5b8d13144ecc2b5be0a1ada4",
+    "output/bot_classification.csv": "4fa5c2654070bcd6e595f52cae181f3867ab51fd888e56b6dfe60a8e84693bae",
+    "output/identity_map.csv": "07b79d0eda53e8e1ca5b0329e105b731fe61f2512ebd5eb28a5f0a638c1c9764",
+    "output/scripted_activity.csv": "f51f4c66c85710754145dee8dbee9c681c49f6fc95eda1aeda0da90505c41d7d",
+    "requirements.txt": "dae3f991ce38c5a86d21cf9e497e00e013b5286df8b99cfb46dc8f0e7291c4f4",
+    "scripts/activity.py": "bb0902969ba6e4deefeb0b60d178b1e1f3e57661e35b445ca698ed686dc3b2f3",
+    "scripts/classify_bots.py": "175f8bf59c2f2212756468e6d0de9ad1f311898d3d51ed299b3c8f6214e2c565",
+    "scripts/events.py": "1692fc7b836d7068d6741a3becfa2cf8df2851c309629989f959650ca8703372",
+    "scripts/fetch_graphql.py": "0dc9c0f5ad76520af1ca5bd28ec9b1bee090e89fad9c04148d86fb9b401ce74e",
+    "scripts/fetch_raw.sh": "857d55533c3f913250952453200f3f64a9c5bd92649ba29c4f0e84d80af1ba9f",
+    "scripts/identify_accounts.py": "4bb61aa561b8c1487be92519b2ceaeee149d881e68606960e2bacb4e891a29b7",
+    "scripts/inspect_account.py": "e1fc36eb12456cf7fc36c60b4581785c505f56595cf2faf1b7520bf4de49520e",
+    "scripts/involvement.py": "85d6e0bb671891d5e8e66668401afafe8ca034fbb75f8407044f6620eaaa574c",
+    "scripts/plot_commit_concentration.py": "13d4300fd1c3e187b82663e60172fbfee33200d5b858d0339864f27c8fc787e7",
+    "scripts/plot_frequency.py": "6361bedb813f7fbf92a416e60015f7bb4049e56d4fd14e62dc14d75da16f406e",
+    "scripts/plot_newcomers.py": "aa33477b9360b26965fbc05e29e75aacd6e9c8759b164733c2b548b337fa94ee",
+    "scripts/test_metrics.py": "f8a3ca4a20898ed2498fe12288ca6f37fe22b73863ccb434ac8ee8619a000cef",
+    "scripts/validate.py": "f3a9d3adfb639a2912e0c1be78cd9b6cd4da16dd8667e54121a0faf1a89e3a2c",
+    "../../Interim/Contributor_Collaboration/scripts/common.py": "07f50c50fdb7902cd188315beabbb6c0aec4d8bfab7c9e7558314c91edc44f89",
+    "../../Interim/Contributor_Collaboration/scripts/detect_bots.py": "ed6af13bc62eb661ccf659596bc603d3e7817624b32eaf72e2c7001eff6af2bb"
+  },
+  "python": "3.11.15",
+  "packages": {
+    "pandas": "2.3.3",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.2"
+  }
+}

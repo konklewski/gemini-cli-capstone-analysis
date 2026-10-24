@@ -1,0 +1,29 @@
+measure,logins,decision,canonical,reason,evidence
+M3 self-declaration + M2,neeraj-kumarr;neeraj-par,same person,neeraj-kumarr,both accounts declare it: 'neeraj-par is my previous account' / 'this account is no longer active. I've moved to neeraj-kumarr',https://github.com/google-gemini/gemini-cli/issues/21230#issuecomment-4003809782
+M2 similar login,shishu314;shishu314-alt,same person,shishu314,alt commit is co-authored by shishu314; alt PRs only test whether the e2e workflow triggers for outside PRs,https://github.com/google-gemini/gemini-cli/commit/39cc07de305a1edf5f1957d65e949f06607d3d47
+M2 similar login,matt-korwel-alt;mattKorwel,same person,mattKorwel,alt account created 2025-09 for one PR described as 'testing only'; -alt suffix; owner is a Google maintainer,https://github.com/google-gemini/gemini-cli/pull/11306
+M1a same git name,jdemeulenaere;jdemeulenaere-google,same person,jdemeulenaere,same git name Jordan Demeulenaere; personal profile lists Google; -google account commits with google.com email (no activity in window),https://github.com/jdemeulenaere-google
+M1c unlinked commit,kklashtorny,same person,kklashtorny,window commit by Kirill Klashtorny with google.com email not linked to any account; login kklashtorny matches the surname,https://github.com/google-gemini/gemini-cli/commit/6be32e9383a0c5868021d45b74fd1d6473b6fcaa
+M1c unlinked commit,MushuEE,same person,MushuEE,window commit by Grant McCloskey (bucknell.edu email) not linked; GitHub user search: MushuEE profile name Grant McCloskey (Google),https://github.com/google-gemini/gemini-cli/commit/a3af4a8caedfbccc3f1339f9d62bb21111aaa8c2
+M3 self-declaration,yashv6655,uncertain,,says 'I accidentally committed with my work GitHub account' but the work account is not visible in the data (commits were rebased),https://github.com/google-gemini/gemini-cli/pull/6616#issuecomment-3320290051
+M1a same git name,Kkartik14;kartikangiras,different people,,only the first name Kartik matches; different companies (Swiggy vs none); different emails; accounts created 2021 vs 2024,https://github.com/Kkartik14
+S shared: several names and emails,eLyiN,one person,,names Adrian Arribas and Shelakh; profile company 'Shelakh Web Solutions' and email domain shelakh.com: the second name is his company,https://github.com/eLyiN
+S shared: several names and emails,gsquared94,one person,,'Gaurav' and 'Gaurav Ghosh' are short and full form of one name,https://github.com/gsquared94
+S shared: deleted users,ghost,attribution placeholder,,Deleted-account attribution cannot identify individuals or establish a shared operational account; exclude ghost from per-person metrics,https://github.com/ghost
+M2 similar login,ATHARVA262005;atharva081106,different people,,Atharva Ralegankar vs Atharva Wani,https://github.com/ATHARVA262005
+M2 similar login,Ankit-Raj27;ankitraj360,different people,,named Ankit Raj Kushwaha (2021) vs empty profile created 2025; one item each months apart,https://github.com/Ankit-Raj27
+M2 similar login,Ayush12358;ayush0402,different people,,Ayush Maurya (Hyderabad) vs Ayush Kumar,https://github.com/Ayush12358
+M2 similar login,Harsh63870;Harsh9485,different people,,Harsh Vardhan Pandey vs Harsh Singh Panwar,https://github.com/Harsh63870
+M2 similar login,Rajveer173;rajveer43,different people,,Rajveer Rahul Kharadepatil vs Rockerz (Ahmedabad),https://github.com/Rajveer173
+M2 similar login,Louis454545;louis030195,different people,,Louis Barnoux (France) vs Louis Beaumont (San Francisco),https://github.com/Louis454545
+M2 similar login,Viktor286;viktor02,different people,,Victor Anderson (New York) vs Viktor Karpov (Saint Petersburg),https://github.com/viktor02
+M2 similar login,Ahmed;ahmed775216,different people,,common first name; accounts created 2010 (Brooklyn) vs 2022,https://github.com/Ahmed
+M2 similar login,Chirag6722;chirag127,different people,,Chirag Honnyal vs Chirag Singhal,https://github.com/Chirag6722
+M2 similar login,Dragon1573;dragon15555000,different people,,Shenzhen vs Marcin Gallos (Poland),https://github.com/dragon15555000
+M2 similar login,Daniel15;daniel2887,different people,,Daniel Lo Nigro (2009) vs empty profile (2013); common first name,https://github.com/Daniel15
+M2 similar login,kranthik10;kranthik123,different people,,Kranthi Kavuri (2013) vs empty profile (2018),https://github.com/kranthik123
+M2 similar login,Chrisb4;chrisb128,different people,,Chris Brown (2016) vs empty profile (2013); common name,https://github.com/Chrisb4
+M2 similar login,zhaowy313;zhaowy3131,uncertain,,near-identical logins but empty profiles; created 2015 vs 2022; 2 and 1 items,https://github.com/zhaowy3131
+M2 similar login,Victor9578;victor9000,uncertain,,empty profiles; no shared evidence,https://github.com/Victor9578
+M2 similar login,coder11125;coder1249,uncertain,,generic login; one named Shashvath; no shared evidence,https://github.com/coder11125
+M2 similar login,robert19066;robert4948,uncertain,,empty or nickname profiles; one item each,https://github.com/robert4948

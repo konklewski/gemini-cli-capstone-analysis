@@ -1,0 +1,12 @@
+kind,bot,human,human_scripted,organization,spam,unattributed
+commit,172,3935,0,0,0,0
+pull_request,1138,7951,0,0,0,78
+issue,167,9623,0,1,42,34
+comment,45191,31296,1407,1,0,96
+review_comment,13135,11299,39,0,0,64
+review,10914,15588,0,0,0,70
+pull_request_merged,63,4248,0,0,0,42
+pull_request_closed_unmerged,2684,2800,0,3,0,50
+issue_closed,4129,7400,0,1,1,56
+pull_request_reopened,60,614,0,0,0,6
+issue_reopened,0,491,0,0,0,1
