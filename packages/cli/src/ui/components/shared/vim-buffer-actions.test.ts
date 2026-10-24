@@ -1362,6 +1362,29 @@ describe('vim-buffer-actions', () => {
     });
 
     describe('vim_change_movement', () => {
+      it.each(['h', 'j', 'k', 'l'] as const)(
+        'records an undo snapshot without mutating the input for %s',
+        (movement) => {
+          const state = createTestState(['alpha', 'beta', 'gamma'], 1, 2);
+          const originalState = structuredClone(state);
+
+          const result = handleVimAction(state, {
+            type: 'vim_change_movement',
+            payload: { movement, count: 1 },
+          });
+
+          expect(result).toHaveOnlyValidCharacters();
+          expect(result.lines).not.toEqual(originalState.lines);
+          expect(result.undoStack).toHaveLength(1);
+          expect(result.undoStack[0]).toMatchObject({
+            lines: originalState.lines,
+            cursorRow: originalState.cursorRow,
+            cursorCol: originalState.cursorCol,
+          });
+          expect(state).toEqual(originalState);
+        },
+      );
+
       it('should change characters to the left', () => {
         const state = createTestState(['hello world'], 0, 5);
         const action = {
