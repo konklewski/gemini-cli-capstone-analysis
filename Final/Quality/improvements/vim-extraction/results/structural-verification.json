@@ -1,0 +1,11 @@
+{
+  "baseline_commit": "4a0749aceac5643e6f85a36d7420314d85e13b52",
+  "typescript_version": "5.8.3",
+  "unchanged_outer_case_clauses": 62,
+  "extracted_statements_identical_after_normalizing_formatting_and_comments": true,
+  "delegation_verified": true,
+  "imports_unchanged": true,
+  "existing_private_helpers_unchanged": true,
+  "text_buffer_module_unchanged": true,
+  "limitation": "Structural equality does not replace tests or prove correctness for all possible inputs. Existing import cycle is unchanged."
+}

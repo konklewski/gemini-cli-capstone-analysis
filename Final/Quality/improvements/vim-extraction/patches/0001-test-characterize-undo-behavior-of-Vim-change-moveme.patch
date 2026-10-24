@@ -1,0 +1,46 @@
+From 8f0a0f2d7d827d7ccd11c3df89631c39af67296f Mon Sep 17 00:00:00 2001
+From: Kuba <kuba.konklewski@gmail.com>
+Date: Sat, 24 Oct 2026 13:08:51 +0200
+Subject: [PATCH 1/2] test: characterize undo behavior of Vim change movements
+
+---
+ .../shared/vim-buffer-actions.test.ts         | 23 +++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+diff --git a/packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts b/packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts
+index 9f163f0..ec25148 100644
+--- a/packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts
++++ b/packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts
+@@ -1362,6 +1362,29 @@ describe('vim-buffer-actions', () => {
+     });
+ 
+     describe('vim_change_movement', () => {
++      it.each(['h', 'j', 'k', 'l'] as const)(
++        'records an undo snapshot without mutating the input for %s',
++        (movement) => {
++          const state = createTestState(['alpha', 'beta', 'gamma'], 1, 2);
++          const originalState = structuredClone(state);
++
++          const result = handleVimAction(state, {
++            type: 'vim_change_movement',
++            payload: { movement, count: 1 },
++          });
++
++          expect(result).toHaveOnlyValidCharacters();
++          expect(result.lines).not.toEqual(originalState.lines);
++          expect(result.undoStack).toHaveLength(1);
++          expect(result.undoStack[0]).toMatchObject({
++            lines: originalState.lines,
++            cursorRow: originalState.cursorRow,
++            cursorCol: originalState.cursorCol,
++          });
++          expect(state).toEqual(originalState);
++        },
++      );
++
+       it('should change characters to the left', () => {
+         const state = createTestState(['hello world'], 0, 5);
+         const action = {
+-- 
+2.51.0
+

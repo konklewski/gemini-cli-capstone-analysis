@@ -1,0 +1,15 @@
+{
+  "new_diagnostics": [],
+  "removed_diagnostics": [],
+  "identical_after_path_normalisation": true,
+  "watched_files": [
+    "packages/cli/src/ui/components/shared/text-buffer.test.ts",
+    "packages/cli/src/ui/components/shared/text-buffer.ts",
+    "packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts",
+    "packages/cli/src/ui/components/shared/vim-buffer-actions.ts"
+  ],
+  "watched_file_diagnostics": {
+    "before": [],
+    "after": []
+  }
+}

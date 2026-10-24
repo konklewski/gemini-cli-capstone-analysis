@@ -1,0 +1,40 @@
+@startuml
+!pragma layout smetana
+title Proposed built-in tool assembly extraction (not implemented)
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam defaultFontSize 14
+skinparam nodesep 20
+skinparam ranksep 30
+top to bottom direction
+
+component "Configuration\nconfig/config.ts" as Config <<component>>
+component "Built-in tool assembly (proposed)\ntools/builtin-tool-assembly.ts" as Assembly <<component>> #EAF2FF
+component "Tool registry\ntools/tool-registry.ts" as Registry <<component>>
+component "Ripgrep integration\ntools/ripGrep.ts" as Ripgrep <<component>>
+
+package "Other concrete tool modules (20)" as Tools {
+  component "Directory listing\ntools/ls.ts" as Listing <<component>>
+  component "Skill activation\ntools/activate-skill.ts" as Skills <<component>>
+  Listing -[hidden]down-> Skills
+  note bottom of Skills
+    Two examples shown.
+    18 further modules omitted;
+    see the import inventory.
+  end note
+}
+
+Config -[dashed]down-> Assembly : import; calls API
+Assembly -[dashed]up-> Config : import type;\nuses Config object
+Config -[dashed]down-> Registry : import type;\nuses registry object
+Assembly -[dashed]down-> Registry : import; constructs;\ncalls registry API
+Config -[dashed]right-> Ripgrep : import; calls\nresolveRipgrepPath()
+Assembly -[dashed]right-> Ripgrep : import; constructs\nRipGrepTool
+Assembly -[dashed]down-> Tools : imports; constructs tools
+Tools -[dashed]up-> Config : import type;\nuses Config objects
+
+legend bottom
+  Dashed arrow = dependency. Labels distinguish imports and runtime use.
+  Type-only imports remove emitted imports, not runtime object/API coupling.
+endlegend
+@enduml

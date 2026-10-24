@@ -1,0 +1,9 @@
+{
+  "installed_version": "Understand 8.0 Build 1265",
+  "status": "blocked_before_analysis_by_application_license_check",
+  "message": "Licensing Error: A valid license is required to analyze the import.",
+  "measured_results_available": false,
+  "project_configuration_complete": false,
+  "detail": "The create/import command printed Settings imported, but the saved temporary project has no source directories or languages. It must not be treated as a completed or analyzed project.",
+  "next_action": "Create/open a public-source project through the GUI to establish eligibility, or activate an educational/trial license. Then import the saved settings and rerun both versions with Build 1265."
+}

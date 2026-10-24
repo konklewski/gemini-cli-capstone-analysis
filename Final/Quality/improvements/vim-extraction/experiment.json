@@ -1,0 +1,95 @@
+{
+  "repository": "https://github.com/google-gemini/gemini-cli",
+  "report_baseline_commit": "4a0749aceac5643e6f85a36d7420314d85e13b52",
+  "controlled_before_commit": "8f0a0f2d7d827d7ccd11c3df89631c39af67296f",
+  "refactored_commit": "1820eca22b026d6f16c05cc62e845c849aa2f49c",
+  "branch": "codex/vim-handler-extraction",
+  "controlled_before_definition": "Report baseline plus four characterization test cases; production source is byte-identical to the report baseline.",
+  "change": "Extract the existing vim_change_movement branch into a private handleVimChangeMovement function in the same module.",
+  "changed_files": [
+    "packages/cli/src/ui/components/shared/vim-buffer-actions.ts",
+    "packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts"
+  ],
+  "versions": {
+    "node": "25.9.0",
+    "npm": "11.12.1",
+    "typescript": "5.8.3",
+    "vitest": "3.2.4"
+  },
+  "package_lock_sha256": "b4565853b8dab02abb4fc65c5f0998f6e5e07c251bd85f6a33f87915e6b5eac4",
+  "production_source_sha256": {
+    "before": "b9027a5f772cacaac81d1acc6589eb314027edf5823542eec3ca580bceacc9f8",
+    "after": "8a2d9567cda15a73f77c0504b13c1e5afd22be8302eefa8f5d9d7f79ba7c1d16"
+  },
+  "test_source_sha256_in_both_controlled_versions": "17e3c3410fc49d40d299339137b80f6784b29f789aa7b007696a2ff41499addd",
+  "test_runs": [
+    {"phase": "original baseline", "passed": 423, "failed": 0, "skipped": 0, "report": "results/baseline-vitest.json"},
+    {"phase": "original production code with characterization tests; Vim suite only", "passed": 200, "failed": 0, "skipped": 0, "report": "results/characterized-baseline-vitest.json"},
+    {"phase": "refactored code; both selected suites", "passed": 427, "failed": 0, "skipped": 0, "report": "results/refactored-vitest.json"}
+  ],
+  "checks": {
+    "baseline_cli_typecheck": "passed after building core and devtools",
+    "refactored_cli_typecheck": "passed",
+    "refactored_eslint_both_changed_files_max_warnings_zero": "passed",
+    "refactored_prettier_both_changed_files": "passed",
+    "git_diff_check": "passed",
+    "ast_structural_verification": "passed; see results/structural-verification.json",
+    "git_bundle_verification": "passed; requires report baseline commit",
+    "bundle_replay_in_fresh_baseline_clone": "passed; controlled before and after source hashes matched; test files were identical",
+    "plantuml_syntax_check": "passed; PlantUML server returned HTTP 200 and SVG without a syntax error"
+  },
+  "physical_source_span_measurements": {
+    "definition": "Inclusive physical function span including internal comments and blank lines, measured with the TypeScript parser. Not Understand CountLineCode.",
+    "handleVimAction_before": 1686,
+    "handleVimAction_after": 1588,
+    "handleVimChangeMovement_after": 104,
+    "sum_of_these_function_spans_before": 1686,
+    "sum_of_these_function_spans_after": 1692,
+    "interpretation": "The outer handler is 98 physical lines shorter. Extracting the helper adds structure and increases the summed spans by six lines; the underlying movement logic is unchanged."
+  },
+  "understand": {
+    "status": "Completed: both GUI projects measured with Understand Build 1265; stored before/after diagnostics compared with no additions or removals.",
+    "tool_build_for_both_versions": 1265,
+    "original_group_tool_build": 1264,
+    "evidence_directory": "results/understand-build-1265-completed",
+    "original_group_csv": "../../packages.csv",
+    "original_group_measurements_for_handleVimAction": {"Cyclomatic": 196, "CountLineCode": 1461},
+    "after_values_available": true,
+    "handleVimAction_before": {"Cyclomatic": 196, "CountLineCode": 1461},
+    "handleVimAction_after": {"Cyclomatic": 188, "CountLineCode": 1381},
+    "handleVimChangeMovement_after": {"Cyclomatic": 9, "CountLineCode": 86},
+    "matching_source_file_paths": 2037,
+    "diagnostics_before": {"errors": 117, "warnings": 172},
+    "diagnostics_after": {"errors": 117, "warnings": 172},
+    "new_diagnostics_after_path_normalisation": 0,
+    "removed_diagnostics_after_path_normalisation": 0,
+    "diagnostics_in_vim_and_text_buffer_sources_and_tests": 0,
+    "metric_comparison": "results/understand-build-1265-completed/metric-comparison.json",
+    "diagnostic_comparison": "results/understand-build-1265-completed/diagnostic-comparison.json",
+    "manifest": "results/understand-build-1265-completed/evidence-manifest.json"
+  },
+  "additional_focused_coverage": {
+    "date": "2026-10-24",
+    "tool": "Vitest 3.2.4 with @vitest/coverage-v8 3.2.4",
+    "scope": "Only vim-buffer-actions.test.ts; coverage includes only vim-buffer-actions.ts",
+    "before_commit": "8f0a0f2d7d827d7ccd11c3df89631c39af67296f",
+    "after_commit": "1820eca22b026d6f16c05cc62e845c849aa2f49c",
+    "passed_tests_each_version": 200,
+    "before": {"covered_lines": 1312, "total_lines": 1524, "line_percent": 86.08, "covered_branches": 175, "total_branches": 257, "branch_percent": 68.09},
+    "after": {"covered_lines": 1318, "total_lines": 1530, "line_percent": 86.14, "covered_branches": 176, "total_branches": 258, "branch_percent": 68.21},
+    "uncovered_lines_each_version": 212,
+    "uncovered_branches_each_version": 82,
+    "before_results": "results/focused-coverage-before",
+    "after_results": "results/focused-coverage-after",
+    "cli_wide_attempt": {"status": "timed out after 480 seconds; no completed coverage percentage", "record": "results/coverage-after/run.command.json"}
+  },
+  "limitations": [
+    "Only the Vim-handler and text-buffer test suites were executed, not the full repository test suite.",
+    "Coverage was disabled for the original 423/200/427-test runs. Additional focused Vim-module coverage is recorded separately; no completed new CLI-package coverage result is claimed.",
+    "Runtime imports and the existing text-buffer/Vim-handler import cycle are unchanged.",
+    "No performance improvement or reduction in total algorithmic complexity is claimed.",
+    "Both Understand analyses retain 117 errors and 172 warnings elsewhere in the project; whole-project parse completeness is not claimed.",
+    "Diagnostic JSON/text was decoded from Understand's stored issues.cbor version 1 using cbor2 6.1.5; original CBOR bytes and the supplied before-analysis log are preserved.",
+    "Full Understand databases are not committed; reproduction requires reconstructing the source checkouts and running Understand with the saved settings."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "before": {
+    "included_entities": 13049,
+    "maximum_observed_cyclomatic": 196,
+    "maximum_functions": [
+      "handleVimAction"
+    ]
+  },
+  "after": {
+    "included_entities": 13050,
+    "maximum_observed_cyclomatic": 188,
+    "maximum_functions": [
+      "handleVimAction"
+    ]
+  },
+  "combined_affected_decision_count": {
+    "definition": "Sum(Cyclomatic - 1) for the affected functions",
+    "before": 195,
+    "after": 195
+  }
+}

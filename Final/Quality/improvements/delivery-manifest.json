@@ -1,0 +1,744 @@
+{
+  "captured_utc": "2026-10-24T18:23:32.979844+00:00",
+  "implemented_change": "Limited Vim change-movement extraction only",
+  "unimplemented_proposals": [
+    "Config built-in tool assembly",
+    "Dependency-security updates"
+  ],
+  "focused_coverage": {
+    "before": {
+      "tests_passed": 200,
+      "tests_failed": 0,
+      "coverage": {
+        "lines": {
+          "total": 1524,
+          "covered": 1312,
+          "skipped": 0,
+          "pct": 86.08
+        },
+        "statements": {
+          "total": 1524,
+          "covered": 1312,
+          "skipped": 0,
+          "pct": 86.08
+        },
+        "functions": {
+          "total": 4,
+          "covered": 4,
+          "skipped": 0,
+          "pct": 100
+        },
+        "branches": {
+          "total": 257,
+          "covered": 175,
+          "skipped": 0,
+          "pct": 68.09
+        },
+        "branchesTrue": {
+          "total": 0,
+          "covered": 0,
+          "skipped": 0,
+          "pct": "Unknown"
+        }
+      }
+    },
+    "after": {
+      "tests_passed": 200,
+      "tests_failed": 0,
+      "coverage": {
+        "lines": {
+          "total": 1530,
+          "covered": 1318,
+          "skipped": 0,
+          "pct": 86.14
+        },
+        "statements": {
+          "total": 1530,
+          "covered": 1318,
+          "skipped": 0,
+          "pct": 86.14
+        },
+        "functions": {
+          "total": 5,
+          "covered": 5,
+          "skipped": 0,
+          "pct": 100
+        },
+        "branches": {
+          "total": 258,
+          "covered": 176,
+          "skipped": 0,
+          "pct": 68.21
+        },
+        "branchesTrue": {
+          "total": 0,
+          "covered": 0,
+          "skipped": 0,
+          "pct": "Unknown"
+        }
+      }
+    }
+  },
+  "cli_wide_coverage": "Timed out after 480 seconds; no completed report",
+  "original_audit_snapshot": "Unavailable; new baseline-lockfile audit clearly dated separately",
+  "final_pdf_modified": false,
+  "publication_record": "vim-extraction/published-revisions.json",
+  "files": {
+    ".gitattributes": {
+      "bytes": 177,
+      "sha256": "dff3653d312abcf2d6d7c01a0f4626a0076363f16690df678d33413188ef262f"
+    },
+    "README.md": {
+      "bytes": 2142,
+      "sha256": "5a7a7c638d02c1d6f84099dddece9e7ed60ce98b4d5492b39014c515f3d2c819"
+    },
+    "config-factory/analyse-config-imports.mjs": {
+      "bytes": 3980,
+      "sha256": "aee468bcc75695fa574526898bdfd281eebfa9e0dc90403c43aeade4e257fabd"
+    },
+    "config-factory/config-import-analysis.json": {
+      "bytes": 9408,
+      "sha256": "885966f35b2409902a97c439c3933d5cec0484497d0b266b50be8334c1f7d75e"
+    },
+    "config-factory/config-tool-assembly-proposal.png": {
+      "bytes": 36428,
+      "sha256": "a74046d45692900007f096c3920882a7fd589aba11bb9aefe72098aacb5cae02"
+    },
+    "config-factory/config-tool-assembly-proposal.puml": {
+      "bytes": 1655,
+      "sha256": "c3e6f41f572e4700059621620478703644336395e05a85d79b210097b6a4da8b"
+    },
+    "config-factory/config-tool-assembly-proposal.svg": {
+      "bytes": 12778,
+      "sha256": "1b449cd3fff9bdee88a335c77788512d448d90449c2875d3a5ac99df3002b6f1"
+    },
+    "config-factory/design-evidence.txt": {
+      "bytes": 4753,
+      "sha256": "dd8484cc3b06d218fc7af83a8b01f1dd2e0b42aed8f9ea705f48b69c103ef493"
+    },
+    "create_delivery_manifest.py": {
+      "bytes": 3332,
+      "sha256": "022555fea6ee4de8d755ce845850341422bf64b36fe5a36fec479035dbb7ac5e"
+    },
+    "final-report-check.json": {
+      "bytes": 1380,
+      "sha256": "4e7313dc560956c577566a8f8e920b3557ea0ba8b8550ac938e2c2b393d622e5"
+    },
+    "rendering/config-final-png.command.json": {
+      "bytes": 865,
+      "sha256": "c511a51120ee936e7d8decb051dd99322f515b2d1b82311d5a89095416dbbc87"
+    },
+    "rendering/config-final-png.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-final-png.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-final-svg.command.json": {
+      "bytes": 865,
+      "sha256": "a568ef708cbb2276d9717c240b7951df6142f91cc7209dc0ce2d474f25fb3aa1"
+    },
+    "rendering/config-final-svg.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-final-svg.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-report-png.command.json": {
+      "bytes": 865,
+      "sha256": "c7ce6ecd27857acfe6406c7289d137e2e28007c153f4875beb14820a5d76bf94"
+    },
+    "rendering/config-report-png.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-report-png.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-report-svg.command.json": {
+      "bytes": 864,
+      "sha256": "588c217e8f5b5854416339ef120d1c42bcb4327bf767cf3bf9b944aad3505a24"
+    },
+    "rendering/config-report-svg.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-report-svg.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-revised-png.command.json": {
+      "bytes": 865,
+      "sha256": "1cc36d7c0590b05efc27b0b6fd005fc92f8ad8494b7ebcb8073157a18b54857b"
+    },
+    "rendering/config-revised-png.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-revised-png.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-revised-svg.command.json": {
+      "bytes": 864,
+      "sha256": "daf46f8e49d089c72671ced645a55dfb4e0700e9c31edc44e9d7adb40a500620"
+    },
+    "rendering/config-revised-svg.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/config-revised-svg.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/png.command.json": {
+      "bytes": 939,
+      "sha256": "29979e5fe25329d6af7618d01cca35c84d798594baff82a6c8c559f27970e5f1"
+    },
+    "rendering/png.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/png.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/render-manifest.json": {
+      "bytes": 1818,
+      "sha256": "a3701a535bc9d472cefa8edf6b1c02543d035b25a3fbc47ef83a00c5107a23b0"
+    },
+    "rendering/svg.command.json": {
+      "bytes": 939,
+      "sha256": "6c2a1bbbaa2c317744c06cecc3e665ed912d87dc0e213825a816b63a15e30f24"
+    },
+    "rendering/svg.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rendering/svg.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run_recorded_check.py": {
+      "bytes": 2902,
+      "sha256": "222bd5ed2995f8b9a46051e53c06f22b92b8deacfd9b8e2c6c58409008ae1b4b"
+    },
+    "security/advisory-eslint.command.json": {
+      "bytes": 632,
+      "sha256": "3e30d6c080ca6103caac0a49a381d298b0dc97053c60f6c5b063da341fd30d05"
+    },
+    "security/advisory-eslint.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "security/advisory-eslint.stdout.txt": {
+      "bytes": 4515,
+      "sha256": "634af9836cbb6c5c69e5d2a1623f7cb26bbebbf204f6a741e521cfe6b7e32f84"
+    },
+    "security/advisory-grpc.command.json": {
+      "bytes": 632,
+      "sha256": "21607a14c3cc5396ff8835f6bab129814a01954e4b49a9087c00ec67a5cb6105"
+    },
+    "security/advisory-grpc.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "security/advisory-grpc.stdout.txt": {
+      "bytes": 3037,
+      "sha256": "d6a76ca7b94cafcb12c5a4fbdf8443d6c930d87dbf0f1699ebeb40b33b93861d"
+    },
+    "security/analyse-audit.py": {
+      "bytes": 4337,
+      "sha256": "ddfc36b4b9b0e7fd1341abd3adc6cfecd3c416eb1a1a1e176e8ed7fd51f38e26"
+    },
+    "security/audit-full.command.json": {
+      "bytes": 639,
+      "sha256": "3dd7802bb81a90cab86e3726354926a383e0ac784d2e7d832ab74a540bbcc7f0"
+    },
+    "security/audit-full.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "security/audit-full.stdout.txt": {
+      "bytes": 133903,
+      "sha256": "bfa670cdbabecb57fd5b6ee24310ff4c5635d169301ed2cfd7eb4fa2cd87be0b"
+    },
+    "security/audit-production.command.json": {
+      "bytes": 656,
+      "sha256": "9c882a00d06d54d90ffc1a9cea65a7b17cf99980c91f08b84370956cc949bf8e"
+    },
+    "security/audit-production.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "security/audit-production.stdout.txt": {
+      "bytes": 107523,
+      "sha256": "0578de1fd4b1f5eb35e3289350e6e9444b72e8c9856c1b05420565c1f5bd5b1c"
+    },
+    "security/audit-summary.json": {
+      "bytes": 4061,
+      "sha256": "f8e8d30490ec585a1c989264b8a4d8ba9e248f3124852e8012b96892f462879f"
+    },
+    "security/explain-eslint.command.json": {
+      "bytes": 638,
+      "sha256": "64f6ed6414b9d6ec86d9e4e1395914158449ee43a43a27f6a446b5cee644fa1b"
+    },
+    "security/explain-eslint.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "security/explain-eslint.stdout.txt": {
+      "bytes": 67495,
+      "sha256": "fbeb3296b605ac6e12453a738f41898b65d2226b1144edf0f8a45e5e04e6e6df"
+    },
+    "security/explain-grpc.command.json": {
+      "bytes": 633,
+      "sha256": "9213ee0fc353608781bcc5d4689bc85a43a554a8bd194e2842f38174a6b3699c"
+    },
+    "security/explain-grpc.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "security/explain-grpc.stdout.txt": {
+      "bytes": 169011,
+      "sha256": "3f832f10510aff4f7133ca3d562e80a1ee8ad1cd10915e30d19131629c3e0594"
+    },
+    "security/explain-vitest.command.json": {
+      "bytes": 626,
+      "sha256": "3f2160afe29314888d0b40a21e608aab9f5de017dd850eaee57c200fe0d27f55"
+    },
+    "security/explain-vitest.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "security/explain-vitest.stdout.txt": {
+      "bytes": 14646,
+      "sha256": "86a3e8b7efa60aa3cd65e005c9fbe9128141b5e15fbe2d4f234b69b643e74769"
+    },
+    "security/security-evidence.txt": {
+      "bytes": 3398,
+      "sha256": "40b7219262ef4db7d113e41ce260b3432a7ed692793560127d827a9397b6f8b8"
+    },
+    "submission-evidence-notes.txt": {
+      "bytes": 4721,
+      "sha256": "53db042bb2dfc393736c4a718f9e27015470a0ea70206c148e52bb3614cce989"
+    },
+    "tool-registration-proposal.png": {
+      "bytes": 111902,
+      "sha256": "d7b51400227f23c24da133fd66f51cc59f0538e1d9afd04ad6eeaf24f5331701"
+    },
+    "tool-registration-proposal.svg": {
+      "bytes": 4299,
+      "sha256": "8a9972d1fdf2386a617143a0b236e0babde7b363789cc682a47370ae16da0ec2"
+    },
+    "verify_report_evidence.py": {
+      "bytes": 4170,
+      "sha256": "78a5947ce134dd8f2014bc4e5b79898f6c1ae02c21b43294ada67caeb429fc1e"
+    },
+    "vim-extraction/REPRODUCING.txt": {
+      "bytes": 6378,
+      "sha256": "e13feaafb058eaf0280764d56056ae5cb6c80316fc13d422feebfff66b17555f"
+    },
+    "vim-extraction/experiment.json": {
+      "bytes": 6434,
+      "sha256": "3cf4ced07bcf470b3517bdd3c32976509ad6c176e85639b29abe42c4c24730ed"
+    },
+    "vim-extraction/measure-source.mjs": {
+      "bytes": 2273,
+      "sha256": "77d075c5f9c1e84fe2e61a3df2703c59f523b5a7943e8a4a42c5f1c926be2930"
+    },
+    "vim-extraction/patches/0001-test-characterize-undo-behavior-of-Vim-change-moveme.patch": {
+      "bytes": 1822,
+      "sha256": "c44a97b2de7b9e2df0c46a78d9780ca690f9c9497d72878b4cbd73676eac4313"
+    },
+    "vim-extraction/patches/0002-refactor-extract-Vim-change-movement-handling.patch": {
+      "bytes": 7174,
+      "sha256": "40514b94be32d2f8885013b03ae9d9a0a3dbe6daaff0c4fde5780a3aa66525b1"
+    },
+    "vim-extraction/preserve_understand_evidence.py": {
+      "bytes": 11680,
+      "sha256": "4e7db6398f1ebdee2caab17aae8d7f1aa11e472f91dc43a0c3cef262026a86c9"
+    },
+    "vim-extraction/procedure.txt": {
+      "bytes": 11664,
+      "sha256": "796b8afd8c6d80e0d7cd50e9a0f1d46a7c4f14f2030c7fc1e99ea3a190910fb8"
+    },
+    "vim-extraction/published-reconstruction-check.json": {
+      "bytes": 1259,
+      "sha256": "6a5d45358373e5cfcc1c4597c8a17406ffad7f72e51513cef4c4e286a6c81bb1"
+    },
+    "vim-extraction/published-revisions.json": {
+      "bytes": 1171,
+      "sha256": "32fbcfe470d67acae5cba54a3889d757e5e023cc1cb5dca9a3632e4c206e6286"
+    },
+    "vim-extraction/results/baseline-vitest.json": {
+      "bytes": 137081,
+      "sha256": "3097b69b497b393494e0451016cd767d5b084ad5f471bc6cd9ca63336c3f2944"
+    },
+    "vim-extraction/results/characterized-baseline-vitest.json": {
+      "bytes": 70649,
+      "sha256": "068f34b1eefc6f7f2aac048f2d9769c6d58f69fbe42844d4dd53c11382d96050"
+    },
+    "vim-extraction/results/coverage-after/INCOMPLETE.txt": {
+      "bytes": 502,
+      "sha256": "326dc4f1becb2fef977cfc4764a2a486c92a410967fbd75f909a16f59870eb66"
+    },
+    "vim-extraction/results/coverage-after/run.command.json": {
+      "bytes": 1353,
+      "sha256": "02b4330cb12b53aac13d275bad9be713fecef8e54d1d89220fadc243b75fa917"
+    },
+    "vim-extraction/results/coverage-after/run.stderr.txt": {
+      "bytes": 19681,
+      "sha256": "ad60ee52529f9a4f4315f3eb236cb8e87bd8c1117c496cf245193bfd90168303"
+    },
+    "vim-extraction/results/coverage-after/run.stdout.txt": {
+      "bytes": 86693,
+      "sha256": "f60df947d651e9c1d5ae58dfdde100f8c80488b78acf89d7b6d84706710de688"
+    },
+    "vim-extraction/results/focused-coverage-after/report/coverage-summary.json": {
+      "bytes": 693,
+      "sha256": "b2e7555034fa0257b3dbd693430dea331bcf035d51a3a978f40467d519943efe"
+    },
+    "vim-extraction/results/focused-coverage-after/run.command.json": {
+      "bytes": 1494,
+      "sha256": "48136a76d17c8b8263fb83619586cccc16635f8f0d3095da9de60cec974bc563"
+    },
+    "vim-extraction/results/focused-coverage-after/run.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/focused-coverage-after/run.stdout.txt": {
+      "bytes": 945,
+      "sha256": "83adc10168e6b0ef6ddf5aa1683be0522b8be3d0bbd831bf90e74b362d07fbd3"
+    },
+    "vim-extraction/results/focused-coverage-after/vitest.json": {
+      "bytes": 246596,
+      "sha256": "f83c23037dcaf2cd2d668cedcac97cfab42ec8f99f19fe1a2b8215fc56871a94"
+    },
+    "vim-extraction/results/focused-coverage-before/report/coverage-summary.json": {
+      "bytes": 693,
+      "sha256": "17511308dbe701e7dd292d1637d40cb00e69cb72a99f2d7b7aafa5484886bcc7"
+    },
+    "vim-extraction/results/focused-coverage-before/run.command.json": {
+      "bytes": 1498,
+      "sha256": "5f78f8828642afdcad764547b345657d81c7a56af6904dbf289114e40a744ba0"
+    },
+    "vim-extraction/results/focused-coverage-before/run.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/focused-coverage-before/run.stdout.txt": {
+      "bytes": 946,
+      "sha256": "11dd61c84d541ccce99405f7ad2175c574eb7052a406cde4ff52a6de7da245bb"
+    },
+    "vim-extraction/results/focused-coverage-before/vitest.json": {
+      "bytes": 245702,
+      "sha256": "fc8b8d183f7594190a91e74a0e74a873c620df40217d4074e1323ef423596291"
+    },
+    "vim-extraction/results/re-evaluation-metrics.json": {
+      "bytes": 447,
+      "sha256": "c23a4580cb25ddb64ecccca5086bb40521797bf4974133041292fb43fd8d9422"
+    },
+    "vim-extraction/results/refactored-vitest.json": {
+      "bytes": 138507,
+      "sha256": "eaa83b47e21bd8754e187932d3a4d001723eefb79cfe5d9fee37b7fb45e95446"
+    },
+    "vim-extraction/results/source-spans-after.json": {
+      "bytes": 1066,
+      "sha256": "8e79d7ab80faef5156e9d601504b0c4fc2227ccf2f272500f3c214e1fffd7350"
+    },
+    "vim-extraction/results/source-spans-before.json": {
+      "bytes": 932,
+      "sha256": "ed6dc9bbc056bce310eb56df87564b57618b5e124b87a5a320a3504ad1d45663"
+    },
+    "vim-extraction/results/structural-verification.json": {
+      "bytes": 513,
+      "sha256": "4192c2da8b8abe628ae026da5fe91a213dbe226c2231f30cfcdd919748630259"
+    },
+    "vim-extraction/results/understand-build-1265/before-create.command.json": {
+      "bytes": 623,
+      "sha256": "6959e07b1ffce1ed0df4a68fca5dd2c2f9cef225f81a3935da3fc445b88e8cab"
+    },
+    "vim-extraction/results/understand-build-1265/before-create.stderr.txt": {
+      "bytes": 68,
+      "sha256": "838c00b14e450baec0d5ee4d09d3b13bb22b1179852604c2862a51463437e476"
+    },
+    "vim-extraction/results/understand-build-1265/before-create.stdout.txt": {
+      "bytes": 18,
+      "sha256": "f34659404faf55b816ee09a86bc71d077b3629b1ed35b2e2b2fa7cffcecde755"
+    },
+    "vim-extraction/results/understand-build-1265/settings-before.xml": {
+      "bytes": 9460,
+      "sha256": "b06e9bf72fb4c3714c675a50d9234ac0205f1630422c193273b59eade704b272"
+    },
+    "vim-extraction/results/understand-build-1265/setup-status.json": {
+      "bytes": 700,
+      "sha256": "cda51c4ee285115e811718840a86accabeb2315064acf52f1ede42e5f9ab9a86"
+    },
+    "vim-extraction/results/understand-build-1265/tool-version.command.json": {
+      "bytes": 295,
+      "sha256": "ef048147eb8b2336a0a5148f3768a86bf2a77959fa9107448546718e441ea6a6"
+    },
+    "vim-extraction/results/understand-build-1265/tool-version.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265/tool-version.stdout.txt": {
+      "bytes": 13,
+      "sha256": "b01b8154fe965198d8e0914fdc6ff9d91a7410f712aa805087588b911ab17487"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-export-settings.command.json": {
+      "bytes": 535,
+      "sha256": "b7c8b331a65048d5010c4dc5329c10611878ffa19384ca6dc2cdea4d85932180"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-export-settings.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-export-settings.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-files.command.json": {
+      "bytes": 275,
+      "sha256": "381ef9f72f1df8e8ae2f0ba7735a24c2a6bb2fba455af957daa2a056382d73a7"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-files.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-files.stdout.txt": {
+      "bytes": 196745,
+      "sha256": "b25dd26542f4d6d402b4d4c3ea091ffc795518bc1ad6fec5e28fdb33cda9977e"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-projectinfo.command.json": {
+      "bytes": 269,
+      "sha256": "aa836a2083ccdfd3afe4754ccb16b80049b8d1da435679cc79aa45fd322a402f"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-projectinfo.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-projectinfo.stdout.txt": {
+      "bytes": 324,
+      "sha256": "5f2702612a761651794bafff7450483417434d20cb9041ab688b18e2e7a912fd"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-revision.command.json": {
+      "bytes": 223,
+      "sha256": "45921d5043de483708e4a773dc38b3d1fb1b768a57c34fe1660b60ff5359a41d"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-revision.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-revision.stdout.txt": {
+      "bytes": 41,
+      "sha256": "cea232982844214ede42a798bbb723a38fb9b4581e64692bbed1a3c61649d27b"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-source-clean.command.json": {
+      "bytes": 386,
+      "sha256": "cba8bf8923c37814415e3305cc4da7bab049718fe95d1edda7df6b2c74c0bf17"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-source-clean.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/after-source-clean.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-export-settings.command.json": {
+      "bytes": 528,
+      "sha256": "51845b7bea3647597bba7b353970a9a7104d328b4e16f557b43e030625d6329a"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-export-settings.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-export-settings.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-files.command.json": {
+      "bytes": 267,
+      "sha256": "485030bc13b92d601333487591a486294de70713e3d7f0e916373112ed69f518"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-files.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-files.stdout.txt": {
+      "bytes": 184523,
+      "sha256": "49655bacad5089a1ef9316ed178f5e371d03cac6e8ca4e49417a6a93cec24721"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-projectinfo.command.json": {
+      "bytes": 261,
+      "sha256": "d03144cd95045ed4c5b22c89fba579cfdd344dc7a67b6d1581aa05b7dbc62aa3"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-projectinfo.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-projectinfo.stdout.txt": {
+      "bytes": 308,
+      "sha256": "c9b259ece62d478787d54fe5c3cc5ee650efadff7543a94f83b4032a72175980"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-revision.command.json": {
+      "bytes": 217,
+      "sha256": "2010b23e86b0dd52333c36cfd7018de32bebb2d489e3183970d0d8b85fdb0af7"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-revision.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-revision.stdout.txt": {
+      "bytes": 41,
+      "sha256": "983f05a62ad7221bee354c98f9645fa0af0e95fa4bd52eeed6ae10fe34242d0e"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-source-clean.command.json": {
+      "bytes": 380,
+      "sha256": "be87b44c75bc8189a32b2e9094d18cb3eef702147c99aa77685eb8d76861d3c5"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-source-clean.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/before-source-clean.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/diagnostic-comparison.json": {
+      "bytes": 463,
+      "sha256": "9b34d035ce1a1271f6ef03b44718372e1205f5419303f120bd9b2ab33bde3f98"
+    },
+    "vim-extraction/results/understand-build-1265-completed/diagnostics-after.json": {
+      "bytes": 53949,
+      "sha256": "324979b0693c943b1032cd7e5e8af7e976f840ebfefca8207956d538a883e5ec"
+    },
+    "vim-extraction/results/understand-build-1265-completed/diagnostics-after.txt": {
+      "bytes": 30248,
+      "sha256": "97bd7eb9988b9c129333c58fd1cd37fefc9401563614ab5f6e94903feb6fd8e6"
+    },
+    "vim-extraction/results/understand-build-1265-completed/diagnostics-before.json": {
+      "bytes": 53949,
+      "sha256": "324979b0693c943b1032cd7e5e8af7e976f840ebfefca8207956d538a883e5ec"
+    },
+    "vim-extraction/results/understand-build-1265-completed/diagnostics-before.txt": {
+      "bytes": 30248,
+      "sha256": "97bd7eb9988b9c129333c58fd1cd37fefc9401563614ab5f6e94903feb6fd8e6"
+    },
+    "vim-extraction/results/understand-build-1265-completed/evidence-manifest.json": {
+      "bytes": 8872,
+      "sha256": "a687fb5c89c1d4a076f808ac2b4a9299c0bf0e8428fd3bd7455b141a689e2744"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-before-analysis-log.txt": {
+      "bytes": 462650,
+      "sha256": "e60b5362285733fe433d944ebb0a1a90833cf6a8cfe4ef2f81737559f05b3594"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-exported-settings-after.xml": {
+      "bytes": 142181,
+      "sha256": "6f6aa6452e3fc532e43e48c2e49caddd326a34c7998127887385653e287ec9bb"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-exported-settings-before.xml": {
+      "bytes": 151250,
+      "sha256": "f7e2714c745256759b7b2d829a31d6becf90fa2cf9cdafd42a169c30fff789a1"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-issues-after.cbor": {
+      "bytes": 32198,
+      "sha256": "b661c90539af5f0234b7fac74955cc9cadba4666f8baa7a3693179254c21093c"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-issues-before.cbor": {
+      "bytes": 33287,
+      "sha256": "8c65e6041fa2552af04d380afaf37ca1002f668461318a5639f8e5ff8ea14fff"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-local-settings-after.xml": {
+      "bytes": 137943,
+      "sha256": "e828258eba8f1329a93d3c331548227e06a7dbcdb57ab5778755f8f4f38c2bf3"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-local-settings-before.xml": {
+      "bytes": 146972,
+      "sha256": "1d47b68d85dea7494e4114bec498a7aec54b23c927790c54d3a92e7f506d87d5"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-log-crosscheck.json": {
+      "bytes": 143,
+      "sha256": "9b94fffa119a3e26294759875ee94a06c6e0f35c25fbac8ab843b3f535eb4e0a"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-settings-after.xml": {
+      "bytes": 11451,
+      "sha256": "7f5bc3c92203079f0f65c086516ded9d1cd1b71dbf4727a958537fe33d38cf20"
+    },
+    "vim-extraction/results/understand-build-1265-completed/gui-settings-before.xml": {
+      "bytes": 12188,
+      "sha256": "96102d8e7102779814ad2a3458e3fd2315dbd6b5ca61efd332621f08ff681ae2"
+    },
+    "vim-extraction/results/understand-build-1265-completed/metric-comparison.json": {
+      "bytes": 1241,
+      "sha256": "7d53b12cc931ea88587274673d1c7cb1c14c2623dbc507a99cd83318ff53091c"
+    },
+    "vim-extraction/results/understand-build-1265-completed/tool-version.command.json": {
+      "bytes": 188,
+      "sha256": "e8be5d9c34f0aef68594a01f0e0014c020fe39582371dbeeeeb01d67a3521c15"
+    },
+    "vim-extraction/results/understand-build-1265-completed/tool-version.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vim-extraction/results/understand-build-1265-completed/tool-version.stdout.txt": {
+      "bytes": 13,
+      "sha256": "b01b8154fe965198d8e0914fdc6ff9d91a7410f712aa805087588b911ab17487"
+    },
+    "vim-extraction/results/understand-build-1265-completed/understand-after.csv": {
+      "bytes": 16127491,
+      "sha256": "d56807d76ca485121ee3cea491fb48e039bd2675d2f4d096b2f3fcfc8638f2b4"
+    },
+    "vim-extraction/results/understand-build-1265-completed/understand-before.csv": {
+      "bytes": 16433773,
+      "sha256": "95ab9bc7be0cf0445d16b1df6d1538bade76bd398aa5417460165b19d143f2d0"
+    },
+    "vim-extraction/results/understand-build-1265-completed/verification-summary.txt": {
+      "bytes": 2600,
+      "sha256": "74fe2e9422b476f1738cad9f1dddaefc074144c4352808235c5c52ba095eb739"
+    },
+    "vim-extraction/run_understand.py": {
+      "bytes": 5923,
+      "sha256": "300c3d9d0226f5ee7938401fdc6fefc7ec94556f157ff75efd9bf234d8b623c6"
+    },
+    "vim-extraction/understand-handoff.txt": {
+      "bytes": 6080,
+      "sha256": "ce593ce149e093cb701d506271535b07eb7a2734ec1b123f4444302464ad3a7a"
+    },
+    "vim-extraction/verify-extraction.mjs": {
+      "bytes": 4635,
+      "sha256": "a01eae2e5d660ca3af14a66a093b5a2c6ca51ace13de394ca1be60b98ea9e35d"
+    },
+    "vim-extraction/vim-change-movement.png": {
+      "bytes": 30424,
+      "sha256": "408337b96bfbfa6660066f6ca5b0356c4b97fbb55d556c4bff1768cc41a5a8b9"
+    },
+    "vim-extraction/vim-change-movement.puml": {
+      "bytes": 1301,
+      "sha256": "6c9757a8318afc92631188457fc5ec31c8130f3a0134b88a9f41caf5578ed9f4"
+    },
+    "vim-extraction/vim-change-movement.svg": {
+      "bytes": 14071,
+      "sha256": "790cd3249853007dab18d11d3c96798a058ce44a6be8801d011eede23050929e"
+    },
+    "vim-extraction/vim-extraction.bundle": {
+      "bytes": 2379,
+      "sha256": "02058ee08b594ce524d0a9cda771330caccb88c4c0c1e13436914eea69bd1fdf"
+    },
+    "vim-handler-proposal.png": {
+      "bytes": 111470,
+      "sha256": "6fbe8864c513980da9228b40269a5cceee5f8fce9e09d989480d9ebbdb94fb4c"
+    },
+    "vim-handler-proposal.svg": {
+      "bytes": 4311,
+      "sha256": "f6524655099415ba5a144562ca89b3404cde8f75b9d06306ae5a114bb62aaf51"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "same_columns": true,
+  "same_source_paths": true,
+  "matching_parser_settings": true,
+  "source_paths": 2037,
+  "functions": {
+    "clampNormalCursor": {
+      "before": {
+        "CountLineCode": 7,
+        "Cyclomatic": 2
+      },
+      "after": {
+        "CountLineCode": 7,
+        "Cyclomatic": 2
+      }
+    },
+    "extractRange": {
+      "before": {
+        "CountLineCode": 28,
+        "Cyclomatic": 3
+      },
+      "after": {
+        "CountLineCode": 28,
+        "Cyclomatic": 3
+      }
+    },
+    "findCharInLine": {
+      "before": {
+        "CountLineCode": 24,
+        "Cyclomatic": 5
+      },
+      "after": {
+        "CountLineCode": 24,
+        "Cyclomatic": 5
+      }
+    },
+    "handleVimAction": {
+      "before": {
+        "CountLineCode": 1461,
+        "Cyclomatic": 196
+      },
+      "after": {
+        "CountLineCode": 1381,
+        "Cyclomatic": 188
+      }
+    },
+    "handleVimChangeMovement": {
+      "before": null,
+      "after": {
+        "CountLineCode": 86,
+        "Cyclomatic": 9
+      }
+    }
+  },
+  "interpretation": "Handler CountLineCode 1461 to 1381 and Cyclomatic 196 to 188. Helper CountLineCode 86 and Cyclomatic 9. Affected code lines total 1461 to 1467. Sum(Cyclomatic - 1) remains 195."
+}

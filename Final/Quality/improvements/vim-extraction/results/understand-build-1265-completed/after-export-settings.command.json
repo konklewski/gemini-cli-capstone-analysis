@@ -1,0 +1,12 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "/Applications/Understand.app/Contents/MacOS/und",
+    "export",
+    "/Users/jakubkonklewski/Library/CloudStorage/OneDrive-Bibliotekiudoste\u0328pnione\u2014onedrive/Dokumenty/TUe/Capstone Software Dev/capstone-analysis/Final/Quality/improvements/vim-extraction/results/understand-build-1265-completed/gui-exported-settings-after.xml",
+    "/private/tmp/gemini-cli-vim-replay.fGa16y-after/packages/packages.und"
+  ],
+  "exit_code": 0,
+  "captured_utc": "2026-10-24T15:52:50.515464+00:00"
+}

@@ -1,0 +1,183 @@
+LIMITED VIM EXTRACTION: PROCEDURE AND EVIDENCE
+
+Scope
+The experiment starts from Gemini CLI v0.64.0, commit
+4a0749aceac5643e6f85a36d7420314d85e13b52.
+It was implemented in a new temporary clone, on codex/vim-handler-extraction.
+The user's existing Gemini CLI clone and the analysis README files were not edited.
+The source changes are saved in the Git bundle and the two patch files.
+
+1. Why this extraction
+The existing vim_change_movement branch handles the related h, j, k and l
+movements inside a nested switch. It is a contiguous responsibility with ten
+existing tests. A private helper in the same file adds no module dependency.
+The larger import cycle was left in place because removing it would require a
+separate investigation of shared text-buffer utilities beyond this extraction.
+
+2. Environment and setup
+Node 25.9.0; npm 11.12.1; TypeScript 5.8.3; Vitest 3.2.4.
+Dependencies were installed from the unchanged lockfile with:
+  npm ci --ignore-scripts --no-audit --no-fund
+The root prepare script was skipped to avoid an automatic full bundle build.
+Required generation/build steps were then run explicitly:
+  npm run generate
+  npm run build --workspace @google/gemini-cli-core
+  npm run build --workspace @google/gemini-cli-devtools
+
+The initial test attempt failed before collecting tests because core was not
+built. The first core build reported a missing generated git-commit module;
+npm run generate resolved that setup issue. The first CLI typecheck reported
+the unbuilt devtools package; building it resolved that setup issue. These
+were failures on unchanged baseline code, not failures introduced by the patch.
+
+3. Original baseline
+The selected test files were vim-buffer-actions.test.ts and text-buffer.test.ts.
+The original code passed 196 + 227 = 423 tests. CLI type checking passed after
+the prerequisite builds. See results/baseline-vitest.json.
+
+4. Characterization tests before production edits
+The ten existing change-movement tests cover editing results, counts, Unicode
+and boundary cases. Four new parameterized cases check that h/j/k/l each save
+an undo snapshot and leave the input state unchanged. All existing tests were
+retained. The Vim suite passed 200 tests on unchanged production code.
+Test-only commit: 8f0a0f2d7d827d7ccd11c3df89631c39af67296f.
+See results/characterized-baseline-vitest.json.
+
+5. Production change
+The original movement declarations and nested switch were moved into private
+handleVimChangeMovement. Its action parameter uses Extract<VimAction, ...> so
+the type checker restricts it to the relevant action. The outer case delegates
+to the helper. Conditions, helper calls, state updates and return values were
+preserved. No import, dependency, exported API, or text-buffer.ts code changed.
+Refactored commit: 1820eca22b026d6f16c05cc62e845c849aa2f49c.
+
+6. Validation after extraction
+Both selected suites passed: 200 Vim tests + 227 text-buffer tests = 427.
+The four new cases had already passed against the original implementation.
+CLI type checking, ESLint on both changed files, Prettier on both changed
+files, and git diff --check passed.
+An AST comparison verified unchanged extracted statements, unchanged imports,
+the new delegation, all other 62 outer switch clauses, the existing private
+helpers, and the unchanged text-buffer module.
+See the Vitest JSON reports and results/structural-verification.json.
+The Git bundle was verified and replayed in a second fresh baseline clone.
+Both reconstructed production source hashes matched the tested versions, and
+the two controlled versions' test file hashes were identical.
+
+7. Exact test/check commands
+From packages/cli, for the original baseline and refactored code:
+  GEMINI_CLI_TRUST_WORKSPACE=true ../../node_modules/.bin/vitest run src/ui/components/shared/vim-buffer-actions.test.ts src/ui/components/shared/text-buffer.test.ts --coverage.enabled=false --maxWorkers=2 --minWorkers=1 --reporter=default --reporter=json --outputFile.json=/absolute/path/to/result.json
+For the test-only checkpoint, the same command was used with only
+src/ui/components/shared/vim-buffer-actions.test.ts.
+
+From the checkout root:
+  npm run typecheck --workspace @google/gemini-cli
+  node_modules/.bin/eslint packages/cli/src/ui/components/shared/vim-buffer-actions.ts packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts --max-warnings 0
+  node_modules/.bin/prettier --check packages/cli/src/ui/components/shared/vim-buffer-actions.ts packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts
+  git diff --check
+
+8. Measurements completed here
+measure-source.mjs uses TypeScript's parser to locate function declarations.
+It counts the inclusive physical span, including internal comments/blank lines.
+It excludes preceding JSDoc. It does not compute Understand's CountLineCode or
+Cyclomatic metrics.
+  handleVimAction: 1686 physical lines before; 1588 after.
+  handleVimChangeMovement: absent before; 104 physical lines after.
+  Sum for the affected functions: 1686 before; 1692 after.
+The outer function is shorter by 98 lines; overall source size has not fallen.
+The existing algorithmic decisions have been moved, not eliminated.
+Before/after JSON files contain source hashes and exact line locations.
+
+With dependencies installed in the relevant checkout, reproduce these checks:
+  node /absolute/path/to/measure-source.mjs CHECKOUT /absolute/path/to/spans.json
+  node /absolute/path/to/verify-extraction.mjs AFTER_CHECKOUT /absolute/path/to/verification.json
+Run measure-source.mjs on both controlled versions. The structural verifier
+requires the original baseline commit to be present in the checkout's Git data.
+
+9. Understand measurements completed on 24 October 2026
+Both completed GUI projects used SciTools Understand 8.0 Build 1265 with Web
+analysis and matching saved parser options. The original teammate used Build
+1264. The new before values match the original report, but this controlled
+comparison uses Build 1265 for BOTH versions.
+
+Original GUI CSV exports are copied unchanged to:
+  results/understand-build-1265-completed/understand-before.csv
+  results/understand-build-1265-completed/understand-after.csv
+Both include the same 2037 source-file paths and the same named columns.
+  handleVimAction: CountLineCode 1461 -> 1381; Cyclomatic 196 -> 188.
+  handleVimChangeMovement: absent before; CountLineCode 86; Cyclomatic 9 after.
+The affected code-line total is 1461 -> 1467. Sum(Cyclomatic - 1) remains 195.
+All three other existing named helper functions retain their measured values.
+See metric-comparison.json in that directory.
+
+The stored diagnostics in the actual GUI projects were copied byte-for-byte
+from local/issues.cbor. preserve_understand_evidence.py decodes its version-1
+container using cbor2 6.1.5, validates its structure, and emits readable TXT/JSON.
+Only checkout-root paths are normalised for matching. Counts, check IDs,
+messages, file locations, lines and columns are otherwise retained. The CBOR
+column values are retained as stored. Cross-checking the supplied GUI log
+requires adding one to its warning columns; its error columns already match.
+With that display conversion, all 289 diagnostic records match, including
+their multiplicities, locations and messages.
+Both runs have 117 errors and 172 warnings. Comparing diagnostic multisets
+finds zero additions and zero removals. Neither Vim/text-buffer source file
+nor either selected test file has a diagnostic. The supplied expanded before
+GUI log is also retained and its error/warning totals agree with stored data.
+
+Original project settings, machine-local settings, supported CLI settings
+exports, file listings, project info, source hashes, command logs and a SHA-256
+evidence manifest are preserved in the same completed directory. These are
+read-only captures of the user's completed GUI analyses, not a successful
+fresh CLI reanalysis. An attempted CLI settings import produced empty projects;
+zero-file results were rejected and are not used. The supported Python API
+also failed to open a project in this environment. Diagnostic comparison uses
+the original stored GUI results instead. No GUI database or source was edited.
+
+To repeat the capture with the same two source roots/databases, install cbor2
+6.1.5 in an isolated Python environment and run:
+  python preserve_understand_evidence.py --und /Applications/Understand.app/Contents/MacOS/und --before-root BEFORE_CHECKOUT --after-root AFTER_CHECKOUT --before-db BEFORE_DATABASE.und --after-db AFTER_DATABASE.und --exports DIRECTORY_CONTAINING_GUI_CSVS --before-gui-log BEFORE_GUI_LOG.txt --output NEW_EVIDENCE_DIRECTORY
+The script refuses to replace an existing evidence directory. For reproduction
+on another machine, first recreate the source checkouts using the Git bundle,
+analyse both packages directories in Understand, and make matching CSV exports.
+The full binary .und analysis caches are not included for submission.
+
+10. Limits
+The import cycle remains. Package-wide coverage and performance were not
+measured in this experiment; the selected tests ran with coverage disabled.
+The added call and function boundary introduce some navigation/indirection.
+The parser errors elsewhere in the repository remain a measurement limitation.
+An additional attempt to rerun the whole CLI package with coverage was stopped
+at its recorded 480-second timeout and produced no completed coverage summary.
+It is not reported as a successful CLI-package test or coverage run. Its logs
+are retained in results/coverage-after/. Incomplete 95 MB V8 intermediate data
+was moved outside the submission folder to temporary troubleshooting storage;
+no valid report was removed. It is not needed to reproduce the command.
+
+On 24 October, two additional focused runs measured only vim-buffer-actions.ts
+using vim-buffer-actions.test.ts and Vitest/V8 3.2.4 on each controlled commit.
+Both passed 200 tests. Before: lines 1312/1524 (86.08%), branches 175/257
+(68.09%). After: lines 1318/1530 (86.14%), branches 176/258 (68.21%). Both leave
+212 lines and 82 branches uncovered. These are V8 coverage counts, not Understand
+CountLineCode/Cyclomatic. The small percentage rise is not evidence of a broader
+set of behaviours tested. It must not be compared directly to the earlier CLI
+package's 84.7%. Exact commands, JSON test results and coverage summaries are
+under results/focused-coverage-before/ and results/focused-coverage-after/.
+Only the isolated experiment checkout was switched between commits, then
+restored to codex/vim-handler-extraction. The original user clone was untouched.
+
+11. Optional diagram generation
+vim-change-movement.puml contains PlantUML source, from @startuml to @enduml.
+Open it as text, paste the complete code into a PlantUML-compatible generator,
+and render/export SVG or PNG. This is PlantUML, not Mermaid syntax.
+The source was syntax-checked using the PlantUML server, which returned a valid
+SVG response without a syntax error. Locally rendered SVG/PNG files were added
+on 24 October using the pinned renderer described below.
+Review it against the patch before submission. It describes the limited
+implemented extraction, not the broader previously proposed module split.
+Suggested caption: "Activity diagram created from the
+implemented extraction of Vim change-movement handling."
+The current syntax is documented at https://plantuml.com/activity-diagram-beta.
+The implemented Vim activity diagram and the separately labelled Config
+proposal component diagram were rendered locally to SVG and PNG using
+PlantUML 1.2026.9. Render command logs and the renderer/source/output hashes
+are retained under ../rendering/. Both images were visually inspected.

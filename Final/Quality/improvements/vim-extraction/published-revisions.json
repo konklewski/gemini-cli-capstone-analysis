@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/konklewski/gemini-cli-capstone-analysis",
+  "source_branch": "codex/vim-handler-extraction",
+  "evidence_branch": "main",
+  "published_source_branch_verified": true,
+  "baseline_commit": "4a0749aceac5643e6f85a36d7420314d85e13b52",
+  "before_commit": "8f0a0f2d7d827d7ccd11c3df89631c39af67296f",
+  "after_commit": "1820eca22b026d6f16c05cc62e845c849aa2f49c",
+  "before_url": "https://github.com/konklewski/gemini-cli-capstone-analysis/commit/8f0a0f2d7d827d7ccd11c3df89631c39af67296f",
+  "after_url": "https://github.com/konklewski/gemini-cli-capstone-analysis/commit/1820eca22b026d6f16c05cc62e845c849aa2f49c",
+  "comparison_url": "https://github.com/konklewski/gemini-cli-capstone-analysis/compare/8f0a0f2d7d827d7ccd11c3df89631c39af67296f...1820eca22b026d6f16c05cc62e845c849aa2f49c",
+  "history_rewritten": false,
+  "upstream_pushed": false,
+  "original_user_clone_modified": false,
+  "preserved_fallback": "vim-extraction.bundle and patches/",
+  "note": "Source history is published separately; never merge this unrelated source branch into the analysis main branch. Original Apache-2.0 licensing and upstream history are retained."
+}

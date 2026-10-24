@@ -1,0 +1,107 @@
+UNDERSTAND REPRODUCTION INSTRUCTIONS AND COMPLETED MEASUREMENT STATUS
+
+Publication update: both exact revisions are available on the capstone
+repository's separate codex/vim-handler-extraction branch. See REPRODUCING.txt
+for direct clone commands and permanent commit URLs. The original incremental
+bundle procedure below remains available as an independent fallback.
+
+Completed locally on 24 October 2026 using Understand Build 1265 for BOTH
+versions. The instructions below originally requested the teammate's Build
+1264. That is no longer required to complete this experiment. The completed
+comparison and raw GUI evidence are in results/understand-build-1265-completed/.
+Before: handleVimAction Cyclomatic 196, CountLineCode 1461.
+After: handleVimAction Cyclomatic 188, CountLineCode 1381;
+       handleVimChangeMovement Cyclomatic 9, CountLineCode 86.
+Each project has 117 errors and 172 warnings, with identical diagnostics after
+checkout-path normalisation. No diagnostics occur in either selected source
+or test file. See procedure.txt for capture details and limitations.
+
+For an independent rerun, use the same Understand build for both versions and
+the saved analysis settings. Do not combine an old export with a new run.
+
+Versions
+Original report baseline:
+  4a0749aceac5643e6f85a36d7420314d85e13b52 (v0.64.0)
+Controlled BEFORE:
+  8f0a0f2d7d827d7ccd11c3df89631c39af67296f
+  Original production code plus four characterization test cases.
+AFTER:
+  1820eca22b026d6f16c05cc62e845c849aa2f49c
+  Same tests plus one private-function extraction.
+Thus the test sources are identical in the two controlled versions.
+
+Get the exact versions without changing an existing Gemini CLI checkout
+1. Download/copy this entire vim-extraction folder, including its Git bundle.
+2. Open a terminal in a NEW working directory and set the folder's real path:
+     VIM_EVIDENCE="/absolute/path/to/vim-extraction"
+3. Create a new baseline clone:
+     git clone --depth 1 --branch v0.64.0 --single-branch https://github.com/google-gemini/gemini-cli.git gemini-vim-before
+4. Verify and fetch the incremental bundle. The original baseline is its
+   prerequisite, so complete the clone first:
+     git -C gemini-vim-before bundle verify "$VIM_EVIDENCE/vim-extraction.bundle"
+     git -C gemini-vim-before fetch "$VIM_EVIDENCE/vim-extraction.bundle" refs/heads/codex/vim-handler-extraction:refs/heads/codex/vim-handler-extraction
+5. Select the controlled before version and create a separate after worktree:
+     git -C gemini-vim-before switch --detach 8f0a0f2d7d827d7ccd11c3df89631c39af67296f
+     git -C gemini-vim-before worktree add --detach ../gemini-vim-after 1820eca22b026d6f16c05cc62e845c849aa2f49c
+6. Verify the two revisions:
+     git -C gemini-vim-before rev-parse HEAD
+     git -C gemini-vim-after rev-parse HEAD
+The two patch files are also supplied for source review. The bundle preserves
+the exact commit IDs; applying patches with git am can create different IDs.
+
+Understand setup
+- Analyze the packages/ folder in both trees with matching language settings,
+  exclusions, and all other analysis options from the original project.
+- These fresh checkouts contain no node_modules. Do not install dependencies
+  before the Understand runs, since the original report warns that including
+  node_modules contaminates the measurements. If a different setup is required,
+  use explicit matching exclusions and document the deviation.
+- Use separate Understand projects/databases, or ensure a complete reanalysis
+  after switching source roots. Do not compare a new tree with a stale database.
+- Record tool/build, source commit, analysis date, options, parse accuracy,
+  error count, warning count and any missing files for EACH run.
+
+Export
+Return the raw before/after CSV exports with Kind, function name (preferably
+qualified), source path, Cyclomatic, and CountLineCode. Keep the original
+filter settings: exclude Ambient Module/Class/Enum/File entries, the named
+describe-callback and mock-callback exclusions, and zero-code-line entries.
+For the named product functions below these test-callback filters should not
+matter, but record them so the comparison stays traceable to the report.
+
+Required function rows in:
+  packages/cli/src/ui/components/shared/vim-buffer-actions.ts
+BEFORE: handleVimAction, findCharInLine, clampNormalCursor, extractRange
+AFTER:  handleVimAction, handleVimChangeMovement, findCharInLine,
+        clampNormalCursor, extractRange
+Report the maximum Cyclomatic and maximum CountLineCode among these functions
+in each version. Include the extracted helper's actual results, not only the
+reduction in the outer dispatcher. Mark the helper "not present" before the
+change, rather than assigning it a fabricated zero.
+
+Sanity checks
+The original group export records Cyclomatic 196 and CountLineCode 1461 for
+handleVimAction. Its source in the controlled before version is byte-identical
+to the original report baseline. If the rerun differs, investigate settings,
+parser/version and file identity before treating the difference as an effect
+of refactoring.
+
+Production file SHA-256:
+  before: b9027a5f772cacaac81d1acc6589eb314027edf5823542eec3ca580bceacc9f8
+  after:  8a2d9567cda15a73f77c0504b13c1e5afd22be8302eefa8f5d9d7f79ba7c1d16
+
+Return files, for example:
+  understand-before.csv
+  understand-after.csv
+  understand-settings-and-parse-results.txt
+Keep raw exports intact. Any report table should be derived separately.
+
+Interpretation
+The experiment is function decomposition. It does not remove decisions from
+the movement algorithm or resolve the existing import cycle. A smaller outer
+function is a local analyzability benefit with an added function-call boundary.
+Cyclomatic totals need care when the number of functions changes, because the
+metric includes a base contribution per function. Do not claim a reduction in
+total behavioral complexity merely because handleVimAction becomes simpler.
+Do not compare these Understand measurements with physical source spans or
+with a complexity value produced by another tool as if definitions matched.

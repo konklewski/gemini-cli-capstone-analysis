@@ -1,0 +1,21 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "npm",
+    "audit",
+    "--json",
+    "--package-lock-only"
+  ],
+  "cwd": "/private/tmp/gemini-cli-vim-extraction.XVxCD6",
+  "source_commit": "1820eca22b026d6f16c05cc62e845c849aa2f49c",
+  "environment_overrides": {},
+  "started_utc": "2026-10-24T16:18:04.256024+00:00",
+  "timeout_seconds": 180,
+  "timed_out": false,
+  "exit_code": 1,
+  "elapsed_seconds": 12.043,
+  "finished_utc": "2026-10-24T16:18:16.299772+00:00",
+  "stdout_sha256": "bfa670cdbabecb57fd5b6ee24310ff4c5635d169301ed2cfd7eb4fa2cd87be0b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "/Applications/Understand.app/Contents/MacOS/und",
+    "list",
+    "files",
+    "/private/tmp/gemini-cli-vim-replay.fGa16y-after/packages/packages.und"
+  ],
+  "exit_code": 0,
+  "captured_utc": "2026-10-24T15:52:51.407481+00:00"
+}

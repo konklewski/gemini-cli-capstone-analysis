@@ -1,0 +1,12 @@
+
+ RUN  v3.2.4 /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli
+      Coverage enabled with v8
+
+········································································································································································································
+
+ Test Files  1 passed (1)
+      Tests  200 passed (200)
+   Start at  18:27:56
+   Duration  3.74s (transform 1.55s, setup 2.68s, collect 264ms, tests 32ms, environment 0ms, prepare 56ms)
+
+JSON report written to /Users/jakubkonklewski/Library/CloudStorage/OneDrive-Bibliotekiudostępnione—onedrive/Dokumenty/TUe/Capstone Software Dev/capstone-analysis/Final/Quality/improvements/vim-extraction/results/focused-coverage-before/vitest.json

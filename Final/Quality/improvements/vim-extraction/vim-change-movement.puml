@@ -1,0 +1,44 @@
+@startuml
+title Limited extraction of Vim change-movement handling
+
+skinparam shadowing false
+skinparam activity {
+  BackgroundColor #EAF2FF
+  BorderColor #274567
+}
+
+partition "Existing module: vim-buffer-actions.ts" {
+  start
+  :handleVimAction(state, action);
+  if (action.type is vim_change_movement?) then (yes)
+    :Delegate to private function\nhandleVimChangeMovement(state, action);
+    note right
+      Extracted from the original nested switch.
+      Same state, action, helper calls and return values.
+    end note
+    switch (action.payload.movement)
+      case (h)
+        :Run existing change-left logic;
+      case (j)
+        :Run existing change-down logic;
+      case (k)
+        :Run existing change-up logic;
+      case (l)
+        :Run existing change-right logic;
+      case (other)
+        :Return unchanged state;
+    endswitch
+  else (other action)
+    :Run the existing action branch;
+  endif
+  :Return TextBufferState;
+  stop
+}
+
+legend bottom
+  Diagram source created with Codex assistance from the implemented extraction.
+  Both functions remain in the same file. No new runtime imports are added.
+  The pre-existing text-buffer / Vim-handler import cycle remains.
+  Both versions measured with Understand Build 1265; raw evidence is retained separately.
+endlegend
+@enduml

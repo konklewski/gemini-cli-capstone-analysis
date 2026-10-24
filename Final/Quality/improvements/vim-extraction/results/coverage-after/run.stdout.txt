@@ -1,0 +1,758 @@
+
+ RUN  v3.2.4 /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli
+      Coverage enabled with v8
+
+······················································································································[?2004h[?2004h··································[?2004h···········stdout | src/config/config.test.ts > loadCliConfig > Model resolution > should handle multiple --model flags by taking the last one
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+[?2004h···············································stdout | src/config/config.test.ts > loadCliConfig > Model resolution > should handle non-string model flags by coercing to string
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig > Proxy configuration > should leave proxy to empty by default
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig > Proxy configuration > should set proxy to http://localhost:7890 according to environment variable [https_proxy]
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig > Proxy configuration > should set proxy to http://localhost:7890 according to environment variable [http_proxy]
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig > Proxy configuration > should set proxy to http://localhost:7890 according to environment variable [HTTPS_PROXY]
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig > Proxy configuration > should set proxy to http://localhost:7890 according to environment variable [HTTP_PROXY]
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig > should add IDE workspace folders from GEMINI_CLI_IDE_WORKSPACE_PATH to include directories
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig > should skip inaccessible workspace folders from GEMINI_CLI_IDE_WORKSPACE_PATH
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+[IDE] Skipping inaccessible workspace folder: /nonexistent/restricted/folder (EACCES: permission denied)
+
+stdout | src/config/config.test.ts > loadCliConfig > should use default fileFilter options when unconfigured
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig > should be non-interactive when isCommand is set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+······stdout | src/config/config.test.ts > loadCliConfig > isAcpMode > should force skipNextSpeakerCheck to true when in ACP mode
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig > isAcpMode > should respect settings.model.skipNextSpeakerCheck when not in ACP mode
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+··········[?2004h···[?2004h·········stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should allow all MCP servers if the flag is not provided
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should allow only the specified MCP server
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should allow multiple specified MCP servers
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should handle server names that do not exist
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should allow no MCP servers if the flag is provided but empty
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should read allowMCPServers from settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should read excludeMCPServers from settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should override allowMCPServers with excludeMCPServers if overlapping
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should prioritize mcp server flag if set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with allowed-mcp-server-names > should prioritize CLI flag over both allowed and excluded settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with admin.mcp.config > should use local configuration if admin allowlist is empty
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with admin.mcp.config > should ignore locally configured servers not present in the allowlist
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig with admin.mcp.config > should clear command, args, env, and cwd for present servers
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with admin.mcp.config > should not initialize a server if it is in allowlist but missing locally
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with admin.mcp.config > should merge local fields and prefer admin tool filters
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig with admin.mcp.config > should use local tool filters when admin does not define them
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig folderTrust > should be false when folderTrust is false
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig folderTrust > should be true when folderTrust is true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig folderTrust > should be true by default
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig compressionThreshold > should pass settings to the core config
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig compressionThreshold > should have default compressionThreshold if not in settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig useRipgrep > should be true by default when useRipgrep is not set in settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+··-···stdout | src/config/config.test.ts > loadCliConfig useRipgrep > should be false when useRipgrep is set to false in settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig useRipgrep > should be true when useRipgrep is explicitly set to true in settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig directWebFetch > should be false by default when directWebFetch is not set in settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig directWebFetch > should be true when directWebFetch is set to true in settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig context management > should be false by default when generalistProfile / context management is not set in settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig context management > should be true when generalistProfile is set to true in settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > screenReader configuration > should use screenReader value from settings if CLI flag is not present (settings true)
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > screenReader configuration > should use screenReader value from settings if CLI flag is not present (settings false)
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+[?2004hstdout | src/config/config.test.ts > screenReader configuration > should prioritize --screen-reader CLI flag (true) over settings (false)
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > screenReader configuration > should be false by default when no flag or setting is present
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should not exclude interactive tools in interactive mode without YOLO
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+[?2004hstdout | src/config/config.test.ts > loadCliConfig tool exclusions > should not exclude interactive tools in interactive mode with YOLO
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should exclude interactive tools in non-interactive mode without YOLO
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should exclude only ask_user in non-interactive mode with YOLO
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should exclude ask_user in interactive mode when --acp is provided
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should exclude ask_user in interactive mode when --experimental-acp is provided
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+······stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should not exclude shell tool in non-interactive mode when --allowed-tools="ShellTool" is set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should not exclude web-fetch in non-interactive mode at config level
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should not exclude web-fetch in non-interactive mode when allowed
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should not exclude shell tool in non-interactive mode when --allowed-tools="run_shell_command" is set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig tool exclusions > should not exclude shell tool in non-interactive mode when --allowed-tools="ShellTool(wc)" is set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should be interactive if isTTY and no prompt
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should be interactive if prompt-interactive is set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should not be interactive if not isTTY and no prompt
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should not be interactive if prompt is set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+······stdout | src/config/config.test.ts > loadCliConfig interactive > should be interactive if positional prompt words are provided with other flags
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should be interactive if positional prompt words are provided with multiple flags
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should be interactive if positional prompt words are provided with extensions flag
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should handle multiple positional words correctly
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should handle multiple positional words with flags
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig interactive > should handle empty positional arguments
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should handle extensions flag with positional arguments correctly
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig interactive > should be interactive if no positional prompt words are provided with flags
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should default to DEFAULT approval mode when no flags are set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should set YOLO approval mode when --yolo flag is used
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig approval mode > should set YOLO approval mode when -y flag is used
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should set DEFAULT approval mode when --approval-mode=default
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should set AUTO_EDIT approval mode when --approval-mode=auto_edit
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should set YOLO approval mode when --approval-mode=yolo
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should prioritize --approval-mode over --yolo when both would be valid (but validation prevents this)
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+····stdout | src/config/config.test.ts > loadCliConfig approval mode > should fall back to --yolo behavior when --approval-mode is not set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should set Plan approval mode when --approval-mode=plan is used and plan is enabled
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should ignore "yolo" in settings.tools.approvalMode and fall back to DEFAULT
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+····stdout | src/config/config.test.ts > loadCliConfig approval mode > should throw error when --approval-mode=plan is used but plan is disabled
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should allow plan approval mode by default when --approval-mode=plan is used
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > should pass planSettings.directory from settings to config
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > when folder is NOT trusted > should override --approval-mode=yolo to DEFAULT
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > when folder is NOT trusted > should override --approval-mode=auto_edit to DEFAULT
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig approval mode > when folder is NOT trusted > should override --yolo flag to DEFAULT
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > when folder is NOT trusted > should remain DEFAULT when --approval-mode=default
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > Persistent approvalMode setting > should use approvalMode from settings when no CLI flags are set
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > Persistent approvalMode setting > should prioritize --approval-mode flag over settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig approval mode > Persistent approvalMode setting > should prioritize --yolo flag over settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+····stdout | src/config/config.test.ts > loadCliConfig approval mode > Persistent approvalMode setting > should respect plan mode from settings when plan is enabled
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+[?2004hstdout | src/config/config.test.ts > loadCliConfig approval mode > Persistent approvalMode setting > should fall back to default if plan mode is in settings but disabled
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig gemmaModelRouter > should have gemmaModelRouter disabled by default
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+[?2004hstdout | src/config/config.test.ts > loadCliConfig gemmaModelRouter > should load gemmaModelRouter settings from merged settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig gemmaModelRouter > should load experimental.gemma setting from merged settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig gemmaModelRouter > should handle partial gemmaModelRouter settings
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig fileFiltering > should pass 'enableFuzzySearch' from settings to config when true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·stdout | src/config/config.test.ts > loadCliConfig fileFiltering > should pass 'enableFuzzySearch' from settings to config when false
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig fileFiltering > should pass 'respectGitIgnore' from settings to config when true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig fileFiltering > should pass 'respectGitIgnore' from settings to config when false
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig fileFiltering > should pass 'respectGeminiIgnore' from settings to config when true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig fileFiltering > should pass 'respectGeminiIgnore' from settings to config when false
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig fileFiltering > should pass 'enableRecursiveFileSearch' from settings to config when true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig fileFiltering > should pass 'enableRecursiveFileSearch' from settings to config when false
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·························stdout | src/config/config.test.ts > PolicyEngine nonInteractive wiring > should set nonInteractive to true when -p flag is used
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > PolicyEngine nonInteractive wiring > should set nonInteractive to false in interactive mode
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > Policy Engine Integration in loadCliConfig > should pass merged allowed tools from CLI and settings to createPolicyEngineConfig
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > Policy Engine Integration in loadCliConfig > should pass merged exclude tools from CLI logic and settings to createPolicyEngineConfig
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > Policy Engine Integration in loadCliConfig > should pass user-provided policy paths from --policy flag to createPolicyEngineConfig
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+····stdout | src/config/config.test.ts > loadCliConfig disableYoloMode > should allow auto_edit mode even if yolo mode is disabled
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig disableYoloMode > should throw if YOLO mode is attempted when disableYoloMode is true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig secureModeEnabled > should throw an error if YOLO mode is attempted when secureModeEnabled is true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig secureModeEnabled > should throw an error if approval-mode=yolo is attempted when secureModeEnabled is true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····[?2004hstdout | src/config/config.test.ts > loadCliConfig secureModeEnabled > should set disableYoloMode to true when secureModeEnabled is true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig mcpEnabled > should enable MCP by default
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+[?2004hstdout | src/config/config.test.ts > loadCliConfig mcpEnabled > should disable MCP when mcpEnabled is false
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig mcpEnabled > should enable MCP when mcpEnabled is true
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·stdout | src/config/config.test.ts > loadCliConfig mcpEnabled > extension plan settings > should use plan directory from active extension when user has not specified one
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig mcpEnabled > extension plan settings > should NOT use plan directory from active extension when user has specified one
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig mcpEnabled > extension plan settings > should NOT use plan directory from inactive extension
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·stdout | src/config/config.test.ts > loadCliConfig mcpEnabled > extension plan settings > should use default path if neither user nor extension settings provide a plan directory
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig acpMode and clientName > should set acpMode to true and detect clientName when --acp flag is used
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+stdout | src/config/config.test.ts > loadCliConfig acpMode and clientName > should set acpMode to true and set clientName to acp for generic terminals
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+·····stdout | src/config/config.test.ts > loadCliConfig acpMode and clientName > should set acpMode to false and clientName to tui by default
+Ignore file not found: /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/.geminiignore, continue without it.
+
+··[?2004h[?2004h···[?2004h[?2004h···[?2004h[?2004h···[?2004h[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h····[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h····[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h··[?2004h··[?2004h[?2004h···[?2004h·[?2004h[?2004h····[?2004h[?2004h····[?2004h·[?2004h···[?2004h·[?2004h···[?2004h·[?2004h···[?2004h··[?2004h·[?2004h·[?2004h··[?2004h··[?2004h··[?2004h·[?2004h[?2004h··[?2004h·[?2004h·[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h····[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h··[?2004h··[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h·[?2004h[?2004h·[?2004h[?2004h·[?2004h····[?2004h·[?2004h·[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h··[?2004h[?2004h[?2004h···[?2004h[?2004h··[?2004h[?2004h[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h[?2004h[?2004h[?2004h····[?2004h[?2004h··[?2004h[?2004h[?2004h[?2004h····[?2004h[?2004h[?2004h···[?2004h[?2004h·[?2004h···[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h·[?2004h··[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h··[?2004h[?2004h··[?2004h·[?2004h··[?2004h[?2004h···[?2004h·[?2004h·[?2004h··[?2004h·[?2004h··[?2004h·[?2004h·[?2004h·[?2004h··[?2004h·[?2004h·[?2004h[?2004h[?2004h···[?2004h[?2004h[?2004h[?2004h[?2004h······[?2004h·[?2004h··[?2004h·[?2004h[?2004h···[?2004h[?2004h···[?2004h·[?2004h·[?2004h··[?2004h[?2004h···[?2004h·[?2004h·[?2004h······[?2004h·[?2004h···[?2004h·[?2004h············································································································································································································[?2004h································································[?2004h······················································································[?2004h···········································[?2004h········································································[?2004h··································[?2004h··[?2004h······[?2004h····[?2004h················[?2004h········[?2004h··············[?2004h··········stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should pass through query if no @ command is present
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-ETcbl7/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should pass through original query if only a lone @ symbol is present
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-FDkHpz/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should process a valid text file path
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-jMpHoI/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should process a valid text file path
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-jMpHoI/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should process a valid directory path and convert to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-TyUVjW/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should process a valid directory path and convert to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-TyUVjW/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle query with text before and after @command
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-CTqtJ9/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle query with text before and after @command
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-CTqtJ9/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should correctly unescape paths with escaped spaces
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-XsIbyN/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should correctly unescape paths with escaped spaces
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-XsIbyN/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should correctly handle double-quoted paths with spaces
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-C6ySLu/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should correctly handle double-quoted paths with spaces
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-C6ySLu/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should correctly handle file paths with narrow non-breaking space (NNBSP)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-68vdZv/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should correctly handle file paths with narrow non-breaking space (NNBSP)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-68vdZv/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle multiple @file references
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-dlFq9t/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle multiple @file references
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-dlFq9t/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle multiple @file references with interleaved text
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-d37sce/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle multiple @file references with interleaved text
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-d37sce/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle a mix of valid, invalid, and lone @ references
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-IdFbNg/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle a mix of valid, invalid, and lone @ references
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-IdFbNg/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle a mix of valid, invalid, and lone @ references
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-IdFbNg/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should return original query if all @paths are invalid or lone @
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-EukYDC/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should return original query if all @paths are invalid or lone @
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-EukYDC/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > git-aware filtering > should skip git-ignored files in @ commands
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-X6aGOH/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > git-aware filtering > should skip git-ignored files in @ commands
+Ignored 1 files:
+Git-ignored: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-X6aGOH/node_modules/package.json
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > git-aware filtering > should process non-git-ignored files normally
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-P6YAph/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > git-aware filtering > should process non-git-ignored files normally
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-P6YAph/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > git-aware filtering > should handle mixed git-ignored and valid files
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-Sdnifl/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > git-aware filtering > should handle mixed git-ignored and valid files
+Ignored 1 files:
+Git-ignored: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-Sdnifl/.env
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > git-aware filtering > should handle mixed git-ignored and valid files
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-Sdnifl/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > git-aware filtering > should always ignore .git directory files
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-UhR11j/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > git-aware filtering > should always ignore .git directory files
+Ignored 1 files:
+Git-ignored: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-UhR11j/.git/config
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > when recursive file search is disabled > should not use glob search for a nonexistent file
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-6tqWCC/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > gemini-ignore filtering > should skip gemini-ignored files in @ commands
+Loading ignore patterns from: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-DH4H7g/.geminiignore
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > gemini-ignore filtering > should skip gemini-ignored files in @ commands
+Ignored 1 files:
+Gemini-ignored: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-DH4H7g/build/output.js
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should process non-ignored files when .geminiignore is present
+Loading ignore patterns from: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-znJVTg/.geminiignore
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should process non-ignored files when .geminiignore is present
+Loading ignore patterns from: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-znJVTg/.geminiignore
+
+··················stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle mixed gemini-ignored and valid files
+Loading ignore patterns from: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-9jeTSS/.geminiignore
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle mixed gemini-ignored and valid files
+Ignored 1 files:
+Gemini-ignored: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-9jeTSS/dist/bundle.js
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should handle mixed gemini-ignored and valid files
+Loading ignore patterns from: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-9jeTSS/.geminiignore
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'comma'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-JoK5wd/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'comma'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-JoK5wd/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'period'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-84O6ht/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'period'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-84O6ht/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'semicolon'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-ym2RAf/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'semicolon'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-ym2RAf/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'exclamation mark'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-LkU8qD/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'exclamation mark'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-LkU8qD/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'question mark'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-NSQknL/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'question mark'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-NSQknL/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'opening parenthesis'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-VzcR3r/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'opening parenthesis'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-VzcR3r/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'closing parenthesis'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-ziV7fX/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'closing parenthesis'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-ziV7fX/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'opening square bracket'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-tuouJ0/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'opening square bracket'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-tuouJ0/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'closing square bracket'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-xQrF1D/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'closing square bracket'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-xQrF1D/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'opening curly brace'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-B5LVta/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'opening curly brace'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-B5LVta/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'closing curly brace'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-oHTkZP/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should terminate @path at 'closing curly brace'
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-oHTkZP/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle multiple @paths terminated by different punctuation
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-XZpj8N/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle multiple @paths terminated by different punctuation
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-XZpj8N/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should still handle escaped spaces in paths before punctuation
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-inPvoL/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should still handle escaped spaces in paths before punctuation
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-inPvoL/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should not break file paths with periods in extensions
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-92uTkW/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should not break file paths with periods in extensions
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-92uTkW/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle file paths ending with period followed by space
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-Ngb2bc/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle file paths ending with period followed by space
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-Ngb2bc/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle comma termination with complex file paths
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-YVtG5C/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle comma termination with complex file paths
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-YVtG5C/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should correctly handle file paths with multiple periods
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-mQ3W7Z/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should correctly handle file paths with multiple periods
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-mQ3W7Z/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle end of string termination for period and comma
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-MT3Yc3/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle end of string termination for period and comma
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-MT3Yc3/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle files with special characters in names
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-I7kbUk/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle files with special characters in names
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-I7kbUk/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle basic file names without special characters
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-wGtvLK/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > punctuation termination in @ commands > should handle basic file names without special characters
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-wGtvLK/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > absolute path handling > should handle absolute file paths correctly
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-Mg5fZu/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > absolute path handling > should handle absolute file paths correctly
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-Mg5fZu/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > absolute path handling > should handle absolute directory paths correctly
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-52BTm7/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > absolute path handling > should handle absolute directory paths correctly
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-52BTm7/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should not add the user's turn to history, as that is the caller's responsibility
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-EcQRSv/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should not add the user's turn to history, as that is the caller's responsibility
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-EcQRSv/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > MCP resource attachments > attaches MCP resource content when @serverName:uri matches registry
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-7PlJ1J/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > MCP resource attachments > returns an error if MCP client is unavailable
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-UdiUe4/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should return error if the read_many_files tool is cancelled by user
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-a2sT20/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve files in multiple workspace directories
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-n29phk/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve files in multiple workspace directories
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-n29phk/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should attempt glob fallback if direct resolution is unauthorized
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-uh8DZt/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should attempt glob fallback if direct resolution is unauthorized
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-uh8DZt/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should attempt glob fallback if direct resolution is unauthorized
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-uh8DZt/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should skip malformed paths (the original crash scenario)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-6FS5eF/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should recover a buried path from a malformed fragment during handleAtCommand
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-Z85uV6/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should recover a buried path from a malformed fragment during handleAtCommand
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-Z85uV6/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not greedily consume code across quotes when @ is inside quotes (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-P32Q0b/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not greedily consume code across quotes when @ is inside quotes (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-P32Q0b/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not hang when input contains @scope/pkg followed by many imports (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-616Mab/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not hang when input contains @scope/pkg followed by many imports (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-616Mab/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not invoke recursive glob search on paths exceeding MAX_GLOB_SEARCH_PATH_LENGTH (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-feUKmR/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not invoke recursive glob search on paths containing newlines (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-TiqS4F/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not invoke recursive glob search on paths containing curly braces (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-cb2oY7/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not invoke recursive glob search on paths containing directory traversal sequences (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-nhUT5R/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not invoke recursive glob search on absolute paths that do not exist (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-GykU8V/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > does not invoke recursive glob search on paths containing glob wildcards (#29434)
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-xax5I2/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js:10) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-stue1M/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js:10) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-stue1M/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js:10-20) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-7jiLCs/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js:10-20) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-7jiLCs/.geminiignore, continue without it.
+
+··········································stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js:10:5) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-OcpybI/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js:10:5) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-OcpybI/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js#L10) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-GKo6si/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js#L10) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-GKo6si/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js#L10-L25) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-mCNW8B/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js#L10-L25) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-mCNW8B/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js#L10-#L25) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-iqdy8C/.geminiignore, continue without it.
+
+stdout | src/ui/hooks/atCommandProcessor.test.ts > handleAtCommand > should resolve file references with line numbers or ranges (@src/app.js#L10-#L25) without falling back to glob
+Ignore file not found: /private/var/folders/sb/47gqd64s0n71b47l1q_nwltr0000gn/T/folder-structure-test-iqdy8C/.geminiignore, continue without it.
+
+··················[?2004h···········[?2004h·[?2004h]0;◇  Ready (cli)                                                                  ]0;◇  Ready (cli)                                                                  [?2004h········[?2004h·[?2004h[?2004h···[?2004h·[?2004h·[?2004h··[?2004h··[?2004h··[?2004h·[?2004h··[?2004h··[?2004h·[?2004h[?2004h[?2004h···[?2004h[?2004h[?2004h···[?2004h[?2004h[?2004h···[?2004h[?2004h[?2004h[?2004h····[?2004h[?2004h[?2004h····[?2004h[?2004h··[?2004h·[?2004h·[?2004h···[?2004h·[?2004h·[?2004h··[?2004h··[?2004h·[?2004h··[?2004h··]0;◇  Ready (cli)                                                                  [?2004h··-···[?2004h·······[?2004h····[?2004h······[?2004h··[?2004h···]0;Gemini CLI (root)                                                               [?7l[?7h]0;Gemini CLI (root)                                                               [?7l[?7h]0;Gemini CLI (root)                                                               [?7l[?7h]0;Gemini CLI (root)                                                               [?7l[?7h]0;Gemini CLI (root)                                                               [?7l[?7h]0;Gemini CLI (root)                                                               [?7l[?7h[?7h·········[?2004h·[?2004h··[?2004h[?2004h··[?2004h[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·····[?2004h··[?2004h·[?2004h····[?2004h·[?2004h·[?2004h···[?2004h·[?2004h[?2004h··[?2004h·[?2004h···[?2004h·[?2004h[?2004h··[?2004h··[?2004h[?2004h·····[?2004h[?2004h····[?2004h[?2004h···[?2004h····[?2004h[?2004h··[?2004h·[?2004h·[?2004h···[?2004h·[?2004h···[?2004h···[?2004h··[?2004h···[?2004h···[?2004h··[?2004h·····[?2004h······[?2004h·[?2004h·[?2004h···[?2004h···[?2004h··[?2004h·[?2004h····[?2004h··[?2004h·[?2004h····[?2004h···[?2004h···[?2004h···[?2004h···[?2004h··[?2004h·[?2004h·[?2004h[?2004h··[?2004h·[?2004h····[?2004h···[?2004h·[?2004h·[?2004h···[?2004h[?2004h····[?2004h[?2004h···[?2004h·[?2004h················································[?2004h··[?2004h·[?2004h[?2004h··[?2004h··[?2004h[?2004h··[?2004h·[?2004h[?2004h···[?2004h·[?2004h·[?2004h···[?2004h·[?2004h···[?2004h·[?2004h·························[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h········[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h·············[?2004h[?2004h·[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h·············[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h··········[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h··············[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h···········[?2004h[?2004h·[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h·[?2004h[?2004h[?2004h···········[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h·············[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h·········[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h··············[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h············[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h·[?2004h··········[?2004h[?2004h[?2004h[?2004h[?2004h······[?2004h··[?2004h··stdout | src/ui/commands/extensionsCommand.test.ts > extensionsCommand > explore > should handle onSelect and onClose in ExtensionRegistryView
+Selected extension: test-ext
+
+···························································[?2004h·[?2004h··[?2004h········································[?2004h···[?2004h··[?2004h··[?2004h······[?2004h····[?2004h···[?2004h····[?2004h···[?2004h···[?2004h···[?2004h[?2004h·····[?2004h···[?2004h··[?2004h··[?2004h···[?2004h··[?2004h·····[?2004h···[?2004h·[?2004h··[?2004h·[?2004h···[?2004h·[?2004h····[?2004h·[?2004h··[?2004h····[?2004h···[?2004h·[?2004h··stdout | src/ui/components/InputPrompt.test.tsx > InputPrompt > Voice Mode > should toggle recording off when space is pressed again (toggle)
+[Voice] Stop requested
+[Voice] Draining transcription for 4000ms
+
+[?2004h····[?2004h···[?2004h··[?2004h····[?2004h·[?2004h··[?2004h··[?2004h[?2004h·stdout | src/ui/components/InputPrompt.test.tsx > InputPrompt > Voice Mode > push-to-talk > should stop recording when space heartbeat stops (release)
+[Voice] Stop requested
+[Voice] Draining transcription for 4000ms
+
+[?2004h··[?2004h··[?2004h··[?2004h···[?2004h·····[?2004h······[?2004h···[?2004h···[?2004h······································[?2004h···········[?2004h···[?2004h········[?2004h·················[?2004h···[?2004h·······[?2004h···············[?2004h········[?2004h····[?2004h······[?2004h···[?2004h·······[?2004h········································································[?2004h···································[?2004h········[?2004h·······································································[?2004h··[?2004h·········[?2004h···[?2004h·[?2004h··[?2004h·[?2004h···[?2004h··[?2004h·[?2004h··[?2004h··[?2004h[?2004h···[?2004h··[?2004h[?2004h·····[?2004h··[?2004h·····[?2004h··[?2004h·[?2004h[?2004h··[?2004h··[?2004h··[?2004h·[?2004h··[?2004h··[?2004h···············[?2004h··[?2004h·····[?2004h[?2004h[?2004h··[?2004h[?2004h[?2004h···[?2004h·[?2004h[?2004h···[?2004h[?2004h··[?2004h[?2004h··[?2004h[?2004h···[?2004h[?2004h··[?2004h[?2004h··[?2004h[?2004h··[?2004h[?2004h··[?2004h[?2004h··[?2004h[?2004h[?2004h···[?2004h·[?2004h··[?2004h[?2004h···[?2004h···[?2004h[?2004h··[?2004h·[?2004h[?2004h··[?2004h[?2004h··[?2004h[?2004h···[?2004h[?2004h····[?2004h··[?2004h[?2004h··[?2004h··[?2004h·[?2004h·[?2004h···[?2004h··[?2004h[?2004h[?2004h··[?2004h[?2004h···[?2004h·[?2004h[?2004h··[?2004h[?2004h···[?2004h·[?2004h[?2004h··[?2004h[?2004h··[?2004h··[?2004h·[?2004h·[?2004h·[?2004h[?2004h···[?2004h[?2004h[?2004h···[?2004h[?2004h··[?2004h·[?2004h··[?2004h·[?2004h·[?2004h[?2004h··[?2004h··[?2004h·[?2004h[?2004h··[?2004h·[?2004h·[?2004h[?2004h··[?2004h··[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h···[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h···[?2004h·[?2004h·[?2004h·[?2004h···[?2004h··································[?2004h···················································[?2004h·················································[?2004h·[?2004h·································[?2004h·[?2004h·[?2004h·[?2004h·[?2004h[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h[?2004h··[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h[?2004h··[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h··[?2004h··[?2004h···································[?2004h·[?2004h······························[?2004h·[?2004h··························[?2004h··[?2004h··································[?2004h·[?2004h·[?2004h······················[?2004h··[?2004h·[?2004h··[?2004h···[?2004h·[?2004h···[?2004h···[?2004h···[?2004h···[?2004h··[?2004h··[?2004h·····[?2004h····[?2004h··[?2004h····[?2004h···[?2004h···················[?2004h··[?2004h···································[?2004h[?2004h····································[?2004h[?2004h··[?2004h··[?2004h··[?2004h[?2004h··[?2004h··[?2004h··[?2004h[?2004h·stdout | src/commands/mcp/list.test.ts > mcp list command > should display connected status even if ping fails
+MCP ping failed for test-server, but connect succeeded: Error: Ping failed
+    at /private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli/src/commands/mcp/list.test.ts:226:39
+    at file:///private/tmp/gemini-cli-vim-extraction.XVxCD6/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///private/tmp/gemini-cli-vim-extraction.XVxCD6/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///private/tmp/gemini-cli-vim-extraction.XVxCD6/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///private/tmp/gemini-cli-vim-extraction.XVxCD6/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///private/tmp/gemini-cli-vim-extraction.XVxCD6/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///private/tmp/gemini-cli-vim-extraction.XVxCD6/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///private/tmp/gemini-cli-vim-extraction.XVxCD6/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+·················[?2004h·[?2004h··············································································[?2004h·[?2004h··[?2004h·[?2004h·[?2004h··[?2004h·[?2004h···[?2004h··[?2004h·[?2004h·[?2004h··[?2004h··[?2004h·[?2004h·[?2004h··[?2004h··[?2004h·[?2004h·[?2004h····[?2004h·[?2004h·[?2004h··[?2004h·[?2004h···························[?2004h·[?2004h[?2004h····················[?2004h·[?2004h··················································[?2004h·[?2004h·[?2004h[?2004h·[?2004h·[?2004h·[?2004h[?2004h··[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h[?2004h··[?2004h·[?2004h·[?2004h·[?2004h[?2004h··[?2004h·[?2004h·[?2004h[?2004h[?2004h[?2004h··[?2004h··[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h[?2004h·[?2004h··[?2004h·[?2004h··[?2004h·[?2004h··············································[?2004h·[?2004h[?2004h·····················[?2004h·[?2004h[?2004h·[?2004h·[?2004h[?2004h[?2004h··[?2004h[?2004h[?2004h[?2004h[?2004h·····[?2004h·[?2004h·[?2004h[?2004h··[?2004h[?2004h[?2004h····[?2004h[?2004h[?2004h···[?2004h[?2004h[?2004h[?2004h[?2004h·····[?2004h[?2004h··[?2004h·[?2004h[?2004h[?2004h·[?2004h··[?2004h···[?2004h··············[?2004h·[?2004h········[?2004h···································[?2004h·································[?2004h·[?2004h··[?2004h··[?2004h··[?2004h··[?2004h··[?2004h·[?2004h[?2004h··[?2004h··[?2004h·[?2004h·[?2004h·[?2004h··[?2004h··[?2004h[?2004h··[?2004h·[?2004h···[?2004h·[?2004h·[?2004h··················[?2004h··[?2004h·······························································[?2004h··[?2004h············································[?2004h··············[?2004h[?2004h·[?2004h··················[?2004h··[?2004h[?2004h·[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h·[?2004h[?2004h······[?2004h[?2004h[?2004h[?2004h····[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h[?2004h·······[?2004h[?2004h[?2004h[?2004h[?2004h·····[?2004h····[?2004h············································[?2004h··[?2004h·························[?2004h················································[?2004h·······················································[?2004h··············[?2004h·····[?2004h·················[?2004h·[?2004h···[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h·[?2004h··[?2004h[?2004h·[?2004h·[?2004h·[?2004h[?2004h·[?2004h·[?2004h[?2004h··[?2004h·[?2004h[?2004h··[?2004h[?2004h[?2004h···[?2004h[?2004h··[?2004h[?2004h··[?2004h·[?2004h[?2004h··[?2004h·[?2004h·[?2004h[?2004h··[?2004h·[?2004h[?2004h··[?2004h·[?2004h·[?2004h[?2004h··[?2004h·[?2004h[?2004h·[?2004h··[?2004h·[?2004h[?2004h··[?2004h[?2004h··[?2004h[?2004h[?2004h···[?2004h[?2004h·[?2004h···[?2004h[?2004h[?2004h···[?2004h[?2004h·····················[?2004h[?2004h[?2004h···········································[?2004h··[?2004h[?2004h[?2004h··[?2004h[?2004h[?2004h[?2004h[?2004h·[?2004h·····[?2004h[?2004h··[?2004h[?2004h··[?2004h[?2004h··[?2004h[?2004h····················[?2004h[?2004h···[?2004h··-···[?2004h··[?2004h·············[?2004h[?2004h···················[?2004h··[?2004h·[?2004h··[?2004h·[?2004h··[?2004h·[?2004h[?2004h··

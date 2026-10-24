@@ -1,0 +1,3304 @@
+[
+  {
+    "name": "@grpc/grpc-js",
+    "version": "1.14.3",
+    "location": "node_modules/@grpc/grpc-js",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "@grpc/grpc-js",
+        "spec": "^1.10.9",
+        "from": {
+          "name": "google-gax",
+          "version": "4.6.1",
+          "location": "node_modules/google-gax",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "google-gax",
+              "spec": "^4.0.3",
+              "from": {
+                "name": "@google-cloud/logging",
+                "version": "11.2.1",
+                "location": "node_modules/@google-cloud/logging",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@google-cloud/logging",
+                    "spec": "11.2.1",
+                    "from": {
+                      "name": "@google/gemini-cli-core",
+                      "version": "0.64.0",
+                      "location": "packages/core",
+                      "isWorkspace": true,
+                      "dependents": [],
+                      "linksIn": [
+                        {
+                          "name": "@google/gemini-cli-core",
+                          "version": "0.64.0",
+                          "location": "node_modules/@google/gemini-cli-core",
+                          "isWorkspace": true,
+                          "dependents": [
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-a2a-server",
+                                "version": "0.64.0",
+                                "location": "packages/a2a-server",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-a2a-server",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-a2a-server",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-a2a-server",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-sdk",
+                                "version": "0.64.0",
+                                "location": "packages/sdk",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-sdk",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-sdk",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-sdk",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli",
+                                "version": "0.64.0",
+                                "location": "packages/cli",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-test-utils",
+                                "version": "0.64.0",
+                                "location": "packages/test-utils",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-test-utils",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-test-utils",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli-core",
+                                          "version": "0.64.0"
+                                        }
+                                      },
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "packages/cli",
+                                          "isWorkspace": true,
+                                          "dependents": [],
+                                          "linksIn": [
+                                            {
+                                              "name": "@google/gemini-cli",
+                                              "version": "0.64.0",
+                                              "location": "node_modules/@google/gemini-cli",
+                                              "isWorkspace": true,
+                                              "dependents": [
+                                                {
+                                                  "type": "workspace",
+                                                  "name": "@google/gemini-cli",
+                                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                  "from": {
+                                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "workspace",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                              "from": {
+                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "prod",
+        "name": "@grpc/grpc-js",
+        "spec": "^1.1.8",
+        "from": {
+          "name": "@google-cloud/opentelemetry-cloud-trace-exporter",
+          "version": "3.0.0",
+          "location": "node_modules/@google-cloud/opentelemetry-cloud-trace-exporter",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@google-cloud/opentelemetry-cloud-trace-exporter",
+              "spec": "3.0.0",
+              "from": {
+                "name": "@google/gemini-cli-core",
+                "version": "0.64.0",
+                "location": "packages/core",
+                "isWorkspace": true,
+                "dependents": [],
+                "linksIn": [
+                  {
+                    "name": "@google/gemini-cli-core",
+                    "version": "0.64.0",
+                    "location": "node_modules/@google/gemini-cli-core",
+                    "isWorkspace": true,
+                    "dependents": [
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-a2a-server",
+                          "version": "0.64.0",
+                          "location": "packages/a2a-server",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-a2a-server",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-a2a-server",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-a2a-server",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-sdk",
+                          "version": "0.64.0",
+                          "location": "packages/sdk",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-sdk",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-sdk",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-sdk",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli",
+                          "version": "0.64.0",
+                          "location": "packages/cli",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-test-utils",
+                          "version": "0.64.0",
+                          "location": "packages/test-utils",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-test-utils",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-test-utils",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli-core",
+                                    "version": "0.64.0"
+                                  }
+                                },
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "packages/cli",
+                                    "isWorkspace": true,
+                                    "dependents": [],
+                                    "linksIn": [
+                                      {
+                                        "name": "@google/gemini-cli",
+                                        "version": "0.64.0",
+                                        "location": "node_modules/@google/gemini-cli",
+                                        "isWorkspace": true,
+                                        "dependents": [
+                                          {
+                                            "type": "workspace",
+                                            "name": "@google/gemini-cli",
+                                            "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                            "from": {
+                                              "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "workspace",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                        "from": {
+                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "prod",
+        "name": "@grpc/grpc-js",
+        "spec": "^1.14.3",
+        "from": {
+          "name": "@opentelemetry/exporter-logs-otlp-grpc",
+          "version": "0.218.0",
+          "location": "node_modules/@opentelemetry/exporter-logs-otlp-grpc",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@opentelemetry/exporter-logs-otlp-grpc",
+              "spec": "0.218.0",
+              "from": {
+                "name": "@opentelemetry/sdk-node",
+                "version": "0.218.0",
+                "location": "node_modules/@opentelemetry/sdk-node",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@opentelemetry/sdk-node",
+                    "spec": "0.218.0",
+                    "from": {
+                      "name": "@google/gemini-cli-core",
+                      "version": "0.64.0",
+                      "location": "packages/core",
+                      "isWorkspace": true,
+                      "dependents": [],
+                      "linksIn": [
+                        {
+                          "name": "@google/gemini-cli-core",
+                          "version": "0.64.0",
+                          "location": "node_modules/@google/gemini-cli-core",
+                          "isWorkspace": true,
+                          "dependents": [
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-a2a-server",
+                                "version": "0.64.0",
+                                "location": "packages/a2a-server",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-a2a-server",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-a2a-server",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-a2a-server",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-sdk",
+                                "version": "0.64.0",
+                                "location": "packages/sdk",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-sdk",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-sdk",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-sdk",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli",
+                                "version": "0.64.0",
+                                "location": "packages/cli",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-test-utils",
+                                "version": "0.64.0",
+                                "location": "packages/test-utils",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-test-utils",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-test-utils",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli-core",
+                                          "version": "0.64.0"
+                                        }
+                                      },
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "packages/cli",
+                                          "isWorkspace": true,
+                                          "dependents": [],
+                                          "linksIn": [
+                                            {
+                                              "name": "@google/gemini-cli",
+                                              "version": "0.64.0",
+                                              "location": "node_modules/@google/gemini-cli",
+                                              "isWorkspace": true,
+                                              "dependents": [
+                                                {
+                                                  "type": "workspace",
+                                                  "name": "@google/gemini-cli",
+                                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                  "from": {
+                                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "workspace",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                              "from": {
+                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "prod",
+              "name": "@opentelemetry/exporter-logs-otlp-grpc",
+              "spec": "0.218.0",
+              "from": {
+                "name": "@google/gemini-cli-core",
+                "version": "0.64.0",
+                "location": "packages/core",
+                "isWorkspace": true,
+                "dependents": [],
+                "linksIn": [
+                  {
+                    "name": "@google/gemini-cli-core",
+                    "version": "0.64.0",
+                    "location": "node_modules/@google/gemini-cli-core",
+                    "isWorkspace": true,
+                    "dependents": [
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-a2a-server",
+                          "version": "0.64.0",
+                          "location": "packages/a2a-server",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-a2a-server",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-a2a-server",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-a2a-server",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-sdk",
+                          "version": "0.64.0",
+                          "location": "packages/sdk",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-sdk",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-sdk",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-sdk",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli",
+                          "version": "0.64.0",
+                          "location": "packages/cli",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-test-utils",
+                          "version": "0.64.0",
+                          "location": "packages/test-utils",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-test-utils",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-test-utils",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli-core",
+                                    "version": "0.64.0"
+                                  }
+                                },
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "packages/cli",
+                                    "isWorkspace": true,
+                                    "dependents": [],
+                                    "linksIn": [
+                                      {
+                                        "name": "@google/gemini-cli",
+                                        "version": "0.64.0",
+                                        "location": "node_modules/@google/gemini-cli",
+                                        "isWorkspace": true,
+                                        "dependents": [
+                                          {
+                                            "type": "workspace",
+                                            "name": "@google/gemini-cli",
+                                            "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                            "from": {
+                                              "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "workspace",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                        "from": {
+                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "prod",
+        "name": "@grpc/grpc-js",
+        "spec": "^1.14.3",
+        "from": {
+          "name": "@opentelemetry/exporter-metrics-otlp-grpc",
+          "version": "0.218.0",
+          "location": "node_modules/@opentelemetry/exporter-metrics-otlp-grpc",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@opentelemetry/exporter-metrics-otlp-grpc",
+              "spec": "0.218.0",
+              "from": {
+                "name": "@opentelemetry/sdk-node",
+                "version": "0.218.0",
+                "location": "node_modules/@opentelemetry/sdk-node",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@opentelemetry/sdk-node",
+                    "spec": "0.218.0",
+                    "from": {
+                      "name": "@google/gemini-cli-core",
+                      "version": "0.64.0",
+                      "location": "packages/core",
+                      "isWorkspace": true,
+                      "dependents": [],
+                      "linksIn": [
+                        {
+                          "name": "@google/gemini-cli-core",
+                          "version": "0.64.0",
+                          "location": "node_modules/@google/gemini-cli-core",
+                          "isWorkspace": true,
+                          "dependents": [
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-a2a-server",
+                                "version": "0.64.0",
+                                "location": "packages/a2a-server",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-a2a-server",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-a2a-server",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-a2a-server",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-sdk",
+                                "version": "0.64.0",
+                                "location": "packages/sdk",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-sdk",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-sdk",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-sdk",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli",
+                                "version": "0.64.0",
+                                "location": "packages/cli",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-test-utils",
+                                "version": "0.64.0",
+                                "location": "packages/test-utils",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-test-utils",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-test-utils",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli-core",
+                                          "version": "0.64.0"
+                                        }
+                                      },
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "packages/cli",
+                                          "isWorkspace": true,
+                                          "dependents": [],
+                                          "linksIn": [
+                                            {
+                                              "name": "@google/gemini-cli",
+                                              "version": "0.64.0",
+                                              "location": "node_modules/@google/gemini-cli",
+                                              "isWorkspace": true,
+                                              "dependents": [
+                                                {
+                                                  "type": "workspace",
+                                                  "name": "@google/gemini-cli",
+                                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                  "from": {
+                                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "workspace",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                              "from": {
+                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "prod",
+              "name": "@opentelemetry/exporter-metrics-otlp-grpc",
+              "spec": "0.218.0",
+              "from": {
+                "name": "@google/gemini-cli-core",
+                "version": "0.64.0",
+                "location": "packages/core",
+                "isWorkspace": true,
+                "dependents": [],
+                "linksIn": [
+                  {
+                    "name": "@google/gemini-cli-core",
+                    "version": "0.64.0",
+                    "location": "node_modules/@google/gemini-cli-core",
+                    "isWorkspace": true,
+                    "dependents": [
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-a2a-server",
+                          "version": "0.64.0",
+                          "location": "packages/a2a-server",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-a2a-server",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-a2a-server",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-a2a-server",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-sdk",
+                          "version": "0.64.0",
+                          "location": "packages/sdk",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-sdk",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-sdk",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-sdk",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli",
+                          "version": "0.64.0",
+                          "location": "packages/cli",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-test-utils",
+                          "version": "0.64.0",
+                          "location": "packages/test-utils",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-test-utils",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-test-utils",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli-core",
+                                    "version": "0.64.0"
+                                  }
+                                },
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "packages/cli",
+                                    "isWorkspace": true,
+                                    "dependents": [],
+                                    "linksIn": [
+                                      {
+                                        "name": "@google/gemini-cli",
+                                        "version": "0.64.0",
+                                        "location": "node_modules/@google/gemini-cli",
+                                        "isWorkspace": true,
+                                        "dependents": [
+                                          {
+                                            "type": "workspace",
+                                            "name": "@google/gemini-cli",
+                                            "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                            "from": {
+                                              "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "workspace",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                        "from": {
+                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "prod",
+        "name": "@grpc/grpc-js",
+        "spec": "^1.14.3",
+        "from": {
+          "name": "@opentelemetry/exporter-trace-otlp-grpc",
+          "version": "0.218.0",
+          "location": "node_modules/@opentelemetry/exporter-trace-otlp-grpc",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@opentelemetry/exporter-trace-otlp-grpc",
+              "spec": "0.218.0",
+              "from": {
+                "name": "@opentelemetry/sdk-node",
+                "version": "0.218.0",
+                "location": "node_modules/@opentelemetry/sdk-node",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@opentelemetry/sdk-node",
+                    "spec": "0.218.0",
+                    "from": {
+                      "name": "@google/gemini-cli-core",
+                      "version": "0.64.0",
+                      "location": "packages/core",
+                      "isWorkspace": true,
+                      "dependents": [],
+                      "linksIn": [
+                        {
+                          "name": "@google/gemini-cli-core",
+                          "version": "0.64.0",
+                          "location": "node_modules/@google/gemini-cli-core",
+                          "isWorkspace": true,
+                          "dependents": [
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-a2a-server",
+                                "version": "0.64.0",
+                                "location": "packages/a2a-server",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-a2a-server",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-a2a-server",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-a2a-server",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-sdk",
+                                "version": "0.64.0",
+                                "location": "packages/sdk",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-sdk",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-sdk",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-sdk",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli",
+                                "version": "0.64.0",
+                                "location": "packages/cli",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-test-utils",
+                                "version": "0.64.0",
+                                "location": "packages/test-utils",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-test-utils",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-test-utils",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli-core",
+                                          "version": "0.64.0"
+                                        }
+                                      },
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "packages/cli",
+                                          "isWorkspace": true,
+                                          "dependents": [],
+                                          "linksIn": [
+                                            {
+                                              "name": "@google/gemini-cli",
+                                              "version": "0.64.0",
+                                              "location": "node_modules/@google/gemini-cli",
+                                              "isWorkspace": true,
+                                              "dependents": [
+                                                {
+                                                  "type": "workspace",
+                                                  "name": "@google/gemini-cli",
+                                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                  "from": {
+                                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "workspace",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                              "from": {
+                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "prod",
+              "name": "@opentelemetry/exporter-trace-otlp-grpc",
+              "spec": "0.218.0",
+              "from": {
+                "name": "@google/gemini-cli-core",
+                "version": "0.64.0",
+                "location": "packages/core",
+                "isWorkspace": true,
+                "dependents": [],
+                "linksIn": [
+                  {
+                    "name": "@google/gemini-cli-core",
+                    "version": "0.64.0",
+                    "location": "node_modules/@google/gemini-cli-core",
+                    "isWorkspace": true,
+                    "dependents": [
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-a2a-server",
+                          "version": "0.64.0",
+                          "location": "packages/a2a-server",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-a2a-server",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-a2a-server",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-a2a-server",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-sdk",
+                          "version": "0.64.0",
+                          "location": "packages/sdk",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-sdk",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-sdk",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-sdk",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli",
+                          "version": "0.64.0",
+                          "location": "packages/cli",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-test-utils",
+                          "version": "0.64.0",
+                          "location": "packages/test-utils",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-test-utils",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-test-utils",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli-core",
+                                    "version": "0.64.0"
+                                  }
+                                },
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "packages/cli",
+                                    "isWorkspace": true,
+                                    "dependents": [],
+                                    "linksIn": [
+                                      {
+                                        "name": "@google/gemini-cli",
+                                        "version": "0.64.0",
+                                        "location": "node_modules/@google/gemini-cli",
+                                        "isWorkspace": true,
+                                        "dependents": [
+                                          {
+                                            "type": "workspace",
+                                            "name": "@google/gemini-cli",
+                                            "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                            "from": {
+                                              "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "workspace",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                        "from": {
+                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "prod",
+        "name": "@grpc/grpc-js",
+        "spec": "^1.14.3",
+        "from": {
+          "name": "@opentelemetry/otlp-grpc-exporter-base",
+          "version": "0.218.0",
+          "location": "node_modules/@opentelemetry/otlp-grpc-exporter-base",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@opentelemetry/otlp-grpc-exporter-base",
+              "spec": "0.218.0",
+              "from": {
+                "name": "@opentelemetry/exporter-logs-otlp-grpc",
+                "version": "0.218.0",
+                "location": "node_modules/@opentelemetry/exporter-logs-otlp-grpc",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@opentelemetry/exporter-logs-otlp-grpc",
+                    "spec": "0.218.0",
+                    "from": {
+                      "name": "@opentelemetry/sdk-node",
+                      "version": "0.218.0",
+                      "location": "node_modules/@opentelemetry/sdk-node",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "prod",
+                          "name": "@opentelemetry/sdk-node",
+                          "spec": "0.218.0",
+                          "from": {
+                            "name": "@google/gemini-cli-core",
+                            "version": "0.64.0",
+                            "location": "packages/core",
+                            "isWorkspace": true,
+                            "dependents": [],
+                            "linksIn": [
+                              {
+                                "name": "@google/gemini-cli-core",
+                                "version": "0.64.0",
+                                "location": "node_modules/@google/gemini-cli-core",
+                                "isWorkspace": true,
+                                "dependents": [
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli-a2a-server",
+                                      "version": "0.64.0",
+                                      "location": "packages/a2a-server",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli-a2a-server",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli-a2a-server",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli-a2a-server",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli-sdk",
+                                      "version": "0.64.0",
+                                      "location": "packages/sdk",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli-sdk",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli-sdk",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli-sdk",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli",
+                                      "version": "0.64.0",
+                                      "location": "packages/cli",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli-test-utils",
+                                      "version": "0.64.0",
+                                      "location": "packages/test-utils",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli-test-utils",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli-test-utils",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "dev",
+                                              "name": "@google/gemini-cli-test-utils",
+                                              "spec": "file:../test-utils",
+                                              "from": {
+                                                "name": "@google/gemini-cli-core",
+                                                "version": "0.64.0"
+                                              }
+                                            },
+                                            {
+                                              "type": "dev",
+                                              "name": "@google/gemini-cli-test-utils",
+                                              "spec": "file:../test-utils",
+                                              "from": {
+                                                "name": "@google/gemini-cli",
+                                                "version": "0.64.0",
+                                                "location": "packages/cli",
+                                                "isWorkspace": true,
+                                                "dependents": [],
+                                                "linksIn": [
+                                                  {
+                                                    "name": "@google/gemini-cli",
+                                                    "version": "0.64.0",
+                                                    "location": "node_modules/@google/gemini-cli",
+                                                    "isWorkspace": true,
+                                                    "dependents": [
+                                                      {
+                                                        "type": "workspace",
+                                                        "name": "@google/gemini-cli",
+                                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                        "from": {
+                                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli-test-utils",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "workspace",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                                    "from": {
+                                      "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "prod",
+                    "name": "@opentelemetry/exporter-logs-otlp-grpc",
+                    "spec": "0.218.0",
+                    "from": {
+                      "name": "@google/gemini-cli-core",
+                      "version": "0.64.0",
+                      "location": "packages/core",
+                      "isWorkspace": true,
+                      "dependents": [],
+                      "linksIn": [
+                        {
+                          "name": "@google/gemini-cli-core",
+                          "version": "0.64.0",
+                          "location": "node_modules/@google/gemini-cli-core",
+                          "isWorkspace": true,
+                          "dependents": [
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-a2a-server",
+                                "version": "0.64.0",
+                                "location": "packages/a2a-server",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-a2a-server",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-a2a-server",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-a2a-server",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-sdk",
+                                "version": "0.64.0",
+                                "location": "packages/sdk",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-sdk",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-sdk",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-sdk",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli",
+                                "version": "0.64.0",
+                                "location": "packages/cli",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-test-utils",
+                                "version": "0.64.0",
+                                "location": "packages/test-utils",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-test-utils",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-test-utils",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli-core",
+                                          "version": "0.64.0"
+                                        }
+                                      },
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "packages/cli",
+                                          "isWorkspace": true,
+                                          "dependents": [],
+                                          "linksIn": [
+                                            {
+                                              "name": "@google/gemini-cli",
+                                              "version": "0.64.0",
+                                              "location": "node_modules/@google/gemini-cli",
+                                              "isWorkspace": true,
+                                              "dependents": [
+                                                {
+                                                  "type": "workspace",
+                                                  "name": "@google/gemini-cli",
+                                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                  "from": {
+                                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "workspace",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                              "from": {
+                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "prod",
+              "name": "@opentelemetry/otlp-grpc-exporter-base",
+              "spec": "0.218.0",
+              "from": {
+                "name": "@opentelemetry/exporter-metrics-otlp-grpc",
+                "version": "0.218.0",
+                "location": "node_modules/@opentelemetry/exporter-metrics-otlp-grpc",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@opentelemetry/exporter-metrics-otlp-grpc",
+                    "spec": "0.218.0",
+                    "from": {
+                      "name": "@opentelemetry/sdk-node",
+                      "version": "0.218.0",
+                      "location": "node_modules/@opentelemetry/sdk-node",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "prod",
+                          "name": "@opentelemetry/sdk-node",
+                          "spec": "0.218.0",
+                          "from": {
+                            "name": "@google/gemini-cli-core",
+                            "version": "0.64.0",
+                            "location": "packages/core",
+                            "isWorkspace": true,
+                            "dependents": [],
+                            "linksIn": [
+                              {
+                                "name": "@google/gemini-cli-core",
+                                "version": "0.64.0",
+                                "location": "node_modules/@google/gemini-cli-core",
+                                "isWorkspace": true,
+                                "dependents": [
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli-a2a-server",
+                                      "version": "0.64.0",
+                                      "location": "packages/a2a-server",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli-a2a-server",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli-a2a-server",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli-a2a-server",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli-sdk",
+                                      "version": "0.64.0",
+                                      "location": "packages/sdk",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli-sdk",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli-sdk",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli-sdk",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli",
+                                      "version": "0.64.0",
+                                      "location": "packages/cli",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli-test-utils",
+                                      "version": "0.64.0",
+                                      "location": "packages/test-utils",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli-test-utils",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli-test-utils",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "dev",
+                                              "name": "@google/gemini-cli-test-utils",
+                                              "spec": "file:../test-utils",
+                                              "from": {
+                                                "name": "@google/gemini-cli-core",
+                                                "version": "0.64.0"
+                                              }
+                                            },
+                                            {
+                                              "type": "dev",
+                                              "name": "@google/gemini-cli-test-utils",
+                                              "spec": "file:../test-utils",
+                                              "from": {
+                                                "name": "@google/gemini-cli",
+                                                "version": "0.64.0",
+                                                "location": "packages/cli",
+                                                "isWorkspace": true,
+                                                "dependents": [],
+                                                "linksIn": [
+                                                  {
+                                                    "name": "@google/gemini-cli",
+                                                    "version": "0.64.0",
+                                                    "location": "node_modules/@google/gemini-cli",
+                                                    "isWorkspace": true,
+                                                    "dependents": [
+                                                      {
+                                                        "type": "workspace",
+                                                        "name": "@google/gemini-cli",
+                                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                        "from": {
+                                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli-test-utils",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "workspace",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                                    "from": {
+                                      "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "prod",
+                    "name": "@opentelemetry/exporter-metrics-otlp-grpc",
+                    "spec": "0.218.0",
+                    "from": {
+                      "name": "@google/gemini-cli-core",
+                      "version": "0.64.0",
+                      "location": "packages/core",
+                      "isWorkspace": true,
+                      "dependents": [],
+                      "linksIn": [
+                        {
+                          "name": "@google/gemini-cli-core",
+                          "version": "0.64.0",
+                          "location": "node_modules/@google/gemini-cli-core",
+                          "isWorkspace": true,
+                          "dependents": [
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-a2a-server",
+                                "version": "0.64.0",
+                                "location": "packages/a2a-server",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-a2a-server",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-a2a-server",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-a2a-server",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-sdk",
+                                "version": "0.64.0",
+                                "location": "packages/sdk",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-sdk",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-sdk",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-sdk",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli",
+                                "version": "0.64.0",
+                                "location": "packages/cli",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-test-utils",
+                                "version": "0.64.0",
+                                "location": "packages/test-utils",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-test-utils",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-test-utils",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli-core",
+                                          "version": "0.64.0"
+                                        }
+                                      },
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "packages/cli",
+                                          "isWorkspace": true,
+                                          "dependents": [],
+                                          "linksIn": [
+                                            {
+                                              "name": "@google/gemini-cli",
+                                              "version": "0.64.0",
+                                              "location": "node_modules/@google/gemini-cli",
+                                              "isWorkspace": true,
+                                              "dependents": [
+                                                {
+                                                  "type": "workspace",
+                                                  "name": "@google/gemini-cli",
+                                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                  "from": {
+                                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "workspace",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                              "from": {
+                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "prod",
+              "name": "@opentelemetry/otlp-grpc-exporter-base",
+              "spec": "0.218.0",
+              "from": {
+                "name": "@opentelemetry/exporter-trace-otlp-grpc",
+                "version": "0.218.0",
+                "location": "node_modules/@opentelemetry/exporter-trace-otlp-grpc",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@opentelemetry/exporter-trace-otlp-grpc",
+                    "spec": "0.218.0",
+                    "from": {
+                      "name": "@opentelemetry/sdk-node",
+                      "version": "0.218.0",
+                      "location": "node_modules/@opentelemetry/sdk-node",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "prod",
+                          "name": "@opentelemetry/sdk-node",
+                          "spec": "0.218.0",
+                          "from": {
+                            "name": "@google/gemini-cli-core",
+                            "version": "0.64.0",
+                            "location": "packages/core",
+                            "isWorkspace": true,
+                            "dependents": [],
+                            "linksIn": [
+                              {
+                                "name": "@google/gemini-cli-core",
+                                "version": "0.64.0",
+                                "location": "node_modules/@google/gemini-cli-core",
+                                "isWorkspace": true,
+                                "dependents": [
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli-a2a-server",
+                                      "version": "0.64.0",
+                                      "location": "packages/a2a-server",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli-a2a-server",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli-a2a-server",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli-a2a-server",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli-sdk",
+                                      "version": "0.64.0",
+                                      "location": "packages/sdk",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli-sdk",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli-sdk",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli-sdk",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli",
+                                      "version": "0.64.0",
+                                      "location": "packages/cli",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "prod",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:../core",
+                                    "from": {
+                                      "name": "@google/gemini-cli-test-utils",
+                                      "version": "0.64.0",
+                                      "location": "packages/test-utils",
+                                      "isWorkspace": true,
+                                      "dependents": [],
+                                      "linksIn": [
+                                        {
+                                          "name": "@google/gemini-cli-test-utils",
+                                          "version": "0.64.0",
+                                          "location": "node_modules/@google/gemini-cli-test-utils",
+                                          "isWorkspace": true,
+                                          "dependents": [
+                                            {
+                                              "type": "dev",
+                                              "name": "@google/gemini-cli-test-utils",
+                                              "spec": "file:../test-utils",
+                                              "from": {
+                                                "name": "@google/gemini-cli-core",
+                                                "version": "0.64.0"
+                                              }
+                                            },
+                                            {
+                                              "type": "dev",
+                                              "name": "@google/gemini-cli-test-utils",
+                                              "spec": "file:../test-utils",
+                                              "from": {
+                                                "name": "@google/gemini-cli",
+                                                "version": "0.64.0",
+                                                "location": "packages/cli",
+                                                "isWorkspace": true,
+                                                "dependents": [],
+                                                "linksIn": [
+                                                  {
+                                                    "name": "@google/gemini-cli",
+                                                    "version": "0.64.0",
+                                                    "location": "node_modules/@google/gemini-cli",
+                                                    "isWorkspace": true,
+                                                    "dependents": [
+                                                      {
+                                                        "type": "workspace",
+                                                        "name": "@google/gemini-cli",
+                                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                        "from": {
+                                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "workspace",
+                                              "name": "@google/gemini-cli-test-utils",
+                                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                              "from": {
+                                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "workspace",
+                                    "name": "@google/gemini-cli-core",
+                                    "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                                    "from": {
+                                      "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "prod",
+                    "name": "@opentelemetry/exporter-trace-otlp-grpc",
+                    "spec": "0.218.0",
+                    "from": {
+                      "name": "@google/gemini-cli-core",
+                      "version": "0.64.0",
+                      "location": "packages/core",
+                      "isWorkspace": true,
+                      "dependents": [],
+                      "linksIn": [
+                        {
+                          "name": "@google/gemini-cli-core",
+                          "version": "0.64.0",
+                          "location": "node_modules/@google/gemini-cli-core",
+                          "isWorkspace": true,
+                          "dependents": [
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-a2a-server",
+                                "version": "0.64.0",
+                                "location": "packages/a2a-server",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-a2a-server",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-a2a-server",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-a2a-server",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-sdk",
+                                "version": "0.64.0",
+                                "location": "packages/sdk",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-sdk",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-sdk",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-sdk",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli",
+                                "version": "0.64.0",
+                                "location": "packages/cli",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "prod",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:../core",
+                              "from": {
+                                "name": "@google/gemini-cli-test-utils",
+                                "version": "0.64.0",
+                                "location": "packages/test-utils",
+                                "isWorkspace": true,
+                                "dependents": [],
+                                "linksIn": [
+                                  {
+                                    "name": "@google/gemini-cli-test-utils",
+                                    "version": "0.64.0",
+                                    "location": "node_modules/@google/gemini-cli-test-utils",
+                                    "isWorkspace": true,
+                                    "dependents": [
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli-core",
+                                          "version": "0.64.0"
+                                        }
+                                      },
+                                      {
+                                        "type": "dev",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:../test-utils",
+                                        "from": {
+                                          "name": "@google/gemini-cli",
+                                          "version": "0.64.0",
+                                          "location": "packages/cli",
+                                          "isWorkspace": true,
+                                          "dependents": [],
+                                          "linksIn": [
+                                            {
+                                              "name": "@google/gemini-cli",
+                                              "version": "0.64.0",
+                                              "location": "node_modules/@google/gemini-cli",
+                                              "isWorkspace": true,
+                                              "dependents": [
+                                                {
+                                                  "type": "workspace",
+                                                  "name": "@google/gemini-cli",
+                                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                                  "from": {
+                                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "type": "workspace",
+                                        "name": "@google/gemini-cli-test-utils",
+                                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                        "from": {
+                                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "workspace",
+                              "name": "@google/gemini-cli-core",
+                              "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                              "from": {
+                                "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "prod",
+        "name": "@grpc/grpc-js",
+        "spec": "1.14.3",
+        "from": {
+          "name": "@google/gemini-cli-core",
+          "version": "0.64.0",
+          "location": "packages/core",
+          "isWorkspace": true,
+          "dependents": [],
+          "linksIn": [
+            {
+              "name": "@google/gemini-cli-core",
+              "version": "0.64.0",
+              "location": "node_modules/@google/gemini-cli-core",
+              "isWorkspace": true,
+              "dependents": [
+                {
+                  "type": "prod",
+                  "name": "@google/gemini-cli-core",
+                  "spec": "file:../core",
+                  "from": {
+                    "name": "@google/gemini-cli-a2a-server",
+                    "version": "0.64.0",
+                    "location": "packages/a2a-server",
+                    "isWorkspace": true,
+                    "dependents": [],
+                    "linksIn": [
+                      {
+                        "name": "@google/gemini-cli-a2a-server",
+                        "version": "0.64.0",
+                        "location": "node_modules/@google/gemini-cli-a2a-server",
+                        "isWorkspace": true,
+                        "dependents": [
+                          {
+                            "type": "workspace",
+                            "name": "@google/gemini-cli-a2a-server",
+                            "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                            "from": {
+                              "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "prod",
+                  "name": "@google/gemini-cli-core",
+                  "spec": "file:../core",
+                  "from": {
+                    "name": "@google/gemini-cli-sdk",
+                    "version": "0.64.0",
+                    "location": "packages/sdk",
+                    "isWorkspace": true,
+                    "dependents": [],
+                    "linksIn": [
+                      {
+                        "name": "@google/gemini-cli-sdk",
+                        "version": "0.64.0",
+                        "location": "node_modules/@google/gemini-cli-sdk",
+                        "isWorkspace": true,
+                        "dependents": [
+                          {
+                            "type": "workspace",
+                            "name": "@google/gemini-cli-sdk",
+                            "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                            "from": {
+                              "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "prod",
+                  "name": "@google/gemini-cli-core",
+                  "spec": "file:../core",
+                  "from": {
+                    "name": "@google/gemini-cli",
+                    "version": "0.64.0",
+                    "location": "packages/cli",
+                    "isWorkspace": true,
+                    "dependents": [],
+                    "linksIn": [
+                      {
+                        "name": "@google/gemini-cli",
+                        "version": "0.64.0",
+                        "location": "node_modules/@google/gemini-cli",
+                        "isWorkspace": true,
+                        "dependents": [
+                          {
+                            "type": "workspace",
+                            "name": "@google/gemini-cli",
+                            "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                            "from": {
+                              "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "prod",
+                  "name": "@google/gemini-cli-core",
+                  "spec": "file:../core",
+                  "from": {
+                    "name": "@google/gemini-cli-test-utils",
+                    "version": "0.64.0",
+                    "location": "packages/test-utils",
+                    "isWorkspace": true,
+                    "dependents": [],
+                    "linksIn": [
+                      {
+                        "name": "@google/gemini-cli-test-utils",
+                        "version": "0.64.0",
+                        "location": "node_modules/@google/gemini-cli-test-utils",
+                        "isWorkspace": true,
+                        "dependents": [
+                          {
+                            "type": "dev",
+                            "name": "@google/gemini-cli-test-utils",
+                            "spec": "file:../test-utils",
+                            "from": {
+                              "name": "@google/gemini-cli-core",
+                              "version": "0.64.0"
+                            }
+                          },
+                          {
+                            "type": "dev",
+                            "name": "@google/gemini-cli-test-utils",
+                            "spec": "file:../test-utils",
+                            "from": {
+                              "name": "@google/gemini-cli",
+                              "version": "0.64.0",
+                              "location": "packages/cli",
+                              "isWorkspace": true,
+                              "dependents": [],
+                              "linksIn": [
+                                {
+                                  "name": "@google/gemini-cli",
+                                  "version": "0.64.0",
+                                  "location": "node_modules/@google/gemini-cli",
+                                  "isWorkspace": true,
+                                  "dependents": [
+                                    {
+                                      "type": "workspace",
+                                      "name": "@google/gemini-cli",
+                                      "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                      "from": {
+                                        "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "workspace",
+                            "name": "@google/gemini-cli-test-utils",
+                            "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                            "from": {
+                              "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "workspace",
+                  "name": "@google/gemini-cli-core",
+                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                  "from": {
+                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "peerOptional",
+        "name": "@grpc/grpc-js",
+        "spec": "^1.11.0",
+        "from": {
+          "name": "@a2a-js/sdk",
+          "version": "0.3.11",
+          "location": "packages/a2a-server/node_modules/@a2a-js/sdk",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@a2a-js/sdk",
+              "spec": "0.3.11",
+              "from": {
+                "name": "@google/gemini-cli-a2a-server",
+                "version": "0.64.0",
+                "location": "packages/a2a-server",
+                "isWorkspace": true,
+                "dependents": [],
+                "linksIn": [
+                  {
+                    "name": "@google/gemini-cli-a2a-server",
+                    "version": "0.64.0",
+                    "location": "node_modules/@google/gemini-cli-a2a-server",
+                    "isWorkspace": true,
+                    "dependents": [
+                      {
+                        "type": "workspace",
+                        "name": "@google/gemini-cli-a2a-server",
+                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                        "from": {
+                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "peerOptional",
+        "name": "@grpc/grpc-js",
+        "spec": "^1.11.0",
+        "from": {
+          "name": "@a2a-js/sdk",
+          "version": "0.3.11",
+          "location": "packages/core/node_modules/@a2a-js/sdk",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@a2a-js/sdk",
+              "spec": "0.3.11",
+              "from": {
+                "name": "@google/gemini-cli-core",
+                "version": "0.64.0",
+                "location": "packages/core",
+                "isWorkspace": true,
+                "dependents": [],
+                "linksIn": [
+                  {
+                    "name": "@google/gemini-cli-core",
+                    "version": "0.64.0",
+                    "location": "node_modules/@google/gemini-cli-core",
+                    "isWorkspace": true,
+                    "dependents": [
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-a2a-server",
+                          "version": "0.64.0",
+                          "location": "packages/a2a-server",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-a2a-server",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-a2a-server",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-a2a-server",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/a2a-server",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-sdk",
+                          "version": "0.64.0",
+                          "location": "packages/sdk",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-sdk",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-sdk",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-sdk",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/sdk",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli",
+                          "version": "0.64.0",
+                          "location": "packages/cli",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "prod",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:../core",
+                        "from": {
+                          "name": "@google/gemini-cli-test-utils",
+                          "version": "0.64.0",
+                          "location": "packages/test-utils",
+                          "isWorkspace": true,
+                          "dependents": [],
+                          "linksIn": [
+                            {
+                              "name": "@google/gemini-cli-test-utils",
+                              "version": "0.64.0",
+                              "location": "node_modules/@google/gemini-cli-test-utils",
+                              "isWorkspace": true,
+                              "dependents": [
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli-core",
+                                    "version": "0.64.0"
+                                  }
+                                },
+                                {
+                                  "type": "dev",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:../test-utils",
+                                  "from": {
+                                    "name": "@google/gemini-cli",
+                                    "version": "0.64.0",
+                                    "location": "packages/cli",
+                                    "isWorkspace": true,
+                                    "dependents": [],
+                                    "linksIn": [
+                                      {
+                                        "name": "@google/gemini-cli",
+                                        "version": "0.64.0",
+                                        "location": "node_modules/@google/gemini-cli",
+                                        "isWorkspace": true,
+                                        "dependents": [
+                                          {
+                                            "type": "workspace",
+                                            "name": "@google/gemini-cli",
+                                            "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+                                            "from": {
+                                              "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "workspace",
+                                  "name": "@google/gemini-cli-test-utils",
+                                  "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/test-utils",
+                                  "from": {
+                                    "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "workspace",
+                        "name": "@google/gemini-cli-core",
+                        "spec": "file:/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/core",
+                        "from": {
+                          "location": "/private/tmp/gemini-cli-vim-extraction.XVxCD6"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "dev": false,
+    "optional": false,
+    "devOptional": false,
+    "peer": false,
+    "bundled": false,
+    "overridden": false
+  }
+]

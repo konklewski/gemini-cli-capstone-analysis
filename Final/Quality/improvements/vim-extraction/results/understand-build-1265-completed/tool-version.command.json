@@ -1,0 +1,10 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "/Applications/Understand.app/Contents/MacOS/und",
+    "version"
+  ],
+  "exit_code": 0,
+  "captured_utc": "2026-10-24T15:52:46.527877+00:00"
+}

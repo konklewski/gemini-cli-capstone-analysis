@@ -1,0 +1,22 @@
+{
+  "source_pdf": "/Users/jakubkonklewski/Downloads/Final_Group27.pdf",
+  "sha256": "de6c91064a1a57af89ca04da000a70dc5acf26cd4d97efe2fae835bff79ac02a",
+  "pdf_modified": false,
+  "editable_source_available": false,
+  "todo_pages": [
+    17
+  ],
+  "quality_improvement_headings_still_todo": true,
+  "approximate_existing_quality_body_words": 2940,
+  "word_count_method": "Whitespace tokens in extracted pages 7-17, starting after Setup and ending before Improvement suggestions TODO; includes figure text and page numbers, so approximate.",
+  "required_before_submission": [
+    "Replace both quality TODOs on page 17 in the editable report and export a new PDF.",
+    "Insert the rendered implemented Vim diagram and clearly label the Config diagram as a proposal.",
+    "Add source permalinks, advisory citations and appendix references.",
+    "Explain Build 1265 for both controlled versions and matching original Build 1264 function values.",
+    "Do not claim full CLI coverage, a full repository test pass, Config implementation or a dependency fix.",
+    "Move about 500-700 words of measurement commands/filtering/setup detail into the appendix before adding the new sections, then recount.",
+    "Remove copied assignment instruction text and update the table of contents.",
+    "Review the final exported PDF for both TODO removal and readable diagrams/citations."
+  ]
+}

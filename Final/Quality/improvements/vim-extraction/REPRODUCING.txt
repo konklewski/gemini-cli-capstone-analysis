@@ -1,0 +1,110 @@
+REPRODUCING THE PUBLISHED VIM EXTRACTION EXPERIMENT
+
+Repository: https://github.com/konklewski/gemini-cli-capstone-analysis
+Source branch: codex/vim-handler-extraction
+This branch preserves Gemini CLI source and ancestry. It is separate from the
+analysis files on main and must not be merged into main.
+
+Exact revisions (unchanged Git object IDs)
+Original baseline, Gemini CLI v0.64.0:
+  4a0749aceac5643e6f85a36d7420314d85e13b52
+Controlled before, adding four characterization tests without production edits:
+  8f0a0f2d7d827d7ccd11c3df89631c39af67296f
+After, same tests plus a private Vim movement helper extraction:
+  1820eca22b026d6f16c05cc62e845c849aa2f49c
+
+Permanent source links
+https://github.com/konklewski/gemini-cli-capstone-analysis/commit/8f0a0f2d7d827d7ccd11c3df89631c39af67296f
+https://github.com/konklewski/gemini-cli-capstone-analysis/commit/1820eca22b026d6f16c05cc62e845c849aa2f49c
+https://github.com/konklewski/gemini-cli-capstone-analysis/compare/8f0a0f2d7d827d7ccd11c3df89631c39af67296f...1820eca22b026d6f16c05cc62e845c849aa2f49c
+
+A. Obtain both published versions from the capstone repository
+Run in a NEW parent directory, not an existing Gemini CLI clone:
+
+  git clone --depth 3 --single-branch --branch codex/vim-handler-extraction https://github.com/konklewski/gemini-cli-capstone-analysis.git gemini-vim-after
+  git -C gemini-vim-after worktree add --detach ../gemini-vim-before 8f0a0f2d7d827d7ccd11c3df89631c39af67296f
+  git -C gemini-vim-before rev-parse HEAD
+  git -C gemini-vim-after rev-parse HEAD
+
+The commands must print the full before and after IDs above. Depth 3 contains
+the after commit, controlled before commit and original baseline. No upstream
+write access, pull request or changes to an existing clone are needed.
+
+B. Independent fallback from the preserved Git bundle
+Download the vim-extraction folder from main, preserving the bundle and patches.
+Set VIM_EVIDENCE to its absolute path. Run in a NEW directory:
+
+  VIM_EVIDENCE="/absolute/path/to/vim-extraction"
+  git clone --depth 1 --single-branch --branch v0.64.0 https://github.com/google-gemini/gemini-cli.git bundle-before
+  git -C bundle-before bundle verify "$VIM_EVIDENCE/vim-extraction.bundle"
+  git -C bundle-before fetch "$VIM_EVIDENCE/vim-extraction.bundle" refs/heads/codex/vim-handler-extraction:refs/heads/codex/vim-handler-extraction
+  git -C bundle-before switch --detach 8f0a0f2d7d827d7ccd11c3df89631c39af67296f
+  git -C bundle-before worktree add --detach ../bundle-after 1820eca22b026d6f16c05cc62e845c849aa2f49c
+  git -C bundle-before rev-parse HEAD
+  git -C bundle-after rev-parse HEAD
+
+The bundle is incremental and requires baseline commit 4a0749a. The initial
+read-only clone supplies that prerequisite. Fetching the bundle preserves the
+exact hashes. The two format-patch files are retained for review/reapplication,
+but git am may create different commit IDs; it is not the hash-preserving route.
+
+C. Verify the source files
+File: packages/cli/src/ui/components/shared/vim-buffer-actions.ts
+Before SHA-256:
+  b9027a5f772cacaac81d1acc6589eb314027edf5823542eec3ca580bceacc9f8
+After SHA-256:
+  8a2d9567cda15a73f77c0504b13c1e5afd22be8302eefa8f5d9d7f79ba7c1d16
+Test file: packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts
+SHA-256 in both controlled versions:
+  17e3c3410fc49d40d299339137b80f6784b29f789aa7b007696a2ff41499addd
+On macOS, run shasum -a 256 PATH_TO_FILE for each of the files above.
+
+D. Reproduce Understand measurements
+Do this BEFORE dependency installation, using source-only checkouts.
+Use SciTools Understand Build 1265 for both versions, separate .und projects,
+and each version's packages/ folder as source. Use Web language analysis.
+Match the settings preserved in results/understand-build-1265-completed/,
+updating only checkout/output paths for your machine. Original machine-local
+settings and supported CLI exports are retained alongside the shared settings.
+Export Cyclomatic, CountLineCode, AvgCyclomatic, AvgCountLine,
+AvgCountLineCode and MaxCyclomatic, with headers, file paths and unique names.
+For details and parser diagnostics, see procedure.txt and understand-handoff.txt.
+
+Recorded results:
+  handleVimAction: CountLineCode 1461 -> 1381; Cyclomatic 196 -> 188.
+  handleVimChangeMovement: absent before; CountLineCode 86, Cyclomatic 9 after.
+  Both projects: 117 errors, 172 warnings; no added/removed diagnostics after
+  source-path normalisation, and none in the selected source/test files.
+The original group measurement used Build 1264. Both controlled versions used
+Build 1265 and reproduced its baseline function values, not all parse results.
+
+E. Reproduce selected tests
+Recorded environment: Node 25.9.0, npm 11.12.1, TypeScript 5.8.3, Vitest 3.2.4.
+In EACH fresh checkout root, install/build prerequisites:
+
+  npm ci --ignore-scripts --no-audit --no-fund
+  npm run generate
+  npm run build --workspace @google/gemini-cli-core
+  npm run build --workspace @google/gemini-cli-devtools
+
+Then change to its packages/cli directory and run:
+
+  GEMINI_CLI_TRUST_WORKSPACE=true ../../node_modules/.bin/vitest run src/ui/components/shared/vim-buffer-actions.test.ts src/ui/components/shared/text-buffer.test.ts --coverage.enabled=false --maxWorkers=2 --minWorkers=1
+
+For the separate focused coverage procedure, use the exact recorded commands
+in results/focused-coverage-before/run.command.json and the after counterpart,
+adjusting only working and output paths. Those runs include only the Vim suite
+and measure only vim-buffer-actions.ts. Both passed 200 tests. They are not
+CLI-package coverage. The whole-CLI attempt timed out at 480 seconds; the full
+repository test suite was not run. Prior selected test reports are retained.
+
+Evidence on main
+experiment.json: revisions, source hashes, measurements and limitations.
+procedure.txt: decisions, setup, commands and validation.
+patches/: test-only patch and production extraction patch.
+vim-extraction.bundle: exact commits, with the stated baseline prerequisite.
+results/understand-build-1265-completed/: untouched CSVs, settings, diagnostics.
+results/*vitest.json and focused-coverage-*/: selected tests and focused coverage.
+published-revisions.json and published-reconstruction-check.json: publication
+and fresh-clone verification. Use commit-pinned /blob/<analysis-commit>/ links
+for these evidence files in the report, not mutable main-branch links.

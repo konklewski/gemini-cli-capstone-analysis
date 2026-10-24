@@ -1,0 +1,10 @@
+# Proposed quality improvements: supporting diagrams
+
+These diagrams support the *Project quality* improvement section of the final report. They show proposed designs, **not changes implemented in Gemini CLI**. Each is available as an editable SVG and a PNG for easy insertion into the report.
+
+- `tool-registration-proposal.svg` shows how built-in tool registration could move out of `Config`. The baseline is [`config.ts`, lines 3974-4129](https://github.com/google-gemini/gemini-cli/blob/4a0749aceac5643e6f85a36d7420314d85e13b52/packages/core/src/config/config.ts#L3974-L4129). The saved [dependency report](../coupling-report.json) records 109 direct dependencies for this file.
+- `vim-handler-proposal.svg` shows how Vim actions could be split by action family, with shared buffer operations extracted to remove the existing import cycle. The baseline is [`vim-buffer-actions.ts`, from line 164](https://github.com/google-gemini/gemini-cli/blob/4a0749aceac5643e6f85a36d7420314d85e13b52/packages/cli/src/ui/components/shared/vim-buffer-actions.ts#L164), [`text-buffer.ts`, lines 30-31](https://github.com/google-gemini/gemini-cli/blob/4a0749aceac5643e6f85a36d7420314d85e13b52/packages/cli/src/ui/components/shared/text-buffer.ts#L30-L31), and the saved [complexity CSV](../packages.csv), where `handleVimAction` has 1,461 code lines and cyclomatic complexity 196. The saved dependency report marks imports between the two modules as circular.
+
+Both conceptual UML component diagrams were drawn manually from these files at tag `v0.64.0`, commit `4a0749aceac5643e6f85a36d7420314d85e13b52`, and from the metrics already collected by the group. No before/after metric has been measured because the changes were not implemented. Re-measure with the same Dependency Cruiser, SciTools Understand, and Vitest commands documented in the report if the changes are implemented.
+
+The draft report also cites an `npm audit` result, but no machine-readable audit output is currently stored under `Final/Quality/`. Preserve that output, the lockfile revision, and the audit date before claiming that a dependency update reduced the number of findings.

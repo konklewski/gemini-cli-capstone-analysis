@@ -1,0 +1,264 @@
+{
+  "status": "Design proposal only; not implemented or remeasured",
+  "baseline_commit": "4a0749aceac5643e6f85a36d7420314d85e13b52",
+  "source_file": "packages/core/src/config/config.ts",
+  "source_sha256": "def687a35fad59afedd93485df0b92b45eb4d953cde89bfc917ca770207a73e5",
+  "dependency_cruiser_version": "18.6.0",
+  "original_direct_edges": 109,
+  "concrete_tool_modules": 21,
+  "movable_concrete_classes": 27,
+  "eligible_direct_edges_to_move": 20,
+  "imports": [
+    {
+      "module": "../tools/ls.js",
+      "resolved": "packages/core/src/tools/ls.ts",
+      "concrete_classes": [
+        "LSTool"
+      ],
+      "import_line": 32,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/read-file.js",
+      "resolved": "packages/core/src/tools/read-file.ts",
+      "concrete_classes": [
+        "ReadFileTool"
+      ],
+      "import_line": 33,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/read-mcp-resource.js",
+      "resolved": "packages/core/src/tools/read-mcp-resource.ts",
+      "concrete_classes": [
+        "ReadMcpResourceTool"
+      ],
+      "import_line": 34,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/list-mcp-resources.js",
+      "resolved": "packages/core/src/tools/list-mcp-resources.ts",
+      "concrete_classes": [
+        "ListMcpResourcesTool"
+      ],
+      "import_line": 35,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/grep.js",
+      "resolved": "packages/core/src/tools/grep.ts",
+      "concrete_classes": [
+        "GrepTool"
+      ],
+      "import_line": 36,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/ripGrep.js",
+      "resolved": "packages/core/src/tools/ripGrep.ts",
+      "concrete_classes": [
+        "RipGrepTool"
+      ],
+      "import_line": 37,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": false,
+      "remaining_symbols_in_config": [
+        "resolveRipgrepPath"
+      ]
+    },
+    {
+      "module": "../tools/glob.js",
+      "resolved": "packages/core/src/tools/glob.ts",
+      "concrete_classes": [
+        "GlobTool"
+      ],
+      "import_line": 38,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/activate-skill.js",
+      "resolved": "packages/core/src/tools/activate-skill.ts",
+      "concrete_classes": [
+        "ActivateSkillTool"
+      ],
+      "import_line": 39,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/edit.js",
+      "resolved": "packages/core/src/tools/edit.ts",
+      "concrete_classes": [
+        "EditTool"
+      ],
+      "import_line": 40,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/shell.js",
+      "resolved": "packages/core/src/tools/shell.ts",
+      "concrete_classes": [
+        "ShellTool"
+      ],
+      "import_line": 41,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/write-file.js",
+      "resolved": "packages/core/src/tools/write-file.ts",
+      "concrete_classes": [
+        "WriteFileTool"
+      ],
+      "import_line": 42,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/web-fetch.js",
+      "resolved": "packages/core/src/tools/web-fetch.ts",
+      "concrete_classes": [
+        "WebFetchTool"
+      ],
+      "import_line": 43,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/web-search.js",
+      "resolved": "packages/core/src/tools/web-search.ts",
+      "concrete_classes": [
+        "WebSearchTool"
+      ],
+      "import_line": 48,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/ask-user.js",
+      "resolved": "packages/core/src/tools/ask-user.ts",
+      "concrete_classes": [
+        "AskUserTool"
+      ],
+      "import_line": 49,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/topicTool.js",
+      "resolved": "packages/core/src/tools/topicTool.ts",
+      "concrete_classes": [
+        "UpdateTopicTool"
+      ],
+      "import_line": 50,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../agents/agent-tool.js",
+      "resolved": "packages/core/src/agents/agent-tool.ts",
+      "concrete_classes": [
+        "AgentTool"
+      ],
+      "import_line": 52,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/exit-plan-mode.js",
+      "resolved": "packages/core/src/tools/exit-plan-mode.ts",
+      "concrete_classes": [
+        "ExitPlanModeTool"
+      ],
+      "import_line": 53,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/enter-plan-mode.js",
+      "resolved": "packages/core/src/tools/enter-plan-mode.ts",
+      "concrete_classes": [
+        "EnterPlanModeTool"
+      ],
+      "import_line": 54,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/shellBackgroundTools.js",
+      "resolved": "packages/core/src/tools/shellBackgroundTools.ts",
+      "concrete_classes": [
+        "ListBackgroundProcessesTool",
+        "ReadBackgroundOutputTool"
+      ],
+      "import_line": 55,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/write-todos.js",
+      "resolved": "packages/core/src/tools/write-todos.ts",
+      "concrete_classes": [
+        "WriteTodosTool"
+      ],
+      "import_line": 100,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    },
+    {
+      "module": "../tools/trackerTools.js",
+      "resolved": "packages/core/src/tools/trackerTools.ts",
+      "concrete_classes": [
+        "TrackerCreateTaskTool",
+        "TrackerUpdateTaskTool",
+        "TrackerGetTaskTool",
+        "TrackerListTasksTool",
+        "TrackerAddDependencyTool",
+        "TrackerVisualizeTool"
+      ],
+      "import_line": 105,
+      "move_construction_to": "proposed packages/core/src/tools/builtin-tool-assembly.ts",
+      "remove_direct_config_module_edge": true,
+      "remaining_symbols_in_config": []
+    }
+  ],
+  "additional_required_change": "Move ActivateSkillTool replacement/removal from initial skill discovery and reloadSkills into assembly helpers, retaining the existing caller conditions.",
+  "retained_dependencies": [
+    "ToolRegistry type/API",
+    "resolveRipgrepPath from ripGrep.js for getRipgrepPath caching",
+    "memoryTool.js filename functions",
+    "tools.js types"
+  ],
+  "conditional_edge_estimate": {
+    "expression": "109 - 20 + 1",
+    "value": 90,
+    "meaning": "If these imports move and only one new assembly import is added, Config has this many direct module edges. This is an import-accounting estimate, not a dependency-cruiser after-measurement or a reduction in whole-system coupling."
+  }
+}

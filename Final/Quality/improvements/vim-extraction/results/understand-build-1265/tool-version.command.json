@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/Applications/Understand.app/Contents/MacOS/und",
+    "version"
+  ],
+  "started_utc": "2026-10-24T13:21:48.067415+00:00",
+  "finished_utc": "2026-10-24T13:21:48.354655+00:00",
+  "exit_code": 0,
+  "stdout": "tool-version.stdout.txt",
+  "stderr": "tool-version.stderr.txt"
+}

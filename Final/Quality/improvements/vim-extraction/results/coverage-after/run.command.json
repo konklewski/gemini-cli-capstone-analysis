@@ -1,0 +1,29 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "../../node_modules/.bin/vitest",
+    "run",
+    "--coverage.enabled=true",
+    "--coverage.reporter=json-summary",
+    "--coverage.reportsDirectory=/Users/jakubkonklewski/Library/CloudStorage/OneDrive-Bibliotekiudoste\u0328pnione\u2014onedrive/Dokumenty/TUe/Capstone Software Dev/capstone-analysis/Final/Quality/improvements/vim-extraction/results/coverage-after/coverage",
+    "--maxWorkers=4",
+    "--minWorkers=1",
+    "--reporter=dot",
+    "--reporter=json",
+    "--outputFile.json=/Users/jakubkonklewski/Library/CloudStorage/OneDrive-Bibliotekiudoste\u0328pnione\u2014onedrive/Dokumenty/TUe/Capstone Software Dev/capstone-analysis/Final/Quality/improvements/vim-extraction/results/coverage-after/vitest.json"
+  ],
+  "cwd": "/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+  "source_commit": "1820eca22b026d6f16c05cc62e845c849aa2f49c",
+  "environment_overrides": {
+    "GEMINI_CLI_TRUST_WORKSPACE": "true"
+  },
+  "started_utc": "2026-10-24T16:18:05.194031+00:00",
+  "timeout_seconds": 480,
+  "timed_out": true,
+  "exit_code": -15,
+  "elapsed_seconds": 480.103,
+  "finished_utc": "2026-10-24T16:26:05.299301+00:00",
+  "stdout_sha256": "f60df947d651e9c1d5ae58dfdde100f8c80488b78acf89d7b6d84706710de688",
+  "stderr_sha256": "ad60ee52529f9a4f4315f3eb236cb8e87bd8c1117c496cf245193bfd90168303"
+}

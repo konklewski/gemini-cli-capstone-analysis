@@ -1,0 +1,7 @@
+Current Build (Build 1265)  14 October 2026
+Project Name: /private/tmp/gemini-cli-vim-replay.fGa16y-after/packages/packages.und
+Last Analysis: 24/10/2026 16:53
+Database Version: 28
+Database Created: 1265
+Database Modified: 1265
+Internal Directory: /private/tmp/gemini-cli-vim-replay.fGa16y-after/packages/packages.und/local

@@ -1,0 +1,6 @@
+# Preserve exported evidence bytes and classify binary diagnostic containers.
+*.cbor binary
+*.bundle binary
+*.csv -text
+*.patch -text -whitespace
+*.stdout.txt -text -whitespace

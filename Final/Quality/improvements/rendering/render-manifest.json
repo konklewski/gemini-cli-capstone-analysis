@@ -1,0 +1,37 @@
+{
+  "tool": "PlantUML",
+  "version": "1.2026.9",
+  "git_commit": "18d0aae",
+  "jar_download_url": "https://github.com/plantuml/plantuml/releases/download/v1.2026.9/plantuml.jar",
+  "jar_sha256": "aa4a1d06f8911c4b842beff4828dd955be431692b631a312d04c0e9fab9581de",
+  "java_version": "openjdk version \"21.0.7\" 2025-04-15 LTS\nOpenJDK Runtime Environment Temurin-21.0.7+6 (build 21.0.7+6-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.7+6 (build 21.0.7+6-LTS, mixed mode, sharing)\n",
+  "outputs": {
+    "vim-extraction/vim-change-movement.puml": {
+      "bytes": 1301,
+      "sha256": "6c9757a8318afc92631188457fc5ec31c8130f3a0134b88a9f41caf5578ed9f4"
+    },
+    "vim-extraction/vim-change-movement.svg": {
+      "bytes": 14071,
+      "sha256": "790cd3249853007dab18d11d3c96798a058ce44a6be8801d011eede23050929e"
+    },
+    "vim-extraction/vim-change-movement.png": {
+      "bytes": 30424,
+      "sha256": "408337b96bfbfa6660066f6ca5b0356c4b97fbb55d556c4bff1768cc41a5a8b9"
+    },
+    "config-factory/config-tool-assembly-proposal.puml": {
+      "bytes": 1655,
+      "sha256": "c3e6f41f572e4700059621620478703644336395e05a85d79b210097b6a4da8b"
+    },
+    "config-factory/config-tool-assembly-proposal.svg": {
+      "bytes": 12778,
+      "sha256": "1b449cd3fff9bdee88a335c77788512d448d90449c2875d3a5ac99df3002b6f1"
+    },
+    "config-factory/config-tool-assembly-proposal.png": {
+      "bytes": 36428,
+      "sha256": "a74046d45692900007f096c3920882a7fd589aba11bb9aefe72098aacb5cae02"
+    }
+  },
+  "visually_inspected": true,
+  "layout": "Smetana for proposed component diagram; built-in activity layout for implemented Vim diagram. Graphviz is not installed.",
+  "version_command_note": "PlantUML -version reports missing Graphviz with exit 16. Actual SVG and PNG render commands both exit 0 and are retained separately."
+}

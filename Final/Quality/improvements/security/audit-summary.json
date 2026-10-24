@@ -1,0 +1,130 @@
+{
+  "original_audit_snapshot_available": false,
+  "historical_report_claim_not_reproduced": {
+    "total": 100,
+    "low": 4,
+    "moderate": 44,
+    "high": 45,
+    "critical": 7
+  },
+  "new_audit_local_date": "2026-10-24",
+  "baseline_commit": "4a0749aceac5643e6f85a36d7420314d85e13b52",
+  "executed_checkout_commit": "1820eca22b026d6f16c05cc62e845c849aa2f49c",
+  "audited_lockfile_identical_to_baseline": true,
+  "lockfile_sha256": "b4565853b8dab02abb4fc65c5f0998f6e5e07c251bd85f6a33f87915e6b5eac4",
+  "node_version": "v25.9.0",
+  "npm_version": "11.12.1",
+  "full_audit": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 3,
+      "moderate": 41,
+      "high": 31,
+      "critical": 7,
+      "total": 82
+    },
+    "dependencies": {
+      "prod": 727,
+      "dev": 712,
+      "optional": 123,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 1527
+    }
+  },
+  "omit_dev_audit": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 38,
+      "high": 28,
+      "critical": 6,
+      "total": 73
+    },
+    "dependencies": {
+      "prod": 727,
+      "dev": 712,
+      "optional": 123,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 1527
+    }
+  },
+  "examples": [
+    {
+      "dependency": "@grpc/grpc-js",
+      "classification": "production dependency of packages/core",
+      "locked_instances": [
+        {
+          "path": "node_modules/@grpc/grpc-js",
+          "version": "1.14.3",
+          "dev": false
+        }
+      ],
+      "advisory": {
+        "source": 1120582,
+        "name": "@grpc/grpc-js",
+        "dependency": "@grpc/grpc-js",
+        "title": "@grpc/grpc-js: A malformed request can cause a server crash",
+        "url": "https://github.com/advisories/GHSA-5375-pq7m-f5r2",
+        "severity": "high",
+        "cwe": [
+          "CWE-248"
+        ],
+        "cvss": {
+          "score": 7.5,
+          "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        "range": ">=1.14.0 <1.14.4"
+      },
+      "present_in_omit_dev_audit": true,
+      "advisory_fix": "1.14.4 for this advisory; audit recommends 1.14.6 for the package findings",
+      "audit_fix_available": {
+        "name": "@grpc/grpc-js",
+        "version": "1.14.6",
+        "isSemVerMajor": false
+      }
+    },
+    {
+      "dependency": "@eslint/plugin-kit",
+      "classification": "development-only transitive dependency through eslint",
+      "locked_instances": [
+        {
+          "path": "node_modules/@eslint/plugin-kit",
+          "version": "0.2.8",
+          "dev": true
+        }
+      ],
+      "advisory": {
+        "source": 1106734,
+        "name": "@eslint/plugin-kit",
+        "dependency": "@eslint/plugin-kit",
+        "title": "@eslint/plugin-kit is vulnerable to Regular Expression Denial of Service attacks through ConfigCommentParser",
+        "url": "https://github.com/advisories/GHSA-xffm-g5w8-qvg7",
+        "severity": "low",
+        "cwe": [
+          "CWE-1333"
+        ],
+        "cvss": {
+          "score": 0,
+          "vectorString": null
+        },
+        "range": "<0.3.4"
+      },
+      "present_in_omit_dev_audit": false,
+      "advisory_fix": "0.3.4 for this advisory; audit recommends eslint 9.39.5",
+      "audit_fix_available": {
+        "name": "eslint",
+        "version": "9.39.5",
+        "isSemVerMajor": false
+      }
+    }
+  ],
+  "vitest_classification_caveat": "Vitest 3.2.4 is declared as a devDependency in several workspaces but packages/test-utils declares it in dependencies. It remains in this root --omit=dev audit and cannot be labelled development-only for this graph.",
+  "limitations": [
+    "No dependency upgrade or post-fix audit was performed.",
+    "Audit counts depend on advisory data and npm resolution; the new 82 is not a security improvement over the historical 100.",
+    "The server-crash advisory is applicable to the package version; reachability of its vulnerable server code in Gemini CLI was not demonstrated.",
+    "The root workspace audit is not proof of exactly what ships in the published CLI package."
+  ]
+}

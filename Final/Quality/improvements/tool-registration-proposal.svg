@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+  <title id="title">Proposed separation of built-in tool registration from Config</title>
+  <desc id="desc">Conceptual UML component diagram comparing current registration in Config with a proposed dedicated factory. The proposal has not been implemented.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#274567"/>
+    </marker>
+    <style>
+      .bg { fill: #f8fafc; }
+      .panel { fill: white; stroke: #cbd5e1; stroke-width: 2; }
+      .component { fill: #eaf2ff; stroke: #274567; stroke-width: 2; }
+      .factory { fill: #e7f5ef; stroke: #27735d; stroke-width: 2; }
+      .heading { font: 700 25px Arial, sans-serif; fill: #142a43; }
+      .subheading { font: 700 18px Arial, sans-serif; fill: #274567; }
+      .name { font: 700 19px Arial, sans-serif; fill: #142a43; text-anchor: middle; }
+      .detail { font: 15px Arial, sans-serif; fill: #334155; text-anchor: middle; }
+      .label { font: 15px Arial, sans-serif; fill: #334155; }
+      .note { font: 14px Arial, sans-serif; fill: #475569; }
+      .edge { stroke: #274567; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="590"/>
+  <text x="42" y="43" class="heading">Built-in tool registration: current and proposed responsibilities</text>
+  <rect x="28" y="70" width="552" height="445" rx="12" class="panel"/>
+  <rect x="620" y="70" width="552" height="445" rx="12" class="panel"/>
+  <text x="52" y="106" class="subheading">Current at v0.64.0</text>
+  <text x="644" y="106" class="subheading">Proposed, not implemented</text>
+
+  <rect x="150" y="138" width="310" height="92" rx="9" class="component"/>
+  <text x="305" y="170" class="name">Config</text>
+  <text x="305" y="195" class="detail">settings + createToolRegistry()</text>
+  <text x="305" y="214" class="detail">selects and constructs built-in tools</text>
+  <path d="M 235 230 L 175 302" class="edge"/>
+  <path d="M 375 230 L 438 302" class="edge"/>
+  <text x="75" y="271" class="label">creates</text>
+  <text x="438" y="271" class="label">imports</text>
+  <rect x="77" y="303" width="210" height="88" rx="9" class="component"/>
+  <text x="182" y="339" class="name">ToolRegistry</text>
+  <text x="182" y="365" class="detail">stores registered tools</text>
+  <rect x="337" y="303" width="210" height="88" rx="9" class="component"/>
+  <text x="442" y="336" class="name">Built-in tools</text>
+  <text x="442" y="360" class="detail">many concrete classes</text>
+  <text x="52" y="445" class="note">Baseline: config.ts has 109 direct dependencies.</text>
+  <text x="52" y="468" class="note">Tool selection and registration occupy lines 3974-4129.</text>
+
+  <rect x="754" y="138" width="280" height="74" rx="9" class="component"/>
+  <text x="894" y="169" class="name">Config</text>
+  <text x="894" y="192" class="detail">settings + initialization</text>
+  <path d="M 894 212 L 894 254" class="edge"/>
+  <text x="914" y="242" class="label">delegates</text>
+  <rect x="720" y="255" width="348" height="82" rx="9" class="factory"/>
+  <text x="894" y="285" class="name">BuiltinToolRegistryFactory</text>
+  <text x="894" y="310" class="detail">selects and registers built-in tools</text>
+  <path d="M 812 337 L 772 381" class="edge"/>
+  <path d="M 976 337 L 1018 381" class="edge"/>
+  <rect x="650" y="382" width="236" height="75" rx="9" class="component"/>
+  <text x="768" y="412" class="name">ToolRegistry</text>
+  <text x="768" y="436" class="detail">stores registered tools</text>
+  <rect x="905" y="382" width="236" height="75" rx="9" class="component"/>
+  <text x="1023" y="412" class="name">Built-in tools</text>
+  <text x="1023" y="436" class="detail">concrete implementations</text>
+  <text x="645" y="489" class="note">Expected: fewer tool-class imports in Config;</text>
+  <text x="645" y="509" class="note">total system dependencies need not decrease.</text>
+  <text x="31" y="560" class="note">Conceptual component diagram drawn from config.ts and the dependency-cruiser report at commit 4a0749a. No code change is claimed.</text>
+</svg>

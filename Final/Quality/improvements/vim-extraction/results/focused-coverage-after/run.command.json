@@ -1,0 +1,31 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "../../node_modules/.bin/vitest",
+    "run",
+    "src/ui/components/shared/vim-buffer-actions.test.ts",
+    "--coverage.enabled=true",
+    "--coverage.include=src/ui/components/shared/vim-buffer-actions.ts",
+    "--coverage.reporter=json-summary",
+    "--coverage.reportsDirectory=/Users/jakubkonklewski/Library/CloudStorage/OneDrive-Bibliotekiudoste\u0328pnione\u2014onedrive/Dokumenty/TUe/Capstone Software Dev/capstone-analysis/Final/Quality/improvements/vim-extraction/results/focused-coverage-after/report",
+    "--maxWorkers=2",
+    "--minWorkers=1",
+    "--reporter=dot",
+    "--reporter=json",
+    "--outputFile.json=/Users/jakubkonklewski/Library/CloudStorage/OneDrive-Bibliotekiudoste\u0328pnione\u2014onedrive/Dokumenty/TUe/Capstone Software Dev/capstone-analysis/Final/Quality/improvements/vim-extraction/results/focused-coverage-after/vitest.json"
+  ],
+  "cwd": "/private/tmp/gemini-cli-vim-extraction.XVxCD6/packages/cli",
+  "source_commit": "1820eca22b026d6f16c05cc62e845c849aa2f49c",
+  "environment_overrides": {
+    "GEMINI_CLI_TRUST_WORKSPACE": "true"
+  },
+  "started_utc": "2026-10-24T16:26:57.900548+00:00",
+  "timeout_seconds": 180,
+  "timed_out": false,
+  "exit_code": 0,
+  "elapsed_seconds": 4.3,
+  "finished_utc": "2026-10-24T16:27:02.201538+00:00",
+  "stdout_sha256": "83adc10168e6b0ef6ddf5aa1683be0522b8be3d0bbd831bf90e74b362d07fbd3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

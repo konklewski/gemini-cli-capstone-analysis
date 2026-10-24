@@ -1,0 +1,17 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "git",
+    "-C",
+    "/private/tmp/gemini-cli-vim-replay.fGa16y-after",
+    "diff",
+    "--exit-code",
+    "HEAD",
+    "--",
+    "packages/cli/src/ui/components/shared/vim-buffer-actions.ts",
+    "packages/cli/src/ui/components/shared/vim-buffer-actions.test.ts"
+  ],
+  "exit_code": 0,
+  "captured_utc": "2026-10-24T15:52:49.616442+00:00"
+}
