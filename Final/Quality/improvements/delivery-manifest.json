@@ -1,5 +1,5 @@
 {
-  "captured_utc": "2026-10-24T19:34:54.349548+00:00",
+  "captured_utc": "2026-10-24T19:37:14.854137+00:00",
   "implemented_change": "Limited Vim change-movement extraction only",
   "unimplemented_proposals": [
     "Config built-in tool assembly",
@@ -101,16 +101,16 @@
       "sha256": "885966f35b2409902a97c439c3933d5cec0484497d0b266b50be8334c1f7d75e"
     },
     "config-factory/config-tool-assembly-proposal.png": {
-      "bytes": 36428,
-      "sha256": "a74046d45692900007f096c3920882a7fd589aba11bb9aefe72098aacb5cae02"
+      "bytes": 36071,
+      "sha256": "328d8968ae1e27fe9660598fcb72dc47ca5112c6f5e774ea8b4538b693cf35f0"
     },
     "config-factory/config-tool-assembly-proposal.puml": {
-      "bytes": 1655,
-      "sha256": "c3e6f41f572e4700059621620478703644336395e05a85d79b210097b6a4da8b"
+      "bytes": 1637,
+      "sha256": "09c0c25506220643f8379496a55f8c7da7253dcaef0cd8c1e11dee456c5d7798"
     },
     "config-factory/config-tool-assembly-proposal.svg": {
-      "bytes": 12778,
-      "sha256": "1b449cd3fff9bdee88a335c77788512d448d90449c2875d3a5ac99df3002b6f1"
+      "bytes": 12744,
+      "sha256": "9694daf31739cc63c1d596d3a69697e58a2b90f1f3b0b2ba4bcd94f569c46854"
     },
     "config-factory/design-evidence.txt": {
       "bytes": 2174,

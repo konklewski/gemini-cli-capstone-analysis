@@ -1,6 +1,6 @@
 @startuml
 !pragma layout smetana
-title Proposed built-in tool assembly extraction (not implemented)
+title Proposed built-in tool assembly extraction
 skinparam shadowing false
 skinparam componentStyle rectangle
 skinparam defaultFontSize 14
